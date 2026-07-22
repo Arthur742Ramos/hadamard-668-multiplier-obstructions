@@ -1,0 +1,53 @@
+{
+  "structure_lemmas": {
+    "L1_multiset_solutions_squares_to_594": [
+      {
+        "1": 16,
+        "289": 2
+      }
+    ],
+    "L1_conclusion": "exactly 2 columns have |colsum|=17, 16 have |colsum|=1",
+    "per_seq_rowsum_analysis": {
+      "0": {
+        "rowsum_pm1_reachable": true,
+        "big_sign_multisets": [
+          []
+        ]
+      },
+      "1": {
+        "rowsum_pm1_reachable": false,
+        "big_sign_multisets": []
+      },
+      "2": {
+        "rowsum_pm1_reachable": true,
+        "big_sign_multisets": [
+          [
+            -17,
+            17
+          ]
+        ]
+      }
+    },
+    "feasible_big_splits_(kA,kB)": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "L2_conclusion": "only (2,0)/(0,2) feasible; each big pair must be one +17 and one -17; (1,1) impossible"
+  },
+  "compression_solution_set": {
+    "total_compression_solutions": 0,
+    "by_split_(kA,kB)": {
+      "0,2": 0,
+      "1,1": 0,
+      "2,0": 0
+    },
+    "examples": [],
+    "note": "row-sum split respects L2 iff (1,1) count == 0"
+  }
+}

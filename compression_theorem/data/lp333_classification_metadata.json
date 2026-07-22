@@ -1,0 +1,337 @@
+{
+  "_provenance": {
+    "description": "Minimal L=333 multiplier-subgroup reduction metadata, vendored for self-containment.",
+    "source_relative_path": "../../lp333/results/subgroup_classification.json",
+    "source_sha256": "1e8073d58a920d2e5f59804f24f685e50f20dba41139c5520fb8863dc4ee3d3a",
+    "extracted_fields": [
+      "order",
+      "reduction_mod9",
+      "reduction_mod37_order",
+      "mod37_full_reduction",
+      "summary.killed_ids"
+    ],
+    "note": "Independently regenerable by lp333/code/classify.py; this copy makes compression_theorem self-contained."
+  },
+  "L": 333,
+  "hadamard_order": 668,
+  "summary_killed_ids": [
+    25,
+    26,
+    27,
+    29
+  ],
+  "subgroups": [
+    {
+      "id": 0,
+      "order": 1,
+      "reduction_mod9": [
+        1
+      ],
+      "reduction_mod37_order": 1,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 1,
+      "order": 2,
+      "reduction_mod9": [
+        1
+      ],
+      "reduction_mod37_order": 2,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 2,
+      "order": 3,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 1,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 3,
+      "order": 3,
+      "reduction_mod9": [
+        1
+      ],
+      "reduction_mod37_order": 3,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 3,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 5,
+      "order": 3,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 3,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 6,
+      "order": 4,
+      "reduction_mod9": [
+        1
+      ],
+      "reduction_mod37_order": 4,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 7,
+      "order": 6,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 2,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 8,
+      "order": 6,
+      "reduction_mod9": [
+        1
+      ],
+      "reduction_mod37_order": 6,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 9,
+      "order": 6,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 6,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 10,
+      "order": 6,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 6,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 11,
+      "order": 9,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 3,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 12,
+      "order": 9,
+      "reduction_mod9": [
+        1
+      ],
+      "reduction_mod37_order": 9,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 13,
+      "order": 9,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 9,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 14,
+      "order": 9,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 9,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 15,
+      "order": 12,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 4,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 16,
+      "order": 12,
+      "reduction_mod9": [
+        1
+      ],
+      "reduction_mod37_order": 12,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 17,
+      "order": 12,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 12,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 18,
+      "order": 12,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 12,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 19,
+      "order": 18,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 6,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 20,
+      "order": 18,
+      "reduction_mod9": [
+        1
+      ],
+      "reduction_mod37_order": 18,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 21,
+      "order": 18,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 18,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 22,
+      "order": 18,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 18,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 23,
+      "order": 27,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 9,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 24,
+      "order": 36,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 12,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 25,
+      "order": 36,
+      "reduction_mod9": [
+        1
+      ],
+      "reduction_mod37_order": 36,
+      "mod37_full_reduction": true
+    },
+    {
+      "id": 26,
+      "order": 36,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 36,
+      "mod37_full_reduction": true
+    },
+    {
+      "id": 27,
+      "order": 36,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 36,
+      "mod37_full_reduction": true
+    },
+    {
+      "id": 28,
+      "order": 54,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 18,
+      "mod37_full_reduction": false
+    },
+    {
+      "id": 29,
+      "order": 108,
+      "reduction_mod9": [
+        1,
+        4,
+        7
+      ],
+      "reduction_mod37_order": 36,
+      "mod37_full_reduction": true
+    }
+  ]
+}

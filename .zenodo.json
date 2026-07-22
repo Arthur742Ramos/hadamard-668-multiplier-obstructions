@@ -1,0 +1,26 @@
+{
+  "title": "Multiplier obstructions for Legendre pairs of length 333",
+  "description": "Proof-carrying exclusions for multiplier-invariant Legendre pairs of length 333, including an analytic exclusion of every common multiplier group of order at least 9. This does not resolve the unrestricted Hadamard order-668 problem.",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Ramos, Arthur"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Hadamard matrix",
+    "Legendre pair",
+    "supplementary difference set",
+    "multiplier",
+    "periodic autocorrelation",
+    "DRAT"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Arthur742Ramos/hadamard-668-multiplier-obstructions",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

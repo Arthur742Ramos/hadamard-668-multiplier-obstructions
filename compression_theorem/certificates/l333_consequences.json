@@ -1,0 +1,387 @@
+{
+  "L": 333,
+  "hadamard_order": 668,
+  "N_is_sos2": false,
+  "metadata_provenance": {
+    "description": "Minimal L=333 multiplier-subgroup reduction metadata, vendored for self-containment.",
+    "source_relative_path": "../../lp333/results/subgroup_classification.json",
+    "source_sha256": "1e8073d58a920d2e5f59804f24f685e50f20dba41139c5520fb8863dc4ee3d3a",
+    "extracted_fields": [
+      "order",
+      "reduction_mod9",
+      "reduction_mod37_order",
+      "mod37_full_reduction",
+      "summary.killed_ids"
+    ],
+    "note": "Independently regenerable by lp333/code/classify.py; this copy makes compression_theorem self-contained."
+  },
+  "theoremA_mod3": {
+    "effect": "(Z/3)^* has order 2; Theorem A(p=3) forbids every class whose image mod 3 is (Z/3)^* since 668 is not a sum of two squares. The surviving classes have image mod 3 = {1}, i.e. H lies in the order-108 kernel -- the reason the classification enumerates subgroups of that kernel.",
+    "kernel_order": 108
+  },
+  "theoremA_mod37": {
+    "forbidden_ids": [
+      25,
+      26,
+      27,
+      29
+    ],
+    "vendored_killed_ids": [
+      25,
+      26,
+      27,
+      29
+    ],
+    "agree": true
+  },
+  "theoremC_mod37_real_index2": {
+    "qr37_family_ids": [
+      20,
+      21,
+      22,
+      28
+    ],
+    "668_is_sum_of_two_squares_in_O_Qsqrt37": true,
+    "forbidden_by_C": [],
+    "note": "37 = 1 (mod 4): image QR(37) is the REAL quadratic case (Theorem C).  668 IS a sum of two squares in O_{Q(sqrt37)}, so Theorem C does NOT fire; the image-QR(37) classes are left unsettled by Theorems A/C (the prior study settled them by meet-in-the-middle)."
+  },
+  "boundary": {
+    "forbidden_by_theorems_here": [
+      25,
+      26,
+      27,
+      29
+    ],
+    "not_settled_by_theorems_here": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      28
+    ],
+    "comment": "Theorems A/C forbid exactly the 4 surjecting-mod-37 classes (ids 25,26,27,29) and are the source of the mod-3 reduction to the order-108 kernel.  The remaining classes are not settled by these obstructions -- we do NOT claim they are irreducibly computational."
+  },
+  "per_family": [
+    {
+      "id": 0,
+      "order": 1,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 1,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 1,
+      "order": 2,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 2,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 2,
+      "order": 3,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 1,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 3,
+      "order": 3,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 3,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 3,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 5,
+      "order": 3,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 3,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 6,
+      "order": 4,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 4,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 7,
+      "order": 6,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 2,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 8,
+      "order": 6,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 6,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 9,
+      "order": 6,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 6,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 10,
+      "order": 6,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 6,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 11,
+      "order": 9,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 3,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 12,
+      "order": 9,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 9,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 13,
+      "order": 9,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 9,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 14,
+      "order": 9,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 9,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 15,
+      "order": 12,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 4,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 16,
+      "order": 12,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 12,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 17,
+      "order": 12,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 12,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 18,
+      "order": 12,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 12,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 19,
+      "order": 18,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 6,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 20,
+      "order": 18,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 18,
+      "verdict": "not settled by Theorems A/C",
+      "method": "image=QR(37): Theorem C does NOT fire (668 is a sum of two squares in O_{Q(sqrt37)})"
+    },
+    {
+      "id": 21,
+      "order": 18,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 18,
+      "verdict": "not settled by Theorems A/C",
+      "method": "image=QR(37): Theorem C does NOT fire (668 is a sum of two squares in O_{Q(sqrt37)})"
+    },
+    {
+      "id": 22,
+      "order": 18,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 18,
+      "verdict": "not settled by Theorems A/C",
+      "method": "image=QR(37): Theorem C does NOT fire (668 is a sum of two squares in O_{Q(sqrt37)})"
+    },
+    {
+      "id": 23,
+      "order": 27,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 9,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 24,
+      "order": 36,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 12,
+      "verdict": "not settled by Theorems A/C",
+      "method": "needs other methods"
+    },
+    {
+      "id": 25,
+      "order": 36,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 36,
+      "verdict": "FORBIDDEN class",
+      "method": "Theorem A (surjective mod 37)"
+    },
+    {
+      "id": 26,
+      "order": 36,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 36,
+      "verdict": "FORBIDDEN class",
+      "method": "Theorem A (surjective mod 37)"
+    },
+    {
+      "id": 27,
+      "order": 36,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 36,
+      "verdict": "FORBIDDEN class",
+      "method": "Theorem A (surjective mod 37)"
+    },
+    {
+      "id": 28,
+      "order": 54,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 18,
+      "verdict": "not settled by Theorems A/C",
+      "method": "image=QR(37): Theorem C does NOT fire (668 is a sum of two squares in O_{Q(sqrt37)})"
+    },
+    {
+      "id": 29,
+      "order": 108,
+      "img_mod3": [
+        1
+      ],
+      "mod37_order": 36,
+      "verdict": "FORBIDDEN class",
+      "method": "Theorem A (surjective mod 37)"
+    }
+  ]
+}

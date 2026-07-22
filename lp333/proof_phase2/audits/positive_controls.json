@@ -1,0 +1,149 @@
+{
+  "length_5": {
+    "cnf": "controls/positive_L5.cnf",
+    "cnf_sha256": "4325973be13f0c61c5a5f839339462248ccdb8fac708c6015eae9ca25c056c6d",
+    "exhaustive_equivalence_audit": {
+      "assignments_checked": 256,
+      "kind": "exhaustive-small-model-equivalence",
+      "result": "PASS",
+      "satisfying_assignments": 50
+    },
+    "known_normalized_legendre_pair": {
+      "a": [
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "b": [
+        1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    "known_pair_directly_verified": true,
+    "known_pair_satisfies_cnf": true,
+    "length": 5,
+    "model": {
+      "direct_pb_obstructions": [],
+      "length": 5,
+      "num_clauses": 721,
+      "num_variables": 123,
+      "orbit_count": 5,
+      "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+      "paf_targets": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "pair_xor_count_per_sequence": 10,
+      "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+      "primary_orbit_variables": 10,
+      "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+      "row_zero_normalization": "za[0] = zb[0] = 0",
+      "shift_representatives": 4,
+      "xor_encoding": "four-clause exact Tseitin XOR"
+    },
+    "solver_log": "logs/positive_L5_solver.log",
+    "solver_log_sha256": "0045e1566c9a3a9811966529adb24da9553a83852cc5577bb9b678e625d75025",
+    "solver_run": {
+      "command": [
+        "cadical",
+        "-q",
+        "-w",
+        "./controls/positive_L5.witness",
+        "./controls/positive_L5.cnf"
+      ],
+      "returncode": 10,
+      "timeout_seconds": 1800
+    },
+    "solver_status": "SAT",
+    "solver_witness_directly_verified": true,
+    "witness": "controls/positive_L5.witness",
+    "witness_sha256": "593f6f9a68e36b6d82a374af31c9ae1e9d82fa933c469b98a35de22f99fbb64d"
+  },
+  "length_7": {
+    "cnf": "controls/positive_L7.cnf",
+    "cnf_sha256": "83ff4312637773ca2de25703331476c3e68b4313f20258cd1804c124ef952109",
+    "exhaustive_equivalence_audit": {
+      "assignments_checked": 4096,
+      "kind": "exhaustive-small-model-equivalence",
+      "result": "PASS",
+      "satisfying_assignments": 196
+    },
+    "known_normalized_legendre_pair": {
+      "a": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "b": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ]
+    },
+    "known_pair_directly_verified": true,
+    "known_pair_satisfies_cnf": true,
+    "length": 7,
+    "model": {
+      "direct_pb_obstructions": [],
+      "length": 7,
+      "num_clauses": 1383,
+      "num_variables": 229,
+      "orbit_count": 7,
+      "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+      "paf_targets": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "pair_xor_count_per_sequence": 21,
+      "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+      "primary_orbit_variables": 14,
+      "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+      "row_zero_normalization": "za[0] = zb[0] = 0",
+      "shift_representatives": 6,
+      "xor_encoding": "four-clause exact Tseitin XOR"
+    },
+    "solver_log": "logs/positive_L7_solver.log",
+    "solver_log_sha256": "40827aab95150483ca66e925908ca9e240049bd02562707223be2ea353dd2745",
+    "solver_run": {
+      "command": [
+        "cadical",
+        "-q",
+        "-w",
+        "./controls/positive_L7.witness",
+        "./controls/positive_L7.cnf"
+      ],
+      "returncode": 10,
+      "timeout_seconds": 1800
+    },
+    "solver_status": "SAT",
+    "solver_witness_directly_verified": true,
+    "witness": "controls/positive_L7.witness",
+    "witness_sha256": "906b32993ef793f4d2b4d02b627e2bf3ecd907daa8c73696f47e0e3a216fd69a"
+  },
+  "transformations": {
+    "kind": "exhaustive-xor-and-pb-transformation-truth-tables",
+    "result": "PASS",
+    "two_value_range_assignments": 8,
+    "unit_split_assignment_extensions": 4,
+    "xor_equality_assignments": 8
+  }
+}

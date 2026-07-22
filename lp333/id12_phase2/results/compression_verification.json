@@ -1,0 +1,50 @@
+{
+  "V1_identity": {
+    "trials": 200,
+    "mismatches": 0,
+    "ok": true
+  },
+  "V1b_LP_projection": {
+    "class_sizes": {
+      "0": 37,
+      "1": 37,
+      "2": 37,
+      "3": 37,
+      "4": 37,
+      "5": 37,
+      "6": 37,
+      "7": 37,
+      "8": 37
+    },
+    "predicted_compressed_PAFsum": {
+      "0": 594,
+      "1": -74,
+      "2": -74,
+      "3": -74,
+      "4": -74,
+      "5": -74,
+      "6": -74,
+      "7": -74,
+      "8": -74
+    },
+    "expect_s0": 594,
+    "expect_snz": -74,
+    "ok": true
+  },
+  "V2_dfs": {
+    "engine": "exhaustive nested DFS (no MITM)",
+    "sizes_by_nbig": {
+      "0": 252,
+      "1": 0,
+      "2": 5040
+    },
+    "feasible_count": 0,
+    "witnesses": []
+  },
+  "V2b_cpsat": {
+    "engine": "cp-sat (enumerate_all)",
+    "status": "INFEASIBLE",
+    "feasible_count": 0,
+    "witnesses": []
+  }
+}

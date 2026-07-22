@@ -1,0 +1,12 @@
+{
+  "id": 19,
+  "order": 18,
+  "r": 35,
+  "num_reps": 34,
+  "seconds": 0.0,
+  "status": "INFEASIBLE",
+  "symmetry_breaking": true,
+  "method": "exact CP-SAT (booleanized PAF) with multiplier+swap symmetry breaking",
+  "sat": false,
+  "verified_no_invariant_LP": true
+}

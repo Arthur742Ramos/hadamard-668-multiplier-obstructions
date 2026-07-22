@@ -1,0 +1,10 @@
+{
+  "id": 9,
+  "order": 6,
+  "r": 59,
+  "num_reps": 58,
+  "seconds": 240.08,
+  "status": "UNKNOWN",
+  "method": "exact CP-SAT (booleanized PAF system)",
+  "sat": null
+}

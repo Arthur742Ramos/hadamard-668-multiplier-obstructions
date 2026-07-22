@@ -1,0 +1,11 @@
+{
+  "id": 15,
+  "order": 12,
+  "r": 50,
+  "num_reps": 49,
+  "seconds": 0.0,
+  "status": "INFEASIBLE",
+  "method": "exact CP-SAT (booleanized PAF system)",
+  "sat": false,
+  "verified_no_invariant_LP": true
+}

@@ -1,0 +1,843 @@
+{
+  "infinite_families_theoremA": [
+    {
+      "p": 3,
+      "r_used": 7,
+      "common_difference": 294,
+      "construction": "L = 0 (mod p), L = r-1 (mod r^2), L odd; v_r(L+1)=1 so 2L+2 not a sum of two squares; infinitely many such L (an arithmetic progression).",
+      "examples": [
+        {
+          "L": 153,
+          "2L+2": 308,
+          "r": 7,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod153": 2
+        },
+        {
+          "L": 447,
+          "2L+2": 896,
+          "r": 7,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod447": 2
+        },
+        {
+          "L": 741,
+          "2L+2": 1484,
+          "r": 7,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod741": 2
+        },
+        {
+          "L": 1035,
+          "2L+2": 2072,
+          "r": 7,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1035": 2
+        },
+        {
+          "L": 1329,
+          "2L+2": 2660,
+          "r": 7,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1329": 2
+        },
+        {
+          "L": 1623,
+          "2L+2": 3248,
+          "r": 7,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1623": 2
+        },
+        {
+          "L": 1917,
+          "2L+2": 3836,
+          "r": 7,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1917": 2
+        },
+        {
+          "L": 2211,
+          "2L+2": 4424,
+          "r": 7,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod2211": 2
+        },
+        {
+          "L": 2505,
+          "2L+2": 5012,
+          "r": 7,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod2505": 2
+        },
+        {
+          "L": 2799,
+          "2L+2": 5600,
+          "r": 7,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod2799": 2
+        },
+        {
+          "L": 3093,
+          "2L+2": 6188,
+          "r": 7,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod3093": 2
+        },
+        {
+          "L": 3387,
+          "2L+2": 6776,
+          "r": 7,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod3387": 2
+        }
+      ]
+    },
+    {
+      "p": 5,
+      "r_used": 3,
+      "common_difference": 90,
+      "construction": "L = 0 (mod p), L = r-1 (mod r^2), L odd; v_r(L+1)=1 so 2L+2 not a sum of two squares; infinitely many such L (an arithmetic progression).",
+      "examples": [
+        {
+          "L": 65,
+          "2L+2": 132,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod65": 2
+        },
+        {
+          "L": 155,
+          "2L+2": 312,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod155": 2
+        },
+        {
+          "L": 245,
+          "2L+2": 492,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod245": 2
+        },
+        {
+          "L": 335,
+          "2L+2": 672,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod335": 2
+        },
+        {
+          "L": 425,
+          "2L+2": 852,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod425": 2
+        },
+        {
+          "L": 515,
+          "2L+2": 1032,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod515": 2
+        },
+        {
+          "L": 605,
+          "2L+2": 1212,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod605": 2
+        },
+        {
+          "L": 695,
+          "2L+2": 1392,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod695": 2
+        },
+        {
+          "L": 785,
+          "2L+2": 1572,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod785": 2
+        },
+        {
+          "L": 875,
+          "2L+2": 1752,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod875": 2
+        },
+        {
+          "L": 965,
+          "2L+2": 1932,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod965": 2
+        },
+        {
+          "L": 1055,
+          "2L+2": 2112,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1055": 2
+        }
+      ]
+    },
+    {
+      "p": 7,
+      "r_used": 3,
+      "common_difference": 126,
+      "construction": "L = 0 (mod p), L = r-1 (mod r^2), L odd; v_r(L+1)=1 so 2L+2 not a sum of two squares; infinitely many such L (an arithmetic progression).",
+      "examples": [
+        {
+          "L": 119,
+          "2L+2": 240,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod119": 3
+        },
+        {
+          "L": 245,
+          "2L+2": 492,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod245": 3
+        },
+        {
+          "L": 371,
+          "2L+2": 744,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod371": 3
+        },
+        {
+          "L": 497,
+          "2L+2": 996,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod497": 3
+        },
+        {
+          "L": 623,
+          "2L+2": 1248,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod623": 3
+        },
+        {
+          "L": 749,
+          "2L+2": 1500,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod749": 3
+        },
+        {
+          "L": 875,
+          "2L+2": 1752,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod875": 3
+        },
+        {
+          "L": 1001,
+          "2L+2": 2004,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1001": 3
+        },
+        {
+          "L": 1127,
+          "2L+2": 2256,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1127": 3
+        },
+        {
+          "L": 1253,
+          "2L+2": 2508,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1253": 3
+        },
+        {
+          "L": 1379,
+          "2L+2": 2760,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1379": 3
+        },
+        {
+          "L": 1505,
+          "2L+2": 3012,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1505": 3
+        }
+      ]
+    },
+    {
+      "p": 11,
+      "r_used": 3,
+      "common_difference": 198,
+      "construction": "L = 0 (mod p), L = r-1 (mod r^2), L odd; v_r(L+1)=1 so 2L+2 not a sum of two squares; infinitely many such L (an arithmetic progression).",
+      "examples": [
+        {
+          "L": 11,
+          "2L+2": 24,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod11": 2
+        },
+        {
+          "L": 209,
+          "2L+2": 420,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod209": 2
+        },
+        {
+          "L": 407,
+          "2L+2": 816,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod407": 2
+        },
+        {
+          "L": 605,
+          "2L+2": 1212,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod605": 2
+        },
+        {
+          "L": 803,
+          "2L+2": 1608,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod803": 2
+        },
+        {
+          "L": 1001,
+          "2L+2": 2004,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1001": 2
+        },
+        {
+          "L": 1199,
+          "2L+2": 2400,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1199": 2
+        },
+        {
+          "L": 1397,
+          "2L+2": 2796,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1397": 2
+        },
+        {
+          "L": 1595,
+          "2L+2": 3192,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1595": 2
+        },
+        {
+          "L": 1793,
+          "2L+2": 3588,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1793": 2
+        },
+        {
+          "L": 1991,
+          "2L+2": 3984,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1991": 2
+        },
+        {
+          "L": 2189,
+          "2L+2": 4380,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod2189": 2
+        }
+      ]
+    },
+    {
+      "p": 13,
+      "r_used": 3,
+      "common_difference": 234,
+      "construction": "L = 0 (mod p), L = r-1 (mod r^2), L odd; v_r(L+1)=1 so 2L+2 not a sum of two squares; infinitely many such L (an arithmetic progression).",
+      "examples": [
+        {
+          "L": 65,
+          "2L+2": 132,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod65": 2
+        },
+        {
+          "L": 299,
+          "2L+2": 600,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod299": 2
+        },
+        {
+          "L": 533,
+          "2L+2": 1068,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod533": 2
+        },
+        {
+          "L": 767,
+          "2L+2": 1536,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod767": 2
+        },
+        {
+          "L": 1001,
+          "2L+2": 2004,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1001": 2
+        },
+        {
+          "L": 1235,
+          "2L+2": 2472,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1235": 2
+        },
+        {
+          "L": 1469,
+          "2L+2": 2940,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1469": 2
+        },
+        {
+          "L": 1703,
+          "2L+2": 3408,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1703": 2
+        },
+        {
+          "L": 1937,
+          "2L+2": 3876,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1937": 2
+        },
+        {
+          "L": 2171,
+          "2L+2": 4344,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod2171": 2
+        },
+        {
+          "L": 2405,
+          "2L+2": 4812,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod2405": 2
+        },
+        {
+          "L": 2639,
+          "2L+2": 5280,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod2639": 2
+        }
+      ]
+    },
+    {
+      "p": 37,
+      "r_used": 3,
+      "common_difference": 666,
+      "construction": "L = 0 (mod p), L = r-1 (mod r^2), L odd; v_r(L+1)=1 so 2L+2 not a sum of two squares; infinitely many such L (an arithmetic progression).",
+      "examples": [
+        {
+          "L": 407,
+          "2L+2": 816,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod407": 2
+        },
+        {
+          "L": 1073,
+          "2L+2": 2148,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1073": 2
+        },
+        {
+          "L": 1739,
+          "2L+2": 3480,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod1739": 2
+        },
+        {
+          "L": 2405,
+          "2L+2": 4812,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod2405": 2
+        },
+        {
+          "L": 3071,
+          "2L+2": 6144,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod3071": 2
+        },
+        {
+          "L": 3737,
+          "2L+2": 7476,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod3737": 2
+        },
+        {
+          "L": 4403,
+          "2L+2": 8808,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod4403": 2
+        },
+        {
+          "L": 5069,
+          "2L+2": 10140,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod5069": 2
+        },
+        {
+          "L": 5735,
+          "2L+2": 11472,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod5735": 2
+        },
+        {
+          "L": 6401,
+          "2L+2": 12804,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod6401": 2
+        },
+        {
+          "L": 7067,
+          "2L+2": 14136,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod7067": 2
+        },
+        {
+          "L": 7733,
+          "2L+2": 15468,
+          "r": 3,
+          "v_r(L+1)": 1,
+          "not_sos2": true,
+          "surjective_H_generator_mod7733": 2
+        }
+      ]
+    }
+  ],
+  "density_theoremA": {
+    "statement": "For each fixed prime p, the odd multiples L of p with 2L+2 not a sum of two squares have natural density 1 among odd multiples of p (Landau-Ramanujan: sums of two squares have density 0).  For each such L the fixed-symmetry class 'H surjects onto (Z/p)^*' is FORBIDDEN.  This forbids symmetry classes, not lengths: an LP of length L may still exist with a smaller-image (or trivial) multiplier group.",
+    "empirical_note": "empirical fractions up to 4000 are a finite-range under-estimate that tends to 1 like 1 - O(1/sqrt(log X))",
+    "empirical": {
+      "3": {
+        "odd_multiples_of_p_upto_4000": 667,
+        "surjecting_class_forbidden": 400,
+        "fraction": 0.5997
+      },
+      "5": {
+        "odd_multiples_of_p_upto_4000": 400,
+        "surjecting_class_forbidden": 281,
+        "fraction": 0.7025
+      },
+      "7": {
+        "odd_multiples_of_p_upto_4000": 286,
+        "surjecting_class_forbidden": 185,
+        "fraction": 0.6469
+      },
+      "13": {
+        "odd_multiples_of_p_upto_4000": 154,
+        "surjecting_class_forbidden": 110,
+        "fraction": 0.7143
+      },
+      "37": {
+        "odd_multiples_of_p_upto_4000": 54,
+        "surjecting_class_forbidden": 36,
+        "fraction": 0.6667
+      }
+    }
+  },
+  "simultaneous_restrictions": [
+    {
+      "L": 185,
+      "2L+2": 372,
+      "N_sos2": false,
+      "primes": {
+        "5": {
+          "p": 5,
+          "p_mod4": 1,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": true,
+          "qr_case": "real quadratic Q(sqrt 5) (Theorem C)"
+        },
+        "37": {
+          "p": 37,
+          "p_mod4": 1,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": true,
+          "qr_case": "real quadratic Q(sqrt 37) (Theorem C)"
+        }
+      }
+    },
+    {
+      "L": 333,
+      "2L+2": 668,
+      "N_sos2": false,
+      "primes": {
+        "3": {
+          "p": 3,
+          "p_mod4": 3,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": false,
+          "qr_case": "imaginary Q(sqrt -3): Proposition B non-obstructive"
+        },
+        "37": {
+          "p": 37,
+          "p_mod4": 1,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": false,
+          "qr_case": "real quadratic Q(sqrt 37) (Theorem C)"
+        }
+      }
+    },
+    {
+      "L": 111,
+      "2L+2": 224,
+      "N_sos2": false,
+      "primes": {
+        "3": {
+          "p": 3,
+          "p_mod4": 3,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": false,
+          "qr_case": "imaginary Q(sqrt -3): Proposition B non-obstructive"
+        },
+        "37": {
+          "p": 37,
+          "p_mod4": 1,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": true,
+          "qr_case": "real quadratic Q(sqrt 37) (Theorem C)"
+        }
+      }
+    },
+    {
+      "L": 55,
+      "2L+2": 112,
+      "N_sos2": false,
+      "primes": {
+        "5": {
+          "p": 5,
+          "p_mod4": 1,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": false,
+          "qr_case": "real quadratic Q(sqrt 5) (Theorem C)"
+        },
+        "11": {
+          "p": 11,
+          "p_mod4": 3,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": false,
+          "qr_case": "imaginary Q(sqrt -11): Proposition B non-obstructive"
+        }
+      }
+    },
+    {
+      "L": 65,
+      "2L+2": 132,
+      "N_sos2": false,
+      "primes": {
+        "5": {
+          "p": 5,
+          "p_mod4": 1,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": true,
+          "qr_case": "real quadratic Q(sqrt 5) (Theorem C)"
+        },
+        "13": {
+          "p": 13,
+          "p_mod4": 1,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": true,
+          "qr_case": "real quadratic Q(sqrt 13) (Theorem C)"
+        }
+      }
+    },
+    {
+      "L": 1443,
+      "2L+2": 2888,
+      "N_sos2": true,
+      "primes": {
+        "3": {
+          "p": 3,
+          "p_mod4": 3,
+          "full_image_killed_by_A": false,
+          "qr_image_killed_by_C": false,
+          "qr_case": "imaginary Q(sqrt -3): Proposition B non-obstructive"
+        },
+        "13": {
+          "p": 13,
+          "p_mod4": 1,
+          "full_image_killed_by_A": false,
+          "qr_image_killed_by_C": false,
+          "qr_case": "real quadratic Q(sqrt 13) (Theorem C)"
+        },
+        "37": {
+          "p": 37,
+          "p_mod4": 1,
+          "full_image_killed_by_A": false,
+          "qr_image_killed_by_C": false,
+          "qr_case": "real quadratic Q(sqrt 37) (Theorem C)"
+        }
+      }
+    },
+    {
+      "L": 555,
+      "2L+2": 1112,
+      "N_sos2": false,
+      "primes": {
+        "3": {
+          "p": 3,
+          "p_mod4": 3,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": false,
+          "qr_case": "imaginary Q(sqrt -3): Proposition B non-obstructive"
+        },
+        "5": {
+          "p": 5,
+          "p_mod4": 1,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": true,
+          "qr_case": "real quadratic Q(sqrt 5) (Theorem C)"
+        },
+        "37": {
+          "p": 37,
+          "p_mod4": 1,
+          "full_image_killed_by_A": true,
+          "qr_image_killed_by_C": true,
+          "qr_case": "real quadratic Q(sqrt 37) (Theorem C)"
+        }
+      }
+    }
+  ],
+  "spotlight_L185": {
+    "L": 185,
+    "2L+2": 372,
+    "N_sos2": false,
+    "primes": {
+      "5": {
+        "p": 5,
+        "p_mod4": 1,
+        "full_image_killed_by_A": true,
+        "qr_image_killed_by_C": true,
+        "qr_case": "real quadratic Q(sqrt 5) (Theorem C)"
+      },
+      "37": {
+        "p": 37,
+        "p_mod4": 1,
+        "full_image_killed_by_A": true,
+        "qr_image_killed_by_C": true,
+        "qr_case": "real quadratic Q(sqrt 37) (Theorem C)"
+      }
+    }
+  }
+}

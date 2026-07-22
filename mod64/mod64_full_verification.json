@@ -1,0 +1,20 @@
+{
+  "valid_modular_hadamard": true,
+  "valid_exact_hadamard": false,
+  "order": 668,
+  "modulus": 64,
+  "checked_off_diagonal_pairs": 222778,
+  "exact_nonzero_off_diagonal_pairs": 8684,
+  "exact_inner_product_histogram": {
+    "-512": 668,
+    "-320": 668,
+    "-256": 668,
+    "-192": 1336,
+    "-64": 1336,
+    "128": 2004,
+    "256": 1336,
+    "384": 668
+  },
+  "first_modular_violations": [],
+  "arithmetic": "exact integer bit counts"
+}

@@ -1,0 +1,97 @@
+{
+  "cnf_semantic_equivalence": {
+    "canonical_cnf_true_count": 0,
+    "kind": "random-orbit-model-equivalence",
+    "pb_sum_outputs_checked": 432,
+    "result": "PASS",
+    "samples": 12,
+    "seed": 333019,
+    "semantic_true_count": 0,
+    "xor_values_checked": 14280
+  },
+  "direct_orbit_paf_equivalence": {
+    "kind": "direct-full-length-orbit-PAF-audit",
+    "random_orbit_assignments": 24,
+    "representative_PAFs_checked": 816,
+    "result": "PASS",
+    "subgroup_id": 19,
+    "subgroup_order": 18
+  },
+  "model": {
+    "direct_pb_obstructions": [
+      {
+        "coefficient_sum_per_sequence": 111,
+        "diagonal_constant": 222,
+        "maximum_weighted_xor_sum": 222,
+        "representative_index": 0,
+        "required_weighted_xor_sum": 334,
+        "shift": 111,
+        "shortfall": 112
+      },
+      {
+        "coefficient_sum_per_sequence": 111,
+        "diagonal_constant": 222,
+        "maximum_weighted_xor_sum": 222,
+        "representative_index": 1,
+        "required_weighted_xor_sum": 334,
+        "shift": 222,
+        "shortfall": 112
+      }
+    ],
+    "length": 333,
+    "num_clauses": 142345,
+    "num_variables": 20889,
+    "orbit_count": 35,
+    "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+    "paf_targets": [
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334
+    ],
+    "pair_xor_count_per_sequence": 595,
+    "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+    "primary_orbit_variables": 70,
+    "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+    "row_zero_normalization": "za[0] = zb[0] = 0",
+    "shift_representatives": 34,
+    "xor_encoding": "four-clause exact Tseitin XOR"
+  },
+  "subgroup_generators": [
+    10,
+    64,
+    85
+  ],
+  "subgroup_id": 19,
+  "subgroup_order": 18
+}

@@ -1,0 +1,20 @@
+{
+  "galois_collapse_numeric_illustration": {
+    "trials": 60,
+    "max_abs_error": 1.2096520545571998e-13,
+    "numeric_illustration_ok": true,
+    "note": "NUMERIC ILLUSTRATION ONLY (floating-point DFT); not a certificate. Shows A(k9,C_m)=sigma^m(Atil(k9)), so the 4 coset PSD equations per k9 collapse to one ring equation."
+  },
+  "compression_trivial_char": {
+    "orbit_sizes": [
+      1,
+      9,
+      9,
+      9,
+      9
+    ],
+    "direct_orbit_evaluation_matches_column_sum": true,
+    "conclusion": "k37=0 slice = 9-compression pair (column sums by direct orbit evaluation); with atilde_j in V this is the elementary obstruction."
+  },
+  "period_polynomial_exact": "x^4 + x^3 + 5x^2 + 7x + 49 (see periods.py)"
+}

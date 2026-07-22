@@ -1,0 +1,29 @@
+{
+  "id6": {
+    "order": 4,
+    "r37": 4,
+    "V_size": 20,
+    "cpsat": {
+      "status": "UNKNOWN",
+      "infeasible": false
+    }
+  },
+  "id8": {
+    "order": 6,
+    "r37": 6,
+    "V_size": 14,
+    "cpsat": {
+      "status": "INFEASIBLE",
+      "infeasible": true
+    }
+  },
+  "id12": {
+    "order": 9,
+    "r37": 9,
+    "V_size": 10,
+    "cpsat": {
+      "status": "INFEASIBLE",
+      "infeasible": true
+    }
+  }
+}

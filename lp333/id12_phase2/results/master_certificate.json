@@ -1,0 +1,69 @@
+{
+  "family": "id12",
+  "claim": "no id12-invariant Legendre pair of length 333 exists",
+  "value_set_V": [
+    -37,
+    -35,
+    -19,
+    -17,
+    -1,
+    1,
+    17,
+    19,
+    35,
+    37
+  ],
+  "K37_orbit_sizes_of_Z37": [
+    1,
+    9,
+    9,
+    9,
+    9
+  ],
+  "K37": [
+    1,
+    7,
+    9,
+    10,
+    12,
+    16,
+    26,
+    33,
+    34
+  ],
+  "necessary_condition": {
+    "C1_column_sum_values": "atilde_j,btilde_j in V",
+    "C2_row_sums": "sum atilde, sum btilde in {+-1}",
+    "C3_compression_paf": "PAF_atilde(s)+PAF_btilde(s) = -74 for s=1..8"
+  },
+  "decisions": {
+    "E1_exhaustive": {
+      "engine": "exhaustive (forced 594 -> 2 big of |17|)",
+      "forced_squared_norm": 594,
+      "unique_square_multiset": {
+        "1": 16,
+        "289": 2
+      },
+      "candidates_by_nbig": {
+        "0": 252,
+        "1": 0,
+        "2": 5040
+      },
+      "pairs_checked": 2540160,
+      "feasible_count": 0,
+      "infeasible": true
+    },
+    "E2_cpsat": {
+      "engine": "cp-sat (full value set V)",
+      "status": "INFEASIBLE",
+      "infeasible": true
+    },
+    "E3_z3": {
+      "engine": "z3 (reduced-equivalent domain {+-1,+-17}, 2 big)",
+      "result": "unsat",
+      "infeasible": true
+    }
+  },
+  "all_engines_agree_infeasible": true,
+  "verdict": "IMPOSSIBLE (proved): id12 admits no invariant Legendre pair"
+}

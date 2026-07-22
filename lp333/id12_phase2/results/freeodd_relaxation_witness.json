@@ -1,0 +1,43 @@
+{
+  "status": "OPTIMAL",
+  "feasible": true,
+  "atilde": [
+    -21,
+    1,
+    5,
+    1,
+    1,
+    5,
+    5,
+    1,
+    3
+  ],
+  "btilde": [
+    -3,
+    5,
+    -1,
+    -3,
+    1,
+    -3,
+    3,
+    -1,
+    1
+  ],
+  "rowsums": [
+    1,
+    -1
+  ],
+  "squared_norm": 594,
+  "PAFsum": [
+    -74,
+    -74,
+    -74,
+    -74,
+    -74,
+    -74,
+    -74,
+    -74
+  ],
+  "verified": true,
+  "note": "Deterministic canonical witness (matches general_verifier.FREE_ODD_WITNESS). Proves the free-odd 9-compression relaxation is feasible; id0/id1 NOT closed."
+}

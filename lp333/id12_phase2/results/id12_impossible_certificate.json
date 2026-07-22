@@ -1,0 +1,212 @@
+{
+  "title": "Impossibility certificate: id12-invariant Legendre pair of length 333",
+  "context": {
+    "L": 333,
+    "hadamard_order": 668,
+    "family": "id12 = <10,46> in (Z/333)^*, order 9",
+    "structure": "trivial mod 9; image mod 37 is the order-9 subgroup K37 of (Z/37)^* (index-4, quartic cyclotomy)",
+    "prior_status": "OPEN (only order->=9 common-multiplier LP(333) family left open after phase 1)",
+    "new_status": "IMPOSSIBLE (proved)"
+  },
+  "theorem": "No length-333 Legendre pair invariant under H=id12 exists. Hence a Hadamard matrix of order 668 cannot be built from an id12-invariant Legendre pair. (This does NOT resolve H(668) in general; it closes the last order->=9 multiplier-invariant family.)",
+  "proof_outline": [
+    "Z_333 = Z_9 x Z_37 (CRT). H trivial mod 9, K37 (order 9) mod 37, so an H-invariant sequence a is a function a(c,d) constant on the K37-orbits of the Z_37 coordinate; those orbits are {0},C0,C1,C2,C3 of sizes 1,9,9,9,9.",
+    "9-compression atilde_j = sum_t a_{j+9t} equals the column sums; each atilde_j = eps0 + 9(eps1+eps2+eps3+eps4), eps in {+-1}, so atilde_j in V = {+-1,+-17,+-19,+-35,+-37}.",
+    "Compression identity PAF_atilde(s) = sum_{s'==s (mod 9)} PAF_a(s') (37 shifts s' per s). For an LP (PAF_a(s')+PAF_b(s') = -2, s'!=0) and s=1..8 this gives PAF_atilde(s)+PAF_btilde(s) = 37*(-2) = -74.",
+    "Row sums: sum atilde = sum a = +-1 (LP), sum btilde = +-1.",
+    "The identity sum_{s=0}^{8} PAF_x(s) = (sum x)^2 forces PAF_atilde(0)+PAF_btilde(0) = sum atilde^2 + sum btilde^2 = 2 - 8*(-74) = 594. Over V-squares {1,289,361,1225,1369}, the ONLY 18-term multiset summing to 594 is 16x1 + 2x289: exactly two columns have |value|=17, sixteen have |value|=1.",
+    "Row sums then force the (2,0) structure: both big columns lie in one sequence, one = +17 (position p) and one = -17 (position q != p), its other 7 entries +-1; the OTHER sequence is nine +-1 entries. (A lone +-17 can never give row sum +-1, so the (1,1) split is impossible.)",
+    "PRIMARY (analytic, no enumeration): evaluate the single shift s = (q-p) mod 9 (nonzero). PAF_atilde(s) = one big-big term atilde_p*atilde_q = 17*(-17) = -289 (unique, since 2s != 0 mod 9) + two big-small terms (each (+-17)*(+-1) <= +17) + six small-small terms (each (+-1)*(+-1) <= +1), so PAF_atilde(s) <= -289+34+6 = -249. And PAF_btilde(s) <= 9 (nine +-1 products). Hence PAF_atilde(s)+PAF_btilde(s) <= -240 < -74, contradicting the required -74. (Term structure verified for all 72 distinct (p,q); the true maximum of PAF_atilde(q-p) is -251, so the bound holds with room.)",
+    "INDEPENDENT CONFIRMATION: an exhaustive square-sum-pruned search over all such (atilde,btilde) finds NO pair with PAF-sum -74 for all s=1..8 (0 of 2,540,160). Same conclusion, no shared logic."
+  ],
+  "primary_proof": "analytic single-shift contradiction (no pair enumeration)",
+  "key_new_ingredient": "The exact K37-invariance value-set restriction atilde_j in V. A naive 9-compression that treats column sums as free odd integers admits 842 distinct 18-square multisets summing to 594 and is NOT closed; restricting to V leaves the unique 16x1+2x289 multiset, which is infeasible. This is why prior work (which did not run a value-set-restricted 9-compression) left id12 open.",
+  "symmetry_audit": "Neither proof uses symmetry breaking. The PRIMARY analytic argument picks a single canonical shift s=q-p and bounds one PAF value, using only the forced structure -- no orbit quotient. The independent exhaustive confirmation over 2,540,160 compressed pairs is likewise complete and unquotiented. (Symmetries -- Z_9 column rotation, (Z/9)^* column scaling, the Z_4 cyclotomic rotation, negation and A<->B swap -- all exist but are deliberately not relied upon.)",
+  "decision_engines": {
+    "E1_exhaustive": {
+      "engine": "exhaustive (forced 594 -> 2 big of |17|)",
+      "forced_squared_norm": 594,
+      "unique_square_multiset": {
+        "1": 16,
+        "289": 2
+      },
+      "candidates_by_nbig": {
+        "0": 252,
+        "1": 0,
+        "2": 5040
+      },
+      "pairs_checked": 2540160,
+      "feasible_count": 0,
+      "infeasible": true
+    },
+    "E2_cpsat": {
+      "engine": "cp-sat (full value set V)",
+      "status": "INFEASIBLE",
+      "infeasible": true
+    },
+    "E3_z3": {
+      "engine": "z3 (reduced-equivalent domain {+-1,+-17}, 2 big)",
+      "result": "unsat",
+      "infeasible": true
+    }
+  },
+  "standalone_verifier": {
+    "overall_pass": true,
+    "group_id12_from_gens_10_46": [
+      1,
+      10,
+      46,
+      100,
+      118,
+      127,
+      145,
+      181,
+      271
+    ],
+    "K37": [
+      1,
+      7,
+      9,
+      10,
+      12,
+      16,
+      26,
+      33,
+      34
+    ],
+    "k37_orbit_sizes": [
+      1,
+      9,
+      9,
+      9,
+      9
+    ],
+    "value_set_V": [
+      -37,
+      -35,
+      -19,
+      -17,
+      -1,
+      1,
+      17,
+      19,
+      35,
+      37
+    ],
+    "compression_identity_exact": true,
+    "squared_norm_identity_exact": true,
+    "forced_squared_norm": 594,
+    "square_multisets_594": [
+      {
+        "1": 16,
+        "289": 2
+      }
+    ],
+    "square_multiset_unique_16x1_2x289": true,
+    "forced_structure_2_0": {
+      "ok": true,
+      "per_k_feasible_big_multisets": {
+        "0": [
+          []
+        ],
+        "1": [],
+        "2": [
+          [
+            -17,
+            17
+          ]
+        ]
+      },
+      "feasible_splits": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    "primary_analytic_proof": {
+      "ok": true,
+      "shift_used": "s = (q - p) mod 9 (nonzero)",
+      "term_decomposition": "1 big-big (=-289) + 2 big-small (<=+17 each) + 6 small-small (<=+1 each), verified for all 72 distinct (p,q)",
+      "bound_PAF_atilde": -249,
+      "bound_PAF_btilde": 9,
+      "bound_sum": -240,
+      "required_value": -74,
+      "contradiction": true
+    },
+    "analytic_numeric_confirmation": {
+      "max_PAF_atilde_at_q_minus_p": -251,
+      "analytic_bound": -249,
+      "bound_valid": true,
+      "max_PAF_btilde": 9,
+      "max_sum": -242,
+      "contradiction": true
+    },
+    "independent_exhaustive_feasible": false,
+    "independent_exhaustive_pruned_sequences": 5292,
+    "transcript": "========================================================================\nSTANDALONE VERIFIER  --  id12 impossibility  (LP 333 / Hadamard 668)\n========================================================================\n[PASS] H=<10,46> mod 333 = [1, 10, 46, 100, 118, 127, 145, 181, 271]\n        order 9, trivial mod 9, K37 = [1, 7, 9, 10, 12, 16, 26, 33, 34]\n[PASS] K37-orbit sizes of Z_37 = [1, 9, 9, 9, 9]\n[PASS] compression identity PAF_atilde(s)=sum_(s'=s mod9) PAF_a(s') (exact coefficient-matrix equality, all s)\n[PASS] identity sum_s PAF_x(s)=(sum x)^2 (coefficient matrix = all-ones)\n[PASS] column-sum value set V = [-37, -35, -19, -17, -1, 1, 17, 19, 35, 37]\n[PASS] forced squared norm = 594 (= (+-1)^2+(+-1)^2 - 8*(-74))\n[PASS] unique 18-square V-multiset -> 594 is 16x1 + 2x289\n[PASS] forced structure: two big columns (one +17, one -17) in a single sequence; the other all +-1 (splits [(0, 2), (2, 0)]; (1,1) impossible)\n[PASS] PRIMARY analytic proof: at s=q-p, PAF_a<=-249 and PAF_b<=9, so sum<=-240 < -74 (term-count verified for all 72 (p,q))\n[PASS] analytic bound confirmed numerically (max PAF_a at q-p = -251 <= -249; max PAF_b = 9)\n[PASS] independent confirmation: exhaustive compressed decision INFEASIBLE (5292 pruned sequences, 0 feasible)\n[PASS] positive controls: routine finds trivial solution=True, finds nontrivial -74 solution=True, accepts length-5 LP=True\n------------------------------------------------------------------------\nVERDICT: PROOF VERIFIED.  No id12-invariant Legendre pair of length 333 exists.\n         PRIMARY proof: analytic single-shift contradiction (PAF sum <= -240 at s=q-p, vs required -74).\n         Independently confirmed by exhaustive enumeration.\n         (Family id12 is IMPOSSIBLE; the last open order->=9 common-multiplier LP(333) family is now closed.)\n========================================================================\n"
+  },
+  "discrepancy_with_prior_free_odd_relaxation": {
+    "free_odd_18square_multisets_summing_to_594": 842,
+    "V_restricted_multisets": 1,
+    "V_restricted_multiset": {
+      "1": 16,
+      "289": 2
+    }
+  },
+  "all_engines_agree_infeasible": true,
+  "compression_cross_verification": {
+    "V1_identity": {
+      "trials": 200,
+      "mismatches": 0,
+      "ok": true
+    },
+    "V1b_LP_projection": {
+      "class_sizes": {
+        "0": 37,
+        "1": 37,
+        "2": 37,
+        "3": 37,
+        "4": 37,
+        "5": 37,
+        "6": 37,
+        "7": 37,
+        "8": 37
+      },
+      "predicted_compressed_PAFsum": {
+        "0": 594,
+        "1": -74,
+        "2": -74,
+        "3": -74,
+        "4": -74,
+        "5": -74,
+        "6": -74,
+        "7": -74,
+        "8": -74
+      },
+      "expect_s0": 594,
+      "expect_snz": -74,
+      "ok": true
+    },
+    "V2_dfs": {
+      "engine": "exhaustive nested DFS (no MITM)",
+      "sizes_by_nbig": {
+        "0": 252,
+        "1": 0,
+        "2": 5040
+      },
+      "feasible_count": 0,
+      "witnesses": []
+    },
+    "V2b_cpsat": {
+      "engine": "cp-sat (enumerate_all)",
+      "status": "INFEASIBLE",
+      "feasible_count": 0,
+      "witnesses": []
+    }
+  }
+}

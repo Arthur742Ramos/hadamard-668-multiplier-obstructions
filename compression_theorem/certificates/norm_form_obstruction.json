@@ -1,0 +1,891 @@
+{
+  "symbolic_identities": {
+    "real_constraint_R": "2 a1 a2 - a2^2 + 2 b1 b2 - b2^2 = 0",
+    "real_energy_S": "a1^2 + b1^2 + (p-1)/4 (a2^2 + b2^2) = 2L+2",
+    "imag_norm_g": "g(x,y) = x^2 - x y + (p+1)/4 y^2  (disc -p; p=3 -> Eisenstein)",
+    "bound_identity": "4 g(x,y) = (2x - y)^2 + p y^2",
+    "verified": true
+  },
+  "totally_real_collapse": [
+    {
+      "p": 5,
+      "f": 2,
+      "minus1_in_K": true,
+      "A_tilde_in_real_subfield_and_real": true
+    },
+    {
+      "p": 13,
+      "f": 2,
+      "minus1_in_K": true,
+      "A_tilde_in_real_subfield_and_real": true
+    },
+    {
+      "p": 17,
+      "f": 2,
+      "minus1_in_K": true,
+      "A_tilde_in_real_subfield_and_real": true
+    },
+    {
+      "p": 37,
+      "f": 2,
+      "minus1_in_K": true,
+      "A_tilde_in_real_subfield_and_real": true
+    },
+    {
+      "p": 17,
+      "f": 4,
+      "minus1_in_K": true,
+      "A_tilde_in_real_subfield_and_real": true
+    },
+    {
+      "p": 41,
+      "f": 4,
+      "minus1_in_K": true,
+      "A_tilde_in_real_subfield_and_real": true
+    }
+  ],
+  "cm_relative_norm": [
+    {
+      "p": 7,
+      "f": 2,
+      "Kf_plus": "Q (degree 1)",
+      "|A~|^2_rational": true
+    },
+    {
+      "p": 11,
+      "f": 2,
+      "Kf_plus": "Q (degree 1)",
+      "|A~|^2_rational": true
+    },
+    {
+      "p": 23,
+      "f": 2,
+      "Kf_plus": "Q (degree 1)",
+      "|A~|^2_rational": true
+    },
+    {
+      "p": 13,
+      "f": 4,
+      "K": [
+        1,
+        3,
+        9
+      ],
+      "minus1_in_K": false,
+      "Kf_plus": "Q(sqrt 13) (degree 2, NONtrivial)",
+      "witness_sequence": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "|A~|^2_minimal_polynomial_over_Q": "t^2 - 20 t + 48",
+      "|A~|^2_values": "10 +/- 2 sqrt(13)  (IRRATIONAL)",
+      "discriminant": 208,
+      "conclusion": "relative norm lands in a NONtrivial real subfield; the 'sum of two rational norms' picture and the 'permissive' conclusion do NOT extend past f=2"
+    }
+  ],
+  "theorem_C_census_exhaustive": {
+    "L_max": 1200,
+    "total_cases": 428,
+    "num_forbidden_classes": 139,
+    "distinct_primes": [
+      5,
+      13,
+      17,
+      29,
+      37,
+      41,
+      53,
+      61,
+      73,
+      89,
+      97,
+      101,
+      109,
+      113,
+      137,
+      149,
+      157,
+      181,
+      193,
+      229,
+      233,
+      281,
+      293,
+      313,
+      317,
+      349,
+      373
+    ],
+    "distinct_lengths": 116,
+    "forbidden_classes_L_p": [
+      [
+        65,
+        5
+      ],
+      [
+        65,
+        13
+      ],
+      [
+        75,
+        5
+      ],
+      [
+        85,
+        17
+      ],
+      [
+        87,
+        29
+      ],
+      [
+        91,
+        13
+      ],
+      [
+        111,
+        37
+      ],
+      [
+        119,
+        17
+      ],
+      [
+        123,
+        41
+      ],
+      [
+        175,
+        5
+      ],
+      [
+        183,
+        61
+      ],
+      [
+        185,
+        5
+      ],
+      [
+        185,
+        37
+      ],
+      [
+        187,
+        17
+      ],
+      [
+        203,
+        29
+      ],
+      [
+        205,
+        41
+      ],
+      [
+        219,
+        73
+      ],
+      [
+        221,
+        13
+      ],
+      [
+        221,
+        17
+      ],
+      [
+        235,
+        5
+      ],
+      [
+        265,
+        5
+      ],
+      [
+        265,
+        53
+      ],
+      [
+        267,
+        89
+      ],
+      [
+        285,
+        5
+      ],
+      [
+        299,
+        13
+      ],
+      [
+        303,
+        101
+      ],
+      [
+        315,
+        5
+      ],
+      [
+        357,
+        17
+      ],
+      [
+        365,
+        73
+      ],
+      [
+        371,
+        53
+      ],
+      [
+        377,
+        13
+      ],
+      [
+        377,
+        29
+      ],
+      [
+        395,
+        5
+      ],
+      [
+        407,
+        37
+      ],
+      [
+        411,
+        137
+      ],
+      [
+        425,
+        5
+      ],
+      [
+        427,
+        61
+      ],
+      [
+        429,
+        13
+      ],
+      [
+        445,
+        89
+      ],
+      [
+        447,
+        149
+      ],
+      [
+        455,
+        5
+      ],
+      [
+        455,
+        13
+      ],
+      [
+        459,
+        17
+      ],
+      [
+        471,
+        157
+      ],
+      [
+        485,
+        97
+      ],
+      [
+        493,
+        17
+      ],
+      [
+        495,
+        5
+      ],
+      [
+        505,
+        5
+      ],
+      [
+        505,
+        101
+      ],
+      [
+        507,
+        13
+      ],
+      [
+        533,
+        13
+      ],
+      [
+        533,
+        41
+      ],
+      [
+        545,
+        109
+      ],
+      [
+        551,
+        29
+      ],
+      [
+        555,
+        5
+      ],
+      [
+        555,
+        37
+      ],
+      [
+        565,
+        113
+      ],
+      [
+        615,
+        5
+      ],
+      [
+        623,
+        89
+      ],
+      [
+        629,
+        17
+      ],
+      [
+        629,
+        37
+      ],
+      [
+        645,
+        5
+      ],
+      [
+        663,
+        17
+      ],
+      [
+        667,
+        29
+      ],
+      [
+        671,
+        61
+      ],
+      [
+        685,
+        137
+      ],
+      [
+        687,
+        229
+      ],
+      [
+        689,
+        13
+      ],
+      [
+        699,
+        233
+      ],
+      [
+        703,
+        37
+      ],
+      [
+        707,
+        101
+      ],
+      [
+        715,
+        5
+      ],
+      [
+        715,
+        13
+      ],
+      [
+        731,
+        17
+      ],
+      [
+        763,
+        109
+      ],
+      [
+        765,
+        17
+      ],
+      [
+        767,
+        13
+      ],
+      [
+        779,
+        41
+      ],
+      [
+        785,
+        5
+      ],
+      [
+        785,
+        157
+      ],
+      [
+        791,
+        113
+      ],
+      [
+        795,
+        5
+      ],
+      [
+        795,
+        53
+      ],
+      [
+        803,
+        73
+      ],
+      [
+        805,
+        5
+      ],
+      [
+        825,
+        5
+      ],
+      [
+        835,
+        5
+      ],
+      [
+        843,
+        281
+      ],
+      [
+        851,
+        37
+      ],
+      [
+        861,
+        41
+      ],
+      [
+        879,
+        293
+      ],
+      [
+        901,
+        17
+      ],
+      [
+        901,
+        53
+      ],
+      [
+        905,
+        5
+      ],
+      [
+        905,
+        181
+      ],
+      [
+        923,
+        13
+      ],
+      [
+        939,
+        313
+      ],
+      [
+        943,
+        41
+      ],
+      [
+        945,
+        5
+      ],
+      [
+        949,
+        73
+      ],
+      [
+        951,
+        317
+      ],
+      [
+        955,
+        5
+      ],
+      [
+        957,
+        29
+      ],
+      [
+        959,
+        137
+      ],
+      [
+        965,
+        193
+      ],
+      [
+        1001,
+        13
+      ],
+      [
+        1003,
+        17
+      ],
+      [
+        1007,
+        53
+      ],
+      [
+        1025,
+        5
+      ],
+      [
+        1037,
+        17
+      ],
+      [
+        1037,
+        61
+      ],
+      [
+        1047,
+        349
+      ],
+      [
+        1055,
+        5
+      ],
+      [
+        1067,
+        97
+      ],
+      [
+        1071,
+        17
+      ],
+      [
+        1073,
+        29
+      ],
+      [
+        1073,
+        37
+      ],
+      [
+        1079,
+        13
+      ],
+      [
+        1099,
+        157
+      ],
+      [
+        1105,
+        5
+      ],
+      [
+        1105,
+        13
+      ],
+      [
+        1111,
+        101
+      ],
+      [
+        1115,
+        5
+      ],
+      [
+        1119,
+        373
+      ],
+      [
+        1131,
+        13
+      ],
+      [
+        1131,
+        29
+      ],
+      [
+        1135,
+        5
+      ],
+      [
+        1139,
+        17
+      ],
+      [
+        1145,
+        5
+      ],
+      [
+        1145,
+        229
+      ],
+      [
+        1147,
+        37
+      ],
+      [
+        1157,
+        13
+      ],
+      [
+        1157,
+        89
+      ],
+      [
+        1165,
+        5
+      ],
+      [
+        1165,
+        233
+      ],
+      [
+        1173,
+        17
+      ],
+      [
+        1189,
+        29
+      ],
+      [
+        1189,
+        41
+      ],
+      [
+        1199,
+        109
+      ]
+    ],
+    "sample_feasible_with_witness": [
+      {
+        "L": 5,
+        "p": 5,
+        "witness_abab": [
+          -2,
+          -2,
+          0,
+          -2
+        ]
+      },
+      {
+        "L": 13,
+        "p": 13,
+        "witness_abab": [
+          -2,
+          -2,
+          0,
+          -2
+        ]
+      },
+      {
+        "L": 29,
+        "p": 29,
+        "witness_abab": [
+          -2,
+          -2,
+          0,
+          -2
+        ]
+      },
+      {
+        "L": 37,
+        "p": 37,
+        "witness_abab": [
+          -2,
+          -2,
+          0,
+          -2
+        ]
+      },
+      {
+        "L": 41,
+        "p": 41,
+        "witness_abab": [
+          -2,
+          -2,
+          0,
+          -2
+        ]
+      },
+      {
+        "L": 45,
+        "p": 5,
+        "witness_abab": [
+          -4,
+          -6,
+          -2,
+          -6
+        ]
+      }
+    ]
+  },
+  "proposition_D_census": {
+    "L_max": 1500,
+    "total_cases": 797,
+    "num_infeasible_in_census": 0,
+    "infeasible_cases": [],
+    "sample_solvable_with_witnesses": [
+      {
+        "L": 3,
+        "p": 3,
+        "g_a": 1,
+        "a_xy": [
+          -1,
+          -1
+        ],
+        "g_b": 7,
+        "b_xy": [
+          -2,
+          -3
+        ]
+      },
+      {
+        "L": 7,
+        "p": 7,
+        "g_a": 0,
+        "a_xy": [
+          0,
+          0
+        ],
+        "g_b": 16,
+        "b_xy": [
+          -2,
+          -3
+        ]
+      },
+      {
+        "L": 9,
+        "p": 3,
+        "g_a": 1,
+        "a_xy": [
+          -1,
+          -1
+        ],
+        "g_b": 19,
+        "b_xy": [
+          -3,
+          -5
+        ]
+      },
+      {
+        "L": 11,
+        "p": 11,
+        "g_a": 1,
+        "a_xy": [
+          -1,
+          0
+        ],
+        "g_b": 23,
+        "b_xy": [
+          -5,
+          -1
+        ]
+      },
+      {
+        "L": 15,
+        "p": 3,
+        "g_a": 1,
+        "a_xy": [
+          -1,
+          -1
+        ],
+        "g_b": 31,
+        "b_xy": [
+          -5,
+          -6
+        ]
+      },
+      {
+        "L": 19,
+        "p": 19,
+        "g_a": 4,
+        "a_xy": [
+          -2,
+          0
+        ],
+        "g_b": 36,
+        "b_xy": [
+          -6,
+          0
+        ]
+      },
+      {
+        "L": 21,
+        "p": 3,
+        "g_a": 1,
+        "a_xy": [
+          -1,
+          -1
+        ],
+        "g_b": 43,
+        "b_xy": [
+          -6,
+          -7
+        ]
+      },
+      {
+        "L": 21,
+        "p": 7,
+        "g_a": 0,
+        "a_xy": [
+          0,
+          0
+        ],
+        "g_b": 44,
+        "b_xy": [
+          -3,
+          -5
+        ]
+      }
+    ],
+    "wording": "EXACT: the identity 2L+2 = g(a)+g(b) is a proven necessary condition.  SOLVABILITY is reported as a FINITE-CENSUS fact (no infeasible case found for p=3 mod4, incl p=3, L<=1500); it is NOT claimed as a universal theorem."
+  },
+  "highlights": {
+    "L333_p37": {
+      "real_index2_feasible": true,
+      "witness_abab": [
+        -4,
+        -6,
+        -2,
+        -6
+      ],
+      "note": "668 is a sum of two squares in O_{Q(sqrt37)}, so the image-QR(37) fixed-symmetry class at L=333 is NOT forbidden by Theorem C."
+    },
+    "L185_open": {
+      "image_QR5_forbidden": true,
+      "image_QR37_forbidden": true,
+      "note": "L=185 is an open Legendre-pair length; the image-QR(5) and image-QR(37) fixed-symmetry classes are forbidden, but LP(185) existence is untouched."
+    },
+    "L111_p37_image_QR37_forbidden": true
+  }
+}

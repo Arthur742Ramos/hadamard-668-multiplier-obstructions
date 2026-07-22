@@ -1,0 +1,75 @@
+{
+  "files": [
+    {
+      "bytes": 6067,
+      "path": "../code/core.py",
+      "role": "orbit primitives used by the primary implementation",
+      "sha256": "b13b2afb80345328db08b1f8c24c8a88821ce5ee4eb8caed775a0e57fab1fce7"
+    },
+    {
+      "bytes": 3731,
+      "path": "../code/search_common.py",
+      "role": "subgroup-record loader used by the primary implementation",
+      "sha256": "e5142332a45835828ffb3d74eda07d0d7b3fab8a64cceeddef6d1718401ca760"
+    },
+    {
+      "bytes": 33340,
+      "path": "../results/subgroup_classification.json",
+      "role": "multiplier subgroup data",
+      "sha256": "1e8073d58a920d2e5f59804f24f685e50f20dba41139c5520fb8863dc4ee3d3a"
+    },
+    {
+      "bytes": 59546,
+      "path": "tools/drat-trim/drat-trim.c",
+      "role": "pinned independent DRAT checker source",
+      "sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+    }
+  ],
+  "format": "lp333-proof-phase2-dependency-pins-v1",
+  "subgroup_records": [
+    {
+      "canonical_sha256": "c50495fd01322721e8a28d44c6ca7281bb1ae7d2f54c6cd928eeb802e36e36a5",
+      "id": 11
+    },
+    {
+      "canonical_sha256": "d105ecc987127a390c25ed80953c0c736220b9644ee389bcc353af3572132bc7",
+      "id": 13
+    },
+    {
+      "canonical_sha256": "8ea0c350a7fc20fb344cff8c2ea53cab118451bb243558ca6398e86d5f471b9b",
+      "id": 14
+    },
+    {
+      "canonical_sha256": "26584ccc1f21192357eb90eb7edb1dc428776dde3d112e48cf719f03ef005dec",
+      "id": 15
+    },
+    {
+      "canonical_sha256": "d840e8051e1c468b6fde1bacc5cdf686ceb1de8ac2e78baaa780b78b6397102c",
+      "id": 19
+    },
+    {
+      "canonical_sha256": "e73a9d1a33ef3a57f261532cb5a2ca76623615bf090d2bbb7ee3a98830a7baa5",
+      "id": 20
+    },
+    {
+      "canonical_sha256": "9d972887e3dd35ab6df824978c96bdc00f9d6d9bc8452eb145add031347c26b0",
+      "id": 21
+    },
+    {
+      "canonical_sha256": "87389c2d93e401328ebabfed88cec7903a87649ae282ef19aa1404ca1da486be",
+      "id": 22
+    },
+    {
+      "canonical_sha256": "fbd6f9bc3a14ec8e4896e20de4760157c48bbff581e444d5dd1a972b264fb9d4",
+      "id": 23
+    },
+    {
+      "canonical_sha256": "4890d549ccac071a9c8776ec06ec8c9111b8fee31ef8cb8b61fa0d1389ca6fbd",
+      "id": 24
+    },
+    {
+      "canonical_sha256": "40127eb00ddac54b36c1a8da26eb9e7af7042e5738f7f71bc5811da0650633de",
+      "id": 28
+    }
+  ]
+}

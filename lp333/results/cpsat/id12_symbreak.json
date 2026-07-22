@@ -1,0 +1,11 @@
+{
+  "id": 12,
+  "order": 9,
+  "r": 45,
+  "num_reps": 44,
+  "seconds": 600.11,
+  "status": "UNKNOWN",
+  "symmetry_breaking": true,
+  "method": "exact CP-SAT (booleanized PAF) with multiplier+swap symmetry breaking",
+  "sat": null
+}

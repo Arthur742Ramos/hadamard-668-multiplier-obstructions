@@ -1,0 +1,1908 @@
+{
+  "controls": {
+    "length_5": {
+      "cnf": "controls/positive_L5.cnf",
+      "cnf_sha256": "4325973be13f0c61c5a5f839339462248ccdb8fac708c6015eae9ca25c056c6d",
+      "exhaustive_equivalence_audit": {
+        "assignments_checked": 256,
+        "kind": "exhaustive-small-model-equivalence",
+        "result": "PASS",
+        "satisfying_assignments": 50
+      },
+      "known_normalized_legendre_pair": {
+        "a": [
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "b": [
+          1,
+          1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      "known_pair_directly_verified": true,
+      "known_pair_satisfies_cnf": true,
+      "length": 5,
+      "model": {
+        "direct_pb_obstructions": [],
+        "length": 5,
+        "num_clauses": 721,
+        "num_variables": 123,
+        "orbit_count": 5,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "pair_xor_count_per_sequence": 10,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 10,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 4,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "solver_log": "logs/positive_L5_solver.log",
+      "solver_log_sha256": "0045e1566c9a3a9811966529adb24da9553a83852cc5577bb9b678e625d75025",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "-q",
+          "-w",
+          "./controls/positive_L5.witness",
+          "./controls/positive_L5.cnf"
+        ],
+        "returncode": 10,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "SAT",
+      "solver_witness_directly_verified": true,
+      "witness": "controls/positive_L5.witness",
+      "witness_sha256": "593f6f9a68e36b6d82a374af31c9ae1e9d82fa933c469b98a35de22f99fbb64d"
+    },
+    "length_7": {
+      "cnf": "controls/positive_L7.cnf",
+      "cnf_sha256": "83ff4312637773ca2de25703331476c3e68b4313f20258cd1804c124ef952109",
+      "exhaustive_equivalence_audit": {
+        "assignments_checked": 4096,
+        "kind": "exhaustive-small-model-equivalence",
+        "result": "PASS",
+        "satisfying_assignments": 196
+      },
+      "known_normalized_legendre_pair": {
+        "a": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "b": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1
+        ]
+      },
+      "known_pair_directly_verified": true,
+      "known_pair_satisfies_cnf": true,
+      "length": 7,
+      "model": {
+        "direct_pb_obstructions": [],
+        "length": 7,
+        "num_clauses": 1383,
+        "num_variables": 229,
+        "orbit_count": 7,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "pair_xor_count_per_sequence": 21,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 14,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 6,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "solver_log": "logs/positive_L7_solver.log",
+      "solver_log_sha256": "40827aab95150483ca66e925908ca9e240049bd02562707223be2ea353dd2745",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "-q",
+          "-w",
+          "./controls/positive_L7.witness",
+          "./controls/positive_L7.cnf"
+        ],
+        "returncode": 10,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "SAT",
+      "solver_witness_directly_verified": true,
+      "witness": "controls/positive_L7.witness",
+      "witness_sha256": "906b32993ef793f4d2b4d02b627e2bf3ecd907daa8c73696f47e0e3a216fd69a"
+    },
+    "transformations": {
+      "kind": "exhaustive-xor-and-pb-transformation-truth-tables",
+      "result": "PASS",
+      "two_value_range_assignments": 8,
+      "unit_split_assignment_extensions": 4,
+      "xor_equality_assignments": 8
+    }
+  },
+  "cross_certification_ids": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    28
+  ],
+  "dependency_pins": {
+    "path": "dependency_pins.json",
+    "result": "PASS",
+    "sha256": "e5feaac5d23ada727a8e30fdae9f049fd5913e6d973846ae1a7ae0cb3af0ba53"
+  },
+  "dimacs_header_audit": {
+    "cnf/lp333_id11.cnf": {
+      "clauses": 458887,
+      "empty_clauses": 2,
+      "maximum_variable_seen": 67407,
+      "result": "PASS",
+      "variables": 67407
+    },
+    "cnf/lp333_id11_unit_split.cnf": {
+      "clauses": 459592,
+      "empty_clauses": 2,
+      "maximum_variable_seen": 68112,
+      "result": "PASS",
+      "variables": 68112
+    },
+    "cnf/lp333_id13.cnf": {
+      "clauses": 262317,
+      "empty_clauses": 0,
+      "maximum_variable_seen": 38219,
+      "result": "PASS",
+      "variables": 38219
+    },
+    "cnf/lp333_id13_unit_split.cnf": {
+      "clauses": 262778,
+      "empty_clauses": 0,
+      "maximum_variable_seen": 38680,
+      "result": "PASS",
+      "variables": 38680
+    },
+    "cnf/lp333_id14.cnf": {
+      "clauses": 262317,
+      "empty_clauses": 0,
+      "maximum_variable_seen": 38219,
+      "result": "PASS",
+      "variables": 38219
+    },
+    "cnf/lp333_id14_unit_split.cnf": {
+      "clauses": 262778,
+      "empty_clauses": 0,
+      "maximum_variable_seen": 38680,
+      "result": "PASS",
+      "variables": 38680
+    },
+    "cnf/lp333_id15.cnf": {
+      "clauses": 264316,
+      "empty_clauses": 2,
+      "maximum_variable_seen": 38871,
+      "result": "PASS",
+      "variables": 38871
+    },
+    "cnf/lp333_id15_unit_split.cnf": {
+      "clauses": 264856,
+      "empty_clauses": 2,
+      "maximum_variable_seen": 39411,
+      "result": "PASS",
+      "variables": 39411
+    },
+    "cnf/lp333_id19.cnf": {
+      "clauses": 142345,
+      "empty_clauses": 2,
+      "maximum_variable_seen": 20889,
+      "result": "PASS",
+      "variables": 20889
+    },
+    "cnf/lp333_id19_unit_split.cnf": {
+      "clauses": 142720,
+      "empty_clauses": 2,
+      "maximum_variable_seen": 21264,
+      "result": "PASS",
+      "variables": 21264
+    },
+    "cnf/lp333_id20.cnf": {
+      "clauses": 50637,
+      "empty_clauses": 0,
+      "maximum_variable_seen": 7565,
+      "result": "PASS",
+      "variables": 7565
+    },
+    "cnf/lp333_id20_unit_split.cnf": {
+      "clauses": 50942,
+      "empty_clauses": 0,
+      "maximum_variable_seen": 7870,
+      "result": "PASS",
+      "variables": 7870
+    },
+    "cnf/lp333_id21.cnf": {
+      "clauses": 74129,
+      "empty_clauses": 0,
+      "maximum_variable_seen": 10833,
+      "result": "PASS",
+      "variables": 10833
+    },
+    "cnf/lp333_id21_unit_split.cnf": {
+      "clauses": 74390,
+      "empty_clauses": 0,
+      "maximum_variable_seen": 11094,
+      "result": "PASS",
+      "variables": 11094
+    },
+    "cnf/lp333_id22.cnf": {
+      "clauses": 74129,
+      "empty_clauses": 0,
+      "maximum_variable_seen": 10833,
+      "result": "PASS",
+      "variables": 10833
+    },
+    "cnf/lp333_id22_unit_split.cnf": {
+      "clauses": 74390,
+      "empty_clauses": 0,
+      "maximum_variable_seen": 11094,
+      "result": "PASS",
+      "variables": 11094
+    },
+    "cnf/lp333_id23.cnf": {
+      "clauses": 69335,
+      "empty_clauses": 2,
+      "maximum_variable_seen": 10191,
+      "result": "PASS",
+      "variables": 10191
+    },
+    "cnf/lp333_id23_unit_split.cnf": {
+      "clauses": 69600,
+      "empty_clauses": 2,
+      "maximum_variable_seen": 10456,
+      "result": "PASS",
+      "variables": 10456
+    },
+    "cnf/lp333_id24.cnf": {
+      "clauses": 41029,
+      "empty_clauses": 2,
+      "maximum_variable_seen": 6051,
+      "result": "PASS",
+      "variables": 6051
+    },
+    "cnf/lp333_id24_unit_split.cnf": {
+      "clauses": 41236,
+      "empty_clauses": 2,
+      "maximum_variable_seen": 6258,
+      "result": "PASS",
+      "variables": 6258
+    },
+    "cnf/lp333_id28.cnf": {
+      "clauses": 17679,
+      "empty_clauses": 2,
+      "maximum_variable_seen": 2637,
+      "result": "PASS",
+      "variables": 2637
+    },
+    "cnf/lp333_id28_unit_split.cnf": {
+      "clauses": 17828,
+      "empty_clauses": 2,
+      "maximum_variable_seen": 2786,
+      "result": "PASS",
+      "variables": 2786
+    },
+    "controls/positive_L5.cnf": {
+      "clauses": 721,
+      "empty_clauses": 0,
+      "maximum_variable_seen": 123,
+      "result": "PASS",
+      "variables": 123
+    },
+    "controls/positive_L7.cnf": {
+      "clauses": 1383,
+      "empty_clauses": 0,
+      "maximum_variable_seen": 229,
+      "result": "PASS",
+      "variables": 229
+    }
+  },
+  "generated_utc": "2026-07-22T05:50:01.838848+00:00",
+  "generator": "proof_phase2/run_proofs.py",
+  "hashes_file": "hashes/sha256sums.txt",
+  "publication_hardening": {
+    "dependency_pins": {
+      "path": "dependency_pins.json",
+      "result": "PASS",
+      "sha256": "ac137b2ebbea47c1f45d465b0f8cd95d124eca414a88f37b6892914214a91e2e"
+    },
+    "full_verification": {
+      "path": "audits/full_validation.json",
+      "result": "PASS",
+      "sha256": "7e41d8cc36d722261125578c6fa00f96a0f8ed1704cfc641bf4e5cf7efaacfe6"
+    },
+    "standalone_independent_audit": {
+      "path": "audits/independent_standalone_audit.json",
+      "result": "PASS",
+      "sha256": "e2fa08e96bccc7cc45c9946c1eb548d788920233d786d9388a126b6efc545c19"
+    }
+  },
+  "records": [
+    {
+      "audit": "audits/lp333_id11.json",
+      "audit_sha256": "3531516d89b90896bfa38d1c6ca8eb6c3b70daa0e0b8981b7b604c7eda847fd0",
+      "cnf": "cnf/lp333_id11.cnf",
+      "cnf_bytes": 10814446,
+      "cnf_dimacs": {
+        "num_clauses": 458887,
+        "num_variables": 67407,
+        "split_unit_clauses": false,
+        "unit_split_count": 0,
+        "unit_split_map": []
+      },
+      "cnf_sha256": "47fd33e0a8529c729343cfcf0cf8ea710ddd5d6f79309980e43b7cec21c824dc",
+      "direct_pb_upper_bound_certificate": {
+        "kind": "nonnegative weighted XOR sum cannot reach required target",
+        "obstructions": [
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 0,
+            "required_weighted_xor_sum": 334,
+            "shift": 111,
+            "shortfall": 112
+          },
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 1,
+            "required_weighted_xor_sum": 334,
+            "shift": 222,
+            "shortfall": 112
+          }
+        ]
+      },
+      "encoding": {
+        "direct_pb_obstructions": [
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 0,
+            "required_weighted_xor_sum": 334,
+            "shift": 111,
+            "shortfall": 112
+          },
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 1,
+            "required_weighted_xor_sum": 334,
+            "shift": 222,
+            "shortfall": 112
+          }
+        ],
+        "length": 333,
+        "num_clauses": 458887,
+        "num_variables": 67407,
+        "orbit_count": 65,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334
+        ],
+        "pair_xor_count_per_sequence": 2080,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 130,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 64,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "external_check": {
+        "checker": "tools/drat-trim/drat-trim",
+        "checker_exit_note": "drat-trim emitted 's VERIFIED' on its early trivial-UNSAT path; upstream exits 1 on that path despite the verified marker",
+        "checker_log": "logs/lp333_id11_drat_trim.log",
+        "checker_log_sha256": "7628e53fdf9e6225349afa2bc5ee0ebc59981e021f61d53a10c05629cfbf4ddc",
+        "checker_run": {
+          "command": [
+            "./tools/drat-trim/drat-trim",
+            "./cnf/lp333_id11_unit_split.cnf",
+            "./proofs/lp333_id11_unit_split.drat",
+            "-I"
+          ],
+          "returncode": 1,
+          "timeout_seconds": 1800
+        },
+        "status": "VERIFIED",
+        "verification_kind": "input_cnf_trivial_unsat",
+        "verified": true
+      },
+      "orbit_count": 65,
+      "proof": "proofs/lp333_id11_unit_split.drat",
+      "proof_bytes": 11424141,
+      "proof_cnf": "cnf/lp333_id11_unit_split.cnf",
+      "proof_cnf_bytes": 10829570,
+      "proof_cnf_dimacs": {
+        "num_clauses": 459592,
+        "num_variables": 68112,
+        "split_unit_clauses": true,
+        "unit_split_count": 705
+      },
+      "proof_cnf_sha256": "e87949e918ad834338b1f7cea8faba8f7db7d0003260faecb6a2241dc1f490c5",
+      "proof_format": "ASCII DRAT",
+      "proof_sha256": "b73b1d67ea8616c4c3c8902eaa9d4811cb45f8e1eeffe34cb70fda6b36afa698",
+      "shift_representatives": 64,
+      "solver_log": "logs/lp333_id11_cadical.log",
+      "solver_log_sha256": "b1fc585a1c15510ad1f182c9c2b6324a352b6a05a3853242918c5d1ee837215e",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "--binary=false",
+          "--checkproof=1",
+          "-q",
+          "./cnf/lp333_id11_unit_split.cnf",
+          "./proofs/lp333_id11_unit_split.drat"
+        ],
+        "returncode": 20,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "UNSAT",
+      "subgroup_id": 11,
+      "subgroup_order": 9,
+      "unit_split_map": "cnf/lp333_id11_unit_split_map.json",
+      "unit_split_map_sha256": "ff2db2776a76b8f8c4629977d72fa1b2105c6937137d33efc002475e418ff029"
+    },
+    {
+      "audit": "audits/lp333_id13.json",
+      "audit_sha256": "6de3334055b8cf3c13c3054cacac79bb34edd7512ab7e898efa11cdaae995638",
+      "cnf": "cnf/lp333_id13.cnf",
+      "cnf_bytes": 6024339,
+      "cnf_dimacs": {
+        "num_clauses": 262317,
+        "num_variables": 38219,
+        "split_unit_clauses": false,
+        "unit_split_count": 0,
+        "unit_split_map": []
+      },
+      "cnf_sha256": "fb154ccc4d83bcd69b7f4fd093f4cfbb8176b326808ecdc550cd290f41a49cdc",
+      "encoding": {
+        "direct_pb_obstructions": [],
+        "length": 333,
+        "num_clauses": 262317,
+        "num_variables": 38219,
+        "orbit_count": 41,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334
+        ],
+        "pair_xor_count_per_sequence": 820,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 82,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 40,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "external_check": {
+        "checker": "tools/drat-trim/drat-trim",
+        "checker_log": "logs/lp333_id13_drat_trim.log",
+        "checker_log_sha256": "0e297ad9e5ae7670d273be11a7995f17d256c40d75f244afd98985ebc75f545a",
+        "checker_run": {
+          "command": [
+            "./tools/drat-trim/drat-trim",
+            "./cnf/lp333_id13_unit_split.cnf",
+            "./proofs/lp333_id13_unit_split.drat",
+            "-I"
+          ],
+          "returncode": 0,
+          "timeout_seconds": 1800
+        },
+        "status": "VERIFIED",
+        "verification_kind": "drat_trace_verified",
+        "verified": true
+      },
+      "orbit_count": 41,
+      "proof": "proofs/lp333_id13_unit_split.drat",
+      "proof_bytes": 54311342,
+      "proof_cnf": "cnf/lp333_id13_unit_split.cnf",
+      "proof_cnf_bytes": 6034152,
+      "proof_cnf_dimacs": {
+        "num_clauses": 262778,
+        "num_variables": 38680,
+        "split_unit_clauses": true,
+        "unit_split_count": 461
+      },
+      "proof_cnf_sha256": "02c8264afb42d6a3219bfc33cac1837b2238f4618abdde4949301a50a37bd638",
+      "proof_format": "ASCII DRAT",
+      "proof_sha256": "f51f1036e98d53888988a80b2664aa2e028c8611ca2466468bce5c35a1605069",
+      "shift_representatives": 40,
+      "solver_log": "logs/lp333_id13_cadical.log",
+      "solver_log_sha256": "8f5d2e42c6bf311652479bef9c28c658f8d67c90e0e2b776ede48e3ebb23c79b",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "--binary=false",
+          "--checkproof=1",
+          "-q",
+          "./cnf/lp333_id13_unit_split.cnf",
+          "./proofs/lp333_id13_unit_split.drat"
+        ],
+        "returncode": 20,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "UNSAT",
+      "subgroup_id": 13,
+      "subgroup_order": 9,
+      "unit_split_map": "cnf/lp333_id13_unit_split_map.json",
+      "unit_split_map_sha256": "10775be08d2b6de08f6b091cece1fa019c4c3d8cb1ad9c8d143475bf21cae8fd"
+    },
+    {
+      "audit": "audits/lp333_id14.json",
+      "audit_sha256": "cbc7c039a393c0d9dbdc463d4d339294609fbab5ea24926bbb040acbd66f7368",
+      "cnf": "cnf/lp333_id14.cnf",
+      "cnf_bytes": 6024339,
+      "cnf_dimacs": {
+        "num_clauses": 262317,
+        "num_variables": 38219,
+        "split_unit_clauses": false,
+        "unit_split_count": 0,
+        "unit_split_map": []
+      },
+      "cnf_sha256": "00de30879baeea2a6e19b238afe49c67de3041013ee57e002f2bdcba1ba858ee",
+      "encoding": {
+        "direct_pb_obstructions": [],
+        "length": 333,
+        "num_clauses": 262317,
+        "num_variables": 38219,
+        "orbit_count": 41,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334
+        ],
+        "pair_xor_count_per_sequence": 820,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 82,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 40,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "external_check": {
+        "checker": "tools/drat-trim/drat-trim",
+        "checker_log": "logs/lp333_id14_drat_trim.log",
+        "checker_log_sha256": "d0e4c02443a904406f0782e3afb3e208e21c5745d40d0d605325952b135b8088",
+        "checker_run": {
+          "command": [
+            "./tools/drat-trim/drat-trim",
+            "./cnf/lp333_id14_unit_split.cnf",
+            "./proofs/lp333_id14_unit_split.drat",
+            "-I"
+          ],
+          "returncode": 0,
+          "timeout_seconds": 1800
+        },
+        "status": "VERIFIED",
+        "verification_kind": "drat_trace_verified",
+        "verified": true
+      },
+      "orbit_count": 41,
+      "proof": "proofs/lp333_id14_unit_split.drat",
+      "proof_bytes": 50829390,
+      "proof_cnf": "cnf/lp333_id14_unit_split.cnf",
+      "proof_cnf_bytes": 6034152,
+      "proof_cnf_dimacs": {
+        "num_clauses": 262778,
+        "num_variables": 38680,
+        "split_unit_clauses": true,
+        "unit_split_count": 461
+      },
+      "proof_cnf_sha256": "b769692dacc68f8d88f050f747b58860752ad771146f65958f4825f7786999a0",
+      "proof_format": "ASCII DRAT",
+      "proof_sha256": "0dae81c9c905069783e4786603abdba83e5852171b0962a7ca89779e0d8af228",
+      "shift_representatives": 40,
+      "solver_log": "logs/lp333_id14_cadical.log",
+      "solver_log_sha256": "572d7b554923f9c150a9643b501c1236d9d3e56a00efb0f25cb78590905b860b",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "--binary=false",
+          "--checkproof=1",
+          "-q",
+          "./cnf/lp333_id14_unit_split.cnf",
+          "./proofs/lp333_id14_unit_split.drat"
+        ],
+        "returncode": 20,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "UNSAT",
+      "subgroup_id": 14,
+      "subgroup_order": 9,
+      "unit_split_map": "cnf/lp333_id14_unit_split_map.json",
+      "unit_split_map_sha256": "39204be368d186028365ca3b60ac308452762df6fa2e6f36a9382042c3a59e1f"
+    },
+    {
+      "audit": "audits/lp333_id15.json",
+      "audit_sha256": "1f8d4975d255e05401a00c3787a7aad2f98b988d85d4490c56ec72b0019bc54f",
+      "cnf": "cnf/lp333_id15.cnf",
+      "cnf_bytes": 6105430,
+      "cnf_dimacs": {
+        "num_clauses": 264316,
+        "num_variables": 38871,
+        "split_unit_clauses": false,
+        "unit_split_count": 0,
+        "unit_split_map": []
+      },
+      "cnf_sha256": "6c1fdbf85bbacc6c27ca6473813f92494f7e90cb9e76e4e3869214bf4f9b591b",
+      "direct_pb_upper_bound_certificate": {
+        "kind": "nonnegative weighted XOR sum cannot reach required target",
+        "obstructions": [
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 0,
+            "required_weighted_xor_sum": 334,
+            "shift": 111,
+            "shortfall": 112
+          },
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 1,
+            "required_weighted_xor_sum": 334,
+            "shift": 222,
+            "shortfall": 112
+          }
+        ]
+      },
+      "encoding": {
+        "direct_pb_obstructions": [
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 0,
+            "required_weighted_xor_sum": 334,
+            "shift": 111,
+            "shortfall": 112
+          },
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 1,
+            "required_weighted_xor_sum": 334,
+            "shift": 222,
+            "shortfall": 112
+          }
+        ],
+        "length": 333,
+        "num_clauses": 264316,
+        "num_variables": 38871,
+        "orbit_count": 50,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334
+        ],
+        "pair_xor_count_per_sequence": 1225,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 100,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 49,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "external_check": {
+        "checker": "tools/drat-trim/drat-trim",
+        "checker_exit_note": "drat-trim emitted 's VERIFIED' on its early trivial-UNSAT path; upstream exits 1 on that path despite the verified marker",
+        "checker_log": "logs/lp333_id15_drat_trim.log",
+        "checker_log_sha256": "394fe76499bc6994bf6992212fed2034e1acf05393918592305b4cbef8d817b0",
+        "checker_run": {
+          "command": [
+            "./tools/drat-trim/drat-trim",
+            "./cnf/lp333_id15_unit_split.cnf",
+            "./proofs/lp333_id15_unit_split.drat",
+            "-I"
+          ],
+          "returncode": 1,
+          "timeout_seconds": 1800
+        },
+        "status": "VERIFIED",
+        "verification_kind": "input_cnf_trivial_unsat",
+        "verified": true
+      },
+      "orbit_count": 50,
+      "proof": "proofs/lp333_id15_unit_split.drat",
+      "proof_bytes": 6471932,
+      "proof_cnf": "cnf/lp333_id15_unit_split.cnf",
+      "proof_cnf_bytes": 6116911,
+      "proof_cnf_dimacs": {
+        "num_clauses": 264856,
+        "num_variables": 39411,
+        "split_unit_clauses": true,
+        "unit_split_count": 540
+      },
+      "proof_cnf_sha256": "a22684030851f192d70f76498b2a802df0b61c6ecffc571a4c17e9b2c3bfcfcf",
+      "proof_format": "ASCII DRAT",
+      "proof_sha256": "313c3549147c22da586a0e4d7a03ca50c6118096f902708f05b7b657e1bd5e9e",
+      "shift_representatives": 49,
+      "solver_log": "logs/lp333_id15_cadical.log",
+      "solver_log_sha256": "faee07e4248d83c7beb11be0edc69e2f87bc45f783ca384294bae6683bf1e1df",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "--binary=false",
+          "--checkproof=1",
+          "-q",
+          "./cnf/lp333_id15_unit_split.cnf",
+          "./proofs/lp333_id15_unit_split.drat"
+        ],
+        "returncode": 20,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "UNSAT",
+      "subgroup_id": 15,
+      "subgroup_order": 12,
+      "unit_split_map": "cnf/lp333_id15_unit_split_map.json",
+      "unit_split_map_sha256": "c089ad30dc954b8ae1babf4dd74ae8c0f83c6ce38b4273a773ab1ffa2935c50c"
+    },
+    {
+      "audit": "audits/lp333_id19.json",
+      "audit_sha256": "692d224ecb2e6c58da7bc56f3ffa47c9a76dfbe12cc053362768043b16d1f5c4",
+      "cnf": "cnf/lp333_id19.cnf",
+      "cnf_bytes": 3147934,
+      "cnf_dimacs": {
+        "num_clauses": 142345,
+        "num_variables": 20889,
+        "split_unit_clauses": false,
+        "unit_split_count": 0,
+        "unit_split_map": []
+      },
+      "cnf_sha256": "67335c256343ff0df5457f3283bd801f04e111e3f0216d8dd7f7e90586d81d64",
+      "direct_pb_upper_bound_certificate": {
+        "kind": "nonnegative weighted XOR sum cannot reach required target",
+        "obstructions": [
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 0,
+            "required_weighted_xor_sum": 334,
+            "shift": 111,
+            "shortfall": 112
+          },
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 1,
+            "required_weighted_xor_sum": 334,
+            "shift": 222,
+            "shortfall": 112
+          }
+        ]
+      },
+      "encoding": {
+        "direct_pb_obstructions": [
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 0,
+            "required_weighted_xor_sum": 334,
+            "shift": 111,
+            "shortfall": 112
+          },
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 1,
+            "required_weighted_xor_sum": 334,
+            "shift": 222,
+            "shortfall": 112
+          }
+        ],
+        "length": 333,
+        "num_clauses": 142345,
+        "num_variables": 20889,
+        "orbit_count": 35,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334
+        ],
+        "pair_xor_count_per_sequence": 595,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 70,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 34,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "external_check": {
+        "checker": "tools/drat-trim/drat-trim",
+        "checker_exit_note": "drat-trim emitted 's VERIFIED' on its early trivial-UNSAT path; upstream exits 1 on that path despite the verified marker",
+        "checker_log": "logs/lp333_id19_drat_trim.log",
+        "checker_log_sha256": "19f1b824cf33ff4a4ef262c531b7cf79d370594a9d7b263ddc14ccf0a79eda34",
+        "checker_run": {
+          "command": [
+            "./tools/drat-trim/drat-trim",
+            "./cnf/lp333_id19_unit_split.cnf",
+            "./proofs/lp333_id19_unit_split.drat",
+            "-I"
+          ],
+          "returncode": 1,
+          "timeout_seconds": 1800
+        },
+        "status": "VERIFIED",
+        "verification_kind": "input_cnf_trivial_unsat",
+        "verified": true
+      },
+      "orbit_count": 35,
+      "proof": "proofs/lp333_id19_unit_split.drat",
+      "proof_bytes": 3344357,
+      "proof_cnf": "cnf/lp333_id19_unit_split.cnf",
+      "proof_cnf_bytes": 3155794,
+      "proof_cnf_dimacs": {
+        "num_clauses": 142720,
+        "num_variables": 21264,
+        "split_unit_clauses": true,
+        "unit_split_count": 375
+      },
+      "proof_cnf_sha256": "abd5f2235f40e5b977bc73d1fa9fcf35560a074e15890c9c05795251867d284d",
+      "proof_format": "ASCII DRAT",
+      "proof_sha256": "29d1b0c391e4da7197725f39a7aaf1a9eb2070dbcc62d1d70a67556129e69d77",
+      "shift_representatives": 34,
+      "solver_log": "logs/lp333_id19_cadical.log",
+      "solver_log_sha256": "b385b5c315757ea11fa255d03312b47cc4a7dccccc4d7eff4c12652631ec183d",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "--binary=false",
+          "--checkproof=1",
+          "-q",
+          "./cnf/lp333_id19_unit_split.cnf",
+          "./proofs/lp333_id19_unit_split.drat"
+        ],
+        "returncode": 20,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "UNSAT",
+      "subgroup_id": 19,
+      "subgroup_order": 18,
+      "unit_split_map": "cnf/lp333_id19_unit_split_map.json",
+      "unit_split_map_sha256": "4332687e2a38b0e95ec482e24fc15e6a306095ed5d5e9ff537863545bf6b893f"
+    },
+    {
+      "audit": "audits/lp333_id20.json",
+      "audit_sha256": "37d693eade12e3267ef4ae66a484993b01178dd344172cc3564adeda1c99df27",
+      "cnf": "cnf/lp333_id20.cnf",
+      "cnf_bytes": 1011870,
+      "cnf_dimacs": {
+        "num_clauses": 50637,
+        "num_variables": 7565,
+        "split_unit_clauses": false,
+        "unit_split_count": 0,
+        "unit_split_map": []
+      },
+      "cnf_sha256": "3c7819aad9e9a3b05906a0686e00615b5b0d547a6fe9fa8759e445720e2d3ee4",
+      "encoding": {
+        "direct_pb_obstructions": [],
+        "length": 333,
+        "num_clauses": 50637,
+        "num_variables": 7565,
+        "orbit_count": 27,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334
+        ],
+        "pair_xor_count_per_sequence": 351,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 54,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 26,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "external_check": {
+        "checker": "tools/drat-trim/drat-trim",
+        "checker_log": "logs/lp333_id20_drat_trim.log",
+        "checker_log_sha256": "d1da69b872f954d6459090edd844c0a197f1d45f5a9ab038a45bdf26de89ba07",
+        "checker_run": {
+          "command": [
+            "./tools/drat-trim/drat-trim",
+            "./cnf/lp333_id20_unit_split.cnf",
+            "./proofs/lp333_id20_unit_split.drat",
+            "-I"
+          ],
+          "returncode": 0,
+          "timeout_seconds": 1800
+        },
+        "status": "VERIFIED",
+        "verification_kind": "drat_trace_verified",
+        "verified": true
+      },
+      "orbit_count": 27,
+      "proof": "proofs/lp333_id20_unit_split.drat",
+      "proof_bytes": 3156610,
+      "proof_cnf": "cnf/lp333_id20_unit_split.cnf",
+      "proof_cnf_bytes": 1017508,
+      "proof_cnf_dimacs": {
+        "num_clauses": 50942,
+        "num_variables": 7870,
+        "split_unit_clauses": true,
+        "unit_split_count": 305
+      },
+      "proof_cnf_sha256": "b756ba051792289b6a0c2e8e3be867f9ad7f6e6a5e6462565559c523871badf2",
+      "proof_format": "ASCII DRAT",
+      "proof_sha256": "f8ff13d5e0b1ec680f3ae397578d71ddd1265d7a05da70ce91e464fe33513f91",
+      "shift_representatives": 26,
+      "solver_log": "logs/lp333_id20_cadical.log",
+      "solver_log_sha256": "dabd868fbb16535e90d9013df41d19da5e4642bbcd49a6989cf9d2fbe614375b",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "--binary=false",
+          "--checkproof=1",
+          "-q",
+          "./cnf/lp333_id20_unit_split.cnf",
+          "./proofs/lp333_id20_unit_split.drat"
+        ],
+        "returncode": 20,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "UNSAT",
+      "subgroup_id": 20,
+      "subgroup_order": 18,
+      "unit_split_map": "cnf/lp333_id20_unit_split_map.json",
+      "unit_split_map_sha256": "d2262f77c11d242ea4d6491e801910a7395c4c39224e1b7b90dc30a184a29d31"
+    },
+    {
+      "audit": "audits/lp333_id21.json",
+      "audit_sha256": "03bf6801e3dc86d7dd62101e8d06a62b48298633782e15cce1cfa91d062528f0",
+      "cnf": "cnf/lp333_id21.cnf",
+      "cnf_bytes": 1519182,
+      "cnf_dimacs": {
+        "num_clauses": 74129,
+        "num_variables": 10833,
+        "split_unit_clauses": false,
+        "unit_split_count": 0,
+        "unit_split_map": []
+      },
+      "cnf_sha256": "05439137e0fc07f1246df087ca8b5b8f8fda35b1923828b0ffe5f423560cc77c",
+      "encoding": {
+        "direct_pb_obstructions": [],
+        "length": 333,
+        "num_clauses": 74129,
+        "num_variables": 10833,
+        "orbit_count": 23,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334
+        ],
+        "pair_xor_count_per_sequence": 253,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 46,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 22,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "external_check": {
+        "checker": "tools/drat-trim/drat-trim",
+        "checker_log": "logs/lp333_id21_drat_trim.log",
+        "checker_log_sha256": "15615dc4ace688d7da960243fe922f5ff6533064395a5c6203af8adbca7a36b3",
+        "checker_run": {
+          "command": [
+            "./tools/drat-trim/drat-trim",
+            "./cnf/lp333_id21_unit_split.cnf",
+            "./proofs/lp333_id21_unit_split.drat",
+            "-I"
+          ],
+          "returncode": 0,
+          "timeout_seconds": 1800
+        },
+        "status": "VERIFIED",
+        "verification_kind": "drat_trace_verified",
+        "verified": true
+      },
+      "orbit_count": 23,
+      "proof": "proofs/lp333_id21_unit_split.drat",
+      "proof_bytes": 1094484485,
+      "proof_cnf": "cnf/lp333_id21_unit_split.cnf",
+      "proof_cnf_bytes": 1524555,
+      "proof_cnf_dimacs": {
+        "num_clauses": 74390,
+        "num_variables": 11094,
+        "split_unit_clauses": true,
+        "unit_split_count": 261
+      },
+      "proof_cnf_sha256": "797fe68ad71583f9637b582aeaf7c67916c70c0879a4953f5d2dbef3a311aa95",
+      "proof_format": "ASCII DRAT",
+      "proof_sha256": "d35a5fc7f0ba4488add2dbea2a8e2d8f5a8a8d8b2bd33e02b6f40f3ef2457540",
+      "shift_representatives": 22,
+      "solver_log": "logs/lp333_id21_cadical.log",
+      "solver_log_sha256": "a491e1265a04beafe712432d00b3f068673a6ccadf798612efe2b3fbd813fdab",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "--binary=false",
+          "--checkproof=1",
+          "-q",
+          "./cnf/lp333_id21_unit_split.cnf",
+          "./proofs/lp333_id21_unit_split.drat"
+        ],
+        "returncode": 20,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "UNSAT",
+      "subgroup_id": 21,
+      "subgroup_order": 18,
+      "unit_split_map": "cnf/lp333_id21_unit_split_map.json",
+      "unit_split_map_sha256": "c0de0a4e8e3186303c565debdc714f14c1082c09e00699996b603c5a6d70b9cd"
+    },
+    {
+      "audit": "audits/lp333_id22.json",
+      "audit_sha256": "c049d89d81ce98242bcb38da5dd5c4438d1785f683eaf0ed9240dd396698c937",
+      "cnf": "cnf/lp333_id22.cnf",
+      "cnf_bytes": 1519182,
+      "cnf_dimacs": {
+        "num_clauses": 74129,
+        "num_variables": 10833,
+        "split_unit_clauses": false,
+        "unit_split_count": 0,
+        "unit_split_map": []
+      },
+      "cnf_sha256": "ff9cb2ed089b85c0dd62e365833551bde0c6e86f3fbf273b214e4bf453a6816f",
+      "encoding": {
+        "direct_pb_obstructions": [],
+        "length": 333,
+        "num_clauses": 74129,
+        "num_variables": 10833,
+        "orbit_count": 23,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334
+        ],
+        "pair_xor_count_per_sequence": 253,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 46,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 22,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "external_check": {
+        "checker": "tools/drat-trim/drat-trim",
+        "checker_log": "logs/lp333_id22_drat_trim.log",
+        "checker_log_sha256": "22cc213f1cda566b3155379f22dbd2e36840c5c4b9b89f60f37c6b7fb17f82ab",
+        "checker_run": {
+          "command": [
+            "./tools/drat-trim/drat-trim",
+            "./cnf/lp333_id22_unit_split.cnf",
+            "./proofs/lp333_id22_unit_split.drat",
+            "-I"
+          ],
+          "returncode": 0,
+          "timeout_seconds": 1800
+        },
+        "status": "VERIFIED",
+        "verification_kind": "drat_trace_verified",
+        "verified": true
+      },
+      "orbit_count": 23,
+      "proof": "proofs/lp333_id22_unit_split.drat",
+      "proof_bytes": 15132523,
+      "proof_cnf": "cnf/lp333_id22_unit_split.cnf",
+      "proof_cnf_bytes": 1524555,
+      "proof_cnf_dimacs": {
+        "num_clauses": 74390,
+        "num_variables": 11094,
+        "split_unit_clauses": true,
+        "unit_split_count": 261
+      },
+      "proof_cnf_sha256": "2827e3ab40c74aa7959c51a623a933a09140f8cd5a443d92241268c83c39bc7c",
+      "proof_format": "ASCII DRAT",
+      "proof_sha256": "5c1c3b660d375c946f39f1cc3448e6caa50d431b8140399f855847d91eb5a975",
+      "shift_representatives": 22,
+      "solver_log": "logs/lp333_id22_cadical.log",
+      "solver_log_sha256": "ab6efb935f71d411dc369dabc13f3fe5aa10cd0a389dbddf8c4028a3d63ad2da",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "--binary=false",
+          "--checkproof=1",
+          "-q",
+          "./cnf/lp333_id22_unit_split.cnf",
+          "./proofs/lp333_id22_unit_split.drat"
+        ],
+        "returncode": 20,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "UNSAT",
+      "subgroup_id": 22,
+      "subgroup_order": 18,
+      "unit_split_map": "cnf/lp333_id22_unit_split_map.json",
+      "unit_split_map_sha256": "688e32ff24be3839fdfac6a5826d4097209cba9cb5197207ae6d5e8933a3e18c"
+    },
+    {
+      "audit": "audits/lp333_id23.json",
+      "audit_sha256": "fc71d7da720deb56d795333674717293a8f7663dcbe65c18a6375e05745b93db",
+      "cnf": "cnf/lp333_id23.cnf",
+      "cnf_bytes": 1405512,
+      "cnf_dimacs": {
+        "num_clauses": 69335,
+        "num_variables": 10191,
+        "split_unit_clauses": false,
+        "unit_split_count": 0,
+        "unit_split_map": []
+      },
+      "cnf_sha256": "13456c91088db851ec0bc839968a428f66e79604820b30f48992ca1a6061715b",
+      "direct_pb_upper_bound_certificate": {
+        "kind": "nonnegative weighted XOR sum cannot reach required target",
+        "obstructions": [
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 0,
+            "required_weighted_xor_sum": 334,
+            "shift": 111,
+            "shortfall": 112
+          },
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 1,
+            "required_weighted_xor_sum": 334,
+            "shift": 222,
+            "shortfall": 112
+          }
+        ]
+      },
+      "encoding": {
+        "direct_pb_obstructions": [
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 0,
+            "required_weighted_xor_sum": 334,
+            "shift": 111,
+            "shortfall": 112
+          },
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 1,
+            "required_weighted_xor_sum": 334,
+            "shift": 222,
+            "shortfall": 112
+          }
+        ],
+        "length": 333,
+        "num_clauses": 69335,
+        "num_variables": 10191,
+        "orbit_count": 25,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334
+        ],
+        "pair_xor_count_per_sequence": 300,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 50,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 24,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "external_check": {
+        "checker": "tools/drat-trim/drat-trim",
+        "checker_exit_note": "drat-trim emitted 's VERIFIED' on its early trivial-UNSAT path; upstream exits 1 on that path despite the verified marker",
+        "checker_log": "logs/lp333_id23_drat_trim.log",
+        "checker_log_sha256": "b62afe7a2a17bb1011e5c89d59c9071c41f962ab11c31bef902af1ca0b6fa344",
+        "checker_run": {
+          "command": [
+            "./tools/drat-trim/drat-trim",
+            "./cnf/lp333_id23_unit_split.cnf",
+            "./proofs/lp333_id23_unit_split.drat",
+            "-I"
+          ],
+          "returncode": 1,
+          "timeout_seconds": 1800
+        },
+        "status": "VERIFIED",
+        "verification_kind": "input_cnf_trivial_unsat",
+        "verified": true
+      },
+      "orbit_count": 25,
+      "proof": "proofs/lp333_id23_unit_split.drat",
+      "proof_bytes": 1500239,
+      "proof_cnf": "cnf/lp333_id23_unit_split.cnf",
+      "proof_cnf_bytes": 1410967,
+      "proof_cnf_dimacs": {
+        "num_clauses": 69600,
+        "num_variables": 10456,
+        "split_unit_clauses": true,
+        "unit_split_count": 265
+      },
+      "proof_cnf_sha256": "498664a487294e1f1d442aa908c8142b08f2b53e12de7bdf2743088d5e5d9aa4",
+      "proof_format": "ASCII DRAT",
+      "proof_sha256": "91d036e51af5d54616bdeffcae79c1d6ffb48df1e4007417ba1c24ecf4793073",
+      "shift_representatives": 24,
+      "solver_log": "logs/lp333_id23_cadical.log",
+      "solver_log_sha256": "fe0aafd4ba26879fcbb5d91f907da1026d61aa96dd34056d2badd48abb7df10f",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "--binary=false",
+          "--checkproof=1",
+          "-q",
+          "./cnf/lp333_id23_unit_split.cnf",
+          "./proofs/lp333_id23_unit_split.drat"
+        ],
+        "returncode": 20,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "UNSAT",
+      "subgroup_id": 23,
+      "subgroup_order": 27,
+      "unit_split_map": "cnf/lp333_id23_unit_split_map.json",
+      "unit_split_map_sha256": "19b2a170c106daa388467813ff9bca926939007400a8e5023e8823511f69bf20"
+    },
+    {
+      "audit": "audits/lp333_id24.json",
+      "audit_sha256": "a584ebf38f559621069ed0da9c8d0c2a94e09ca425df7a57fd16e099f71eaeef",
+      "cnf": "cnf/lp333_id24.cnf",
+      "cnf_bytes": 819039,
+      "cnf_dimacs": {
+        "num_clauses": 41029,
+        "num_variables": 6051,
+        "split_unit_clauses": false,
+        "unit_split_count": 0,
+        "unit_split_map": []
+      },
+      "cnf_sha256": "e39017f4d8fd7bec4bc7bf058e93197b5e542d97eebe66705dbb57383e64b4ad",
+      "direct_pb_upper_bound_certificate": {
+        "kind": "nonnegative weighted XOR sum cannot reach required target",
+        "obstructions": [
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 0,
+            "required_weighted_xor_sum": 334,
+            "shift": 111,
+            "shortfall": 112
+          },
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 1,
+            "required_weighted_xor_sum": 334,
+            "shift": 222,
+            "shortfall": 112
+          }
+        ]
+      },
+      "encoding": {
+        "direct_pb_obstructions": [
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 0,
+            "required_weighted_xor_sum": 334,
+            "shift": 111,
+            "shortfall": 112
+          },
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 1,
+            "required_weighted_xor_sum": 334,
+            "shift": 222,
+            "shortfall": 112
+          }
+        ],
+        "length": 333,
+        "num_clauses": 41029,
+        "num_variables": 6051,
+        "orbit_count": 20,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334
+        ],
+        "pair_xor_count_per_sequence": 190,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 40,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 19,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "external_check": {
+        "checker": "tools/drat-trim/drat-trim",
+        "checker_exit_note": "drat-trim emitted 's VERIFIED' on its early trivial-UNSAT path; upstream exits 1 on that path despite the verified marker",
+        "checker_log": "logs/lp333_id24_drat_trim.log",
+        "checker_log_sha256": "aaa562dc06fe3a2eaa733ef0cc051eb68c68b11e85270c0b714c21a7f145f883",
+        "checker_run": {
+          "command": [
+            "./tools/drat-trim/drat-trim",
+            "./cnf/lp333_id24_unit_split.cnf",
+            "./proofs/lp333_id24_unit_split.drat",
+            "-I"
+          ],
+          "returncode": 1,
+          "timeout_seconds": 1800
+        },
+        "status": "VERIFIED",
+        "verification_kind": "input_cnf_trivial_unsat",
+        "verified": true
+      },
+      "orbit_count": 20,
+      "proof": "proofs/lp333_id24_unit_split.drat",
+      "proof_bytes": 872292,
+      "proof_cnf": "cnf/lp333_id24_unit_split.cnf",
+      "proof_cnf_bytes": 822847,
+      "proof_cnf_dimacs": {
+        "num_clauses": 41236,
+        "num_variables": 6258,
+        "split_unit_clauses": true,
+        "unit_split_count": 207
+      },
+      "proof_cnf_sha256": "79efe6e573c9d3740b550b54ac9d9cb8cedd082f7587e5967ffe2735767bd421",
+      "proof_format": "ASCII DRAT",
+      "proof_sha256": "62811db4373360dc4cf53ce291c41d9306e949028bc7259bd696804e07fce84e",
+      "shift_representatives": 19,
+      "solver_log": "logs/lp333_id24_cadical.log",
+      "solver_log_sha256": "ab214fbadfe447ba7d7a5401235246a3a7549a919bc70ae0ad37e3f825add410",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "--binary=false",
+          "--checkproof=1",
+          "-q",
+          "./cnf/lp333_id24_unit_split.cnf",
+          "./proofs/lp333_id24_unit_split.drat"
+        ],
+        "returncode": 20,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "UNSAT",
+      "subgroup_id": 24,
+      "subgroup_order": 36,
+      "unit_split_map": "cnf/lp333_id24_unit_split_map.json",
+      "unit_split_map_sha256": "a187e0169c670f8753bbbf6017f3db835361eb2596b92f13d5be02225dedeaa3"
+    },
+    {
+      "audit": "audits/lp333_id28.json",
+      "audit_sha256": "c5c104d628c84e85b499b028fbac9f7c8a122d5f3eaca2b4031c2104116b5404",
+      "cnf": "cnf/lp333_id28.cnf",
+      "cnf_bytes": 337043,
+      "cnf_dimacs": {
+        "num_clauses": 17679,
+        "num_variables": 2637,
+        "split_unit_clauses": false,
+        "unit_split_count": 0,
+        "unit_split_map": []
+      },
+      "cnf_sha256": "5cab07a073053d2b886b1b039c8709b7fbe330afec5d6892af4f5ca7b852015e",
+      "direct_pb_upper_bound_certificate": {
+        "kind": "nonnegative weighted XOR sum cannot reach required target",
+        "obstructions": [
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 0,
+            "required_weighted_xor_sum": 334,
+            "shift": 111,
+            "shortfall": 112
+          },
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 1,
+            "required_weighted_xor_sum": 334,
+            "shift": 222,
+            "shortfall": 112
+          }
+        ]
+      },
+      "encoding": {
+        "direct_pb_obstructions": [
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 0,
+            "required_weighted_xor_sum": 334,
+            "shift": 111,
+            "shortfall": 112
+          },
+          {
+            "coefficient_sum_per_sequence": 111,
+            "diagonal_constant": 222,
+            "maximum_weighted_xor_sum": 222,
+            "representative_index": 1,
+            "required_weighted_xor_sum": 334,
+            "shift": 222,
+            "shortfall": 112
+          }
+        ],
+        "length": 333,
+        "num_clauses": 17679,
+        "num_variables": 2637,
+        "orbit_count": 15,
+        "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+        "paf_targets": [
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334,
+          334
+        ],
+        "pair_xor_count_per_sequence": 105,
+        "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+        "primary_orbit_variables": 30,
+        "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+        "row_zero_normalization": "za[0] = zb[0] = 0",
+        "shift_representatives": 14,
+        "xor_encoding": "four-clause exact Tseitin XOR"
+      },
+      "external_check": {
+        "checker": "tools/drat-trim/drat-trim",
+        "checker_exit_note": "drat-trim emitted 's VERIFIED' on its early trivial-UNSAT path; upstream exits 1 on that path despite the verified marker",
+        "checker_log": "logs/lp333_id28_drat_trim.log",
+        "checker_log_sha256": "b6998e50cd6dba46b413a5ca304e3bebe24dcf9d5579071c208e240d93af9b3c",
+        "checker_run": {
+          "command": [
+            "./tools/drat-trim/drat-trim",
+            "./cnf/lp333_id28_unit_split.cnf",
+            "./proofs/lp333_id28_unit_split.drat",
+            "-I"
+          ],
+          "returncode": 1,
+          "timeout_seconds": 1800
+        },
+        "status": "VERIFIED",
+        "verification_kind": "input_cnf_trivial_unsat",
+        "verified": true
+      },
+      "orbit_count": 15,
+      "proof": "proofs/lp333_id28_unit_split.drat",
+      "proof_bytes": 356223,
+      "proof_cnf": "cnf/lp333_id28_unit_split.cnf",
+      "proof_cnf_bytes": 339754,
+      "proof_cnf_dimacs": {
+        "num_clauses": 17828,
+        "num_variables": 2786,
+        "split_unit_clauses": true,
+        "unit_split_count": 149
+      },
+      "proof_cnf_sha256": "c7db8b14510566ff8917b80911ad58dcf790b07383c6f8f790430c8508f4410e",
+      "proof_format": "ASCII DRAT",
+      "proof_sha256": "23240328df76dbc6a58d162f29e991b675b86777cba52920fa945a45fefee572",
+      "shift_representatives": 14,
+      "solver_log": "logs/lp333_id28_cadical.log",
+      "solver_log_sha256": "6897553a89e6c4772c3cc0d5e0aa46a0cdb27cfcb96d3049949be9700f9065ad",
+      "solver_run": {
+        "command": [
+          "cadical",
+          "--binary=false",
+          "--checkproof=1",
+          "-q",
+          "./cnf/lp333_id28_unit_split.cnf",
+          "./proofs/lp333_id28_unit_split.drat"
+        ],
+        "returncode": 20,
+        "timeout_seconds": 1800
+      },
+      "solver_status": "UNSAT",
+      "subgroup_id": 28,
+      "subgroup_order": 54,
+      "unit_split_map": "cnf/lp333_id28_unit_split_map.json",
+      "unit_split_map_sha256": "8e8b655fcf73b69d4547d957edcda64ebdd1795898f844d357efd13df94301ac"
+    }
+  ],
+  "requested_ids": [
+    11,
+    13,
+    14,
+    15,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    28
+  ],
+  "target_cp_sat_only_ids": [
+    11,
+    13,
+    14,
+    15,
+    19
+  ],
+  "tools": {
+    "cadical": "cadical",
+    "cadical_version": "3.0.1",
+    "drat_trim": "tools/drat-trim/drat-trim",
+    "drat_trim_git_revision": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "drat_trim_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+  }
+}

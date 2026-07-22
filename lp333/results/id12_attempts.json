@@ -1,0 +1,53 @@
+{
+  "id": 12,
+  "order": 9,
+  "r": 45,
+  "structure": "trivial mod 9; order-9 subgroup of (Z/37)^* (pure cyclotomic mod-37)",
+  "status": "IMPOSSIBLE (proved, phase 2)",
+  "reason": "no two-square obstruction (quartic Gaussian periods are non-integer); row sum +/-1 reachable; 37- and 9-compression relaxations feasible; exact CP-SAT did not terminate within budget and found no LP.",
+  "exact_attempts": [
+    {
+      "engine": "CP-SAT booleanized (no symbreak)",
+      "budget_s": 240,
+      "workers": 8,
+      "result": "UNKNOWN"
+    },
+    {
+      "engine": "CP-SAT booleanized + multiplier/swap symmetry breaking",
+      "budget_s": 600,
+      "workers": 8,
+      "result": "UNKNOWN"
+    },
+    {
+      "engine": "CP-SAT column-type model (Z9 x Z37) + symmetry breaking",
+      "budget_s": 900,
+      "workers": 9,
+      "result": "UNKNOWN"
+    },
+    {
+      "engine": "CP-SAT column-type model (Z9 x Z37), no symmetry breaking",
+      "budget_s": 1200,
+      "workers": 4,
+      "result": "UNKNOWN"
+    }
+  ],
+  "note": "No LP found in any attempt; almost certainly a hard UNSAT, but reported OPEN (not proved).",
+  "resolution": {
+    "verdict": "IMPOSSIBLE",
+    "method": "9-compression obstruction using the exact K37-invariance column-sum value set V={+-1,+-17,+-19,+-35,+-37}",
+    "key_facts": [
+      "Column sums atilde_j in V (K37-invariance, orbit sizes 1,9,9,9,9).",
+      "Compression identity => PAF_atilde(s)+PAF_btilde(s) = -74 for s=1..8; row sums +-1.",
+      "Forced squared-norm 594 has a UNIQUE V-square multiset 16x1+2x289 => exactly two |.|=17 columns, sixteen |.|=1.",
+      "Exhaustive search over 2,540,160 compressed pairs finds 0 solutions."
+    ],
+    "engines_agree_infeasible": [
+      "exhaustive",
+      "CP-SAT (ortools)",
+      "z3"
+    ],
+    "standalone_verifier": "PASS (pure stdlib)",
+    "certificate": "id12_phase2/results/id12_impossible_certificate.json",
+    "why_open_before": "prior 9-compression relaxation treated column sums as free odd integers (842 square-multisets for 594); the K37 value-set restriction was the missing ingredient."
+  }
+}

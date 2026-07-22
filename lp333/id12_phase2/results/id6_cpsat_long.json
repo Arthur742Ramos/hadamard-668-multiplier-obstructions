@@ -1,0 +1,1 @@
+{"id":6,"engine":"cp-sat long (600s budget)","status":"UNKNOWN (timed out on large |V|=20 nonlinear model)","infeasible":false,"note":"id6 is proved IMPOSSIBLE by the complete exhaustive (2,428,992 pruned compressed sequences, 0 feasible), by the same algorithm three-engine-validated on id12; CP-SAT could not corroborate within budget on the larger domain."}

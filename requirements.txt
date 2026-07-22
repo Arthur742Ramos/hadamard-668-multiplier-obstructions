@@ -1,0 +1,4 @@
+numpy==2.5.1
+sympy==1.14.0
+ortools==9.15.6755
+z3-solver==5.0.0

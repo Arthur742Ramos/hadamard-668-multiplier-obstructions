@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software or its proof artifacts, please cite this release."
+title: "Multiplier obstructions for Legendre pairs of length 333"
+type: software
+authors:
+  - family-names: "Ramos"
+    given-names: "Arthur"
+    alias: "Arthur742Ramos"
+repository-code: "https://github.com/Arthur742Ramos/hadamard-668-multiplier-obstructions"
+url: "https://github.com/Arthur742Ramos/hadamard-668-multiplier-obstructions"
+version: 1.0.0
+date-released: 2026-07-22
+license: MIT
+abstract: >-
+  Proof-carrying exclusions for multiplier-invariant Legendre pairs of
+  length 333, including an analytic exclusion of the final order-9
+  multiplier family and supporting fixed-field compression obstructions.
+keywords:
+  - Hadamard matrix
+  - Legendre pair
+  - supplementary difference set
+  - multiplier
+  - periodic autocorrelation
+  - DRAT

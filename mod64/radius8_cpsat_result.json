@@ -1,0 +1,26 @@
+{
+  "solver": "OR-Tools CP-SAT 9.15.6755",
+  "status": "INFEASIBLE",
+  "elapsed_seconds": 1.0851557080022758,
+  "workers": 8,
+  "time_limit_seconds": 1800.0,
+  "primary_flip_variables": 84,
+  "eligible_plus_positions": 41,
+  "required_flips": 8,
+  "xor_auxiliaries": 820,
+  "constraints": "all 83 exact aperiodic complementary equations",
+  "source_row_sums": [
+    -2,
+    3,
+    0,
+    -1
+  ],
+  "required_row_sums": [
+    -18,
+    3,
+    0,
+    -1
+  ],
+  "model_sha256": "934b43ecae98229a069c161f3cda9246ce532f858b0636681a68324395810432",
+  "solver_stats": "CpSolverResponse summary:\nstatus: INFEASIBLE\nobjective: NA\nbest_bound: NA\nintegers: 0\nbooleans: 0\nconflicts: 0\nbranches: 0\npropagations: 0\ninteger_propagations: 0\nrestarts: 0\nlp_iterations: 0\nwalltime: 0.036223\nusertime: 0.036223\ndeterministic_time: 0\ngap_integral: 0\n"
+}

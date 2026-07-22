@@ -1,0 +1,101 @@
+{
+  "dependency_pins": {
+    "checks": [
+      {
+        "path": "../code/core.py",
+        "result": "PASS",
+        "sha256": "b13b2afb80345328db08b1f8c24c8a88821ce5ee4eb8caed775a0e57fab1fce7"
+      },
+      {
+        "path": "../code/search_common.py",
+        "result": "PASS",
+        "sha256": "e5142332a45835828ffb3d74eda07d0d7b3fab8a64cceeddef6d1718401ca760"
+      },
+      {
+        "path": "../results/subgroup_classification.json",
+        "result": "PASS",
+        "sha256": "1e8073d58a920d2e5f59804f24f685e50f20dba41139c5520fb8863dc4ee3d3a"
+      },
+      {
+        "path": "tools/drat-trim/drat-trim.c",
+        "result": "PASS",
+        "sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+      }
+    ],
+    "path": "dependency_pins.json",
+    "result": "PASS",
+    "sha256": "ac137b2ebbea47c1f45d465b0f8cd95d124eca414a88f37b6892914214a91e2e"
+  },
+  "dimacs_files_checked": 24,
+  "errors": [],
+  "full_verification": {
+    "mode": "pinned-prior-full-run",
+    "path": "audits/full_validation.json",
+    "result": "PASS"
+  },
+  "hash_entries_checked": 72,
+  "independent_rebuild_checked": true,
+  "positive_controls": [
+    "length_5",
+    "length_7"
+  ],
+  "record_checks": [
+    {
+      "evidence": "input_cnf_trivial_unsat",
+      "id": 11,
+      "result": "PASS"
+    },
+    {
+      "evidence": "drat_trace_verified",
+      "id": 13,
+      "result": "PASS"
+    },
+    {
+      "evidence": "drat_trace_verified",
+      "id": 14,
+      "result": "PASS"
+    },
+    {
+      "evidence": "input_cnf_trivial_unsat",
+      "id": 15,
+      "result": "PASS"
+    },
+    {
+      "evidence": "input_cnf_trivial_unsat",
+      "id": 19,
+      "result": "PASS"
+    },
+    {
+      "evidence": "drat_trace_verified",
+      "id": 20,
+      "result": "PASS"
+    },
+    {
+      "evidence": "drat_trace_verified",
+      "id": 21,
+      "result": "PASS"
+    },
+    {
+      "evidence": "drat_trace_verified",
+      "id": 22,
+      "result": "PASS"
+    },
+    {
+      "evidence": "input_cnf_trivial_unsat",
+      "id": 23,
+      "result": "PASS"
+    },
+    {
+      "evidence": "input_cnf_trivial_unsat",
+      "id": 24,
+      "result": "PASS"
+    },
+    {
+      "evidence": "input_cnf_trivial_unsat",
+      "id": 28,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS",
+  "standalone_independent_audit_checked": true
+}

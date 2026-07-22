@@ -1,0 +1,11 @@
+{
+  "id": 12,
+  "order": 9,
+  "model": "column-type (Z9 x Z37 factored)",
+  "K37_order": 9,
+  "num_column_types": 32,
+  "seconds": 1204.23,
+  "status": "UNKNOWN",
+  "symmetry_breaking": false,
+  "sat": null
+}

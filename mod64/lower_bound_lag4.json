@@ -1,0 +1,93 @@
+{
+  "solver": "OR-Tools CP-SAT 9.15.6755",
+  "status": "FEASIBLE",
+  "elapsed_seconds": 300.05622183400556,
+  "workers": 2,
+  "time_limit_seconds": 300.0,
+  "lags": [
+    4
+  ],
+  "original_combined_aperiodic_correlations": {
+    "4": -256
+  },
+  "primary_flip_variables": 334,
+  "xor_auxiliaries": 318,
+  "objective_value": 64.0,
+  "best_objective_bound": 0.0,
+  "model_sha256": "a9490f39c42b29a2d8d5d5e7c57671fc320a2628654b8702b8655b72d4d6bc5f",
+  "solver_stats": "CpSolverResponse summary:\nstatus: FEASIBLE\nobjective: 64\nbest_bound: 0\nintegers: 672\nbooleans: 652\nconflicts: 1185750\nbranches: 9253526\npropagations: 148256459\ninteger_propagations: 335362245\nrestarts: 1043\nlp_iterations: 0\nwalltime: 300.012\nusertime: 300.012\ndeterministic_time: 276.679\ngap_integral: 1150.74\nsolution_fingerprint: 0x9e1a9dbb1e32ba08\n",
+  "flipped_positions_zero_based": [
+    [
+      21,
+      48,
+      49,
+      51,
+      56,
+      58,
+      68,
+      69,
+      71,
+      77,
+      79
+    ],
+    [
+      5,
+      10,
+      13,
+      15,
+      16,
+      24,
+      31,
+      33,
+      45,
+      46,
+      47,
+      54,
+      57,
+      69,
+      70
+    ],
+    [
+      4,
+      6,
+      14,
+      15,
+      17,
+      23,
+      24,
+      30,
+      32,
+      35,
+      38,
+      40,
+      48,
+      57,
+      59,
+      65,
+      72,
+      73,
+      75
+    ],
+    [
+      5,
+      6,
+      13,
+      14,
+      15,
+      16,
+      26,
+      28,
+      29,
+      31,
+      47,
+      49,
+      54,
+      55,
+      56,
+      68,
+      70,
+      73,
+      75
+    ]
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "solver": "OR-Tools CP-SAT 9.15.6755",
+  "status": "UNKNOWN",
+  "elapsed_seconds": 300.72383233300934,
+  "workers": 2,
+  "time_limit_seconds": 300.0,
+  "lags": [
+    4,
+    8,
+    12,
+    16,
+    26,
+    30,
+    34,
+    38,
+    42,
+    46,
+    50,
+    54,
+    58
+  ],
+  "original_combined_aperiodic_correlations": {
+    "4": -256,
+    "8": 192,
+    "12": -128,
+    "16": 64,
+    "26": -32,
+    "30": 64,
+    "34": -96,
+    "38": 128,
+    "42": -160,
+    "46": 128,
+    "50": -96,
+    "54": 64,
+    "58": -32
+  },
+  "primary_flip_variables": 334,
+  "xor_auxiliaries": 2670,
+  "objective_value": null,
+  "best_objective_bound": 0.0,
+  "model_sha256": "dcceae56a748bac94692648b3236cd9787424b5803e43281f6aa5a7af73275ea",
+  "solver_stats": "CpSolverResponse summary:\nstatus: UNKNOWN\nobjective: 334\nbest_bound: 0\nintegers: 3024\nbooleans: 3004\nconflicts: 1546404\nbranches: 7643605\npropagations: 220433318\ninteger_propagations: 105975017\nrestarts: 3287\nlp_iterations: 0\nwalltime: 300.679\nusertime: 300.679\ndeterministic_time: 254.21\ngap_integral: 1477.98\n"
+}

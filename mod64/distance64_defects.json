@@ -1,0 +1,32 @@
+{
+  "solver": "OR-Tools CP-SAT 9.15.6755",
+  "status": "UNKNOWN",
+  "elapsed_seconds": 1800.109504167005,
+  "workers": 4,
+  "time_limit_seconds": 1800.0,
+  "lags": [
+    4,
+    8,
+    12,
+    16,
+    26,
+    30,
+    34,
+    38,
+    42,
+    46,
+    50,
+    54,
+    58
+  ],
+  "distance": 64,
+  "tight_lag4_conditions": {
+    "eligible_vertices": 245,
+    "all_flips_have_two_negative_lag4_edges": true,
+    "no_two_flips_are_lag4_adjacent": true
+  },
+  "eligible_dc_profiles": 336,
+  "xor_auxiliaries": 2670,
+  "model_sha256": "a2fc0e29630ed6a6e2f59f080b61a5c02def65c58fcff5d0ef8f807c27a4d184",
+  "solver_stats": "CpSolverResponse summary:\nstatus: UNKNOWN\nobjective: 0\nbest_bound: 0\nintegers: 2399\nbooleans: 2109\nconflicts: 303690\nbranches: 4469886\npropagations: 55760763\ninteger_propagations: 101397073\nrestarts: 679\nlp_iterations: 6693184\nwalltime: 1800.06\nusertime: 1800.06\ndeterministic_time: 3085.35\ngap_integral: 0\n"
+}

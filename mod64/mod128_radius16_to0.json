@@ -1,0 +1,17 @@
+{
+  "solver": "OR-Tools CP-SAT 9.15.6755",
+  "status": "INFEASIBLE",
+  "elapsed_seconds": 3.4596410840022145,
+  "workers": 4,
+  "time_limit_seconds": 1800.0,
+  "target": "128-modular GS from special-form base sequences",
+  "base_aperiodic_target": "0 modulo 64 at every lag 1..83",
+  "primary_flip_variables": 334,
+  "xor_auxiliaries": 13778,
+  "objective_value": null,
+  "best_objective_bound": 0.0,
+  "fixed_flips": 16,
+  "lag58_target": 0,
+  "model_sha256": "b5a7c25785ebd5c4a0fb0423a6fc6e83275c6f4e7633560e2521f32bb8e5844e",
+  "solver_stats": "CpSolverResponse summary:\nstatus: INFEASIBLE\nobjective: NA\nbest_bound: NA\nintegers: 2674\nbooleans: 2495\nconflicts: 1139\nbranches: 65610\npropagations: 209735\ninteger_propagations: 456138\nrestarts: 9\nlp_iterations: 21531\nwalltime: 3.45687\nusertime: 3.45687\ndeterministic_time: 6.54777\ngap_integral: 0\n"
+}

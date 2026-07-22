@@ -1,0 +1,123 @@
+{
+  "bogus_proof_control": {
+    "log": "logs/full_bogus_id13_drat_trim.log",
+    "not_verified_marker_count": 1,
+    "proof": "audits/bogus_id13_empty.drat",
+    "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "result": "PASS",
+    "returncode": 1,
+    "target_id": 13,
+    "verified_marker_count": 0
+  },
+  "checker": {
+    "expected_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "path": "tools/drat-trim/drat-trim",
+    "result": "PASS",
+    "source": "tools/drat-trim/drat-trim.c",
+    "source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+  },
+  "errors": [],
+  "kind": "full-independent-drat-trim-reverification",
+  "records": [
+    {
+      "id": 11,
+      "kind": "input_cnf_trivial_unsat",
+      "log": "logs/full_id11_drat_trim.log",
+      "not_verified_marker_count": 0,
+      "result": "PASS",
+      "returncode": 1,
+      "verified_marker_count": 1
+    },
+    {
+      "id": 13,
+      "kind": "drat_trace_verified",
+      "log": "logs/full_id13_drat_trim.log",
+      "not_verified_marker_count": 0,
+      "result": "PASS",
+      "returncode": 0,
+      "verified_marker_count": 1
+    },
+    {
+      "id": 14,
+      "kind": "drat_trace_verified",
+      "log": "logs/full_id14_drat_trim.log",
+      "not_verified_marker_count": 0,
+      "result": "PASS",
+      "returncode": 0,
+      "verified_marker_count": 1
+    },
+    {
+      "id": 15,
+      "kind": "input_cnf_trivial_unsat",
+      "log": "logs/full_id15_drat_trim.log",
+      "not_verified_marker_count": 0,
+      "result": "PASS",
+      "returncode": 1,
+      "verified_marker_count": 1
+    },
+    {
+      "id": 19,
+      "kind": "input_cnf_trivial_unsat",
+      "log": "logs/full_id19_drat_trim.log",
+      "not_verified_marker_count": 0,
+      "result": "PASS",
+      "returncode": 1,
+      "verified_marker_count": 1
+    },
+    {
+      "id": 20,
+      "kind": "drat_trace_verified",
+      "log": "logs/full_id20_drat_trim.log",
+      "not_verified_marker_count": 0,
+      "result": "PASS",
+      "returncode": 0,
+      "verified_marker_count": 1
+    },
+    {
+      "id": 21,
+      "kind": "drat_trace_verified",
+      "log": "logs/full_id21_drat_trim.log",
+      "not_verified_marker_count": 0,
+      "result": "PASS",
+      "returncode": 0,
+      "verified_marker_count": 1
+    },
+    {
+      "id": 22,
+      "kind": "drat_trace_verified",
+      "log": "logs/full_id22_drat_trim.log",
+      "not_verified_marker_count": 0,
+      "result": "PASS",
+      "returncode": 0,
+      "verified_marker_count": 1
+    },
+    {
+      "id": 23,
+      "kind": "input_cnf_trivial_unsat",
+      "log": "logs/full_id23_drat_trim.log",
+      "not_verified_marker_count": 0,
+      "result": "PASS",
+      "returncode": 1,
+      "verified_marker_count": 1
+    },
+    {
+      "id": 24,
+      "kind": "input_cnf_trivial_unsat",
+      "log": "logs/full_id24_drat_trim.log",
+      "not_verified_marker_count": 0,
+      "result": "PASS",
+      "returncode": 1,
+      "verified_marker_count": 1
+    },
+    {
+      "id": 28,
+      "kind": "input_cnf_trivial_unsat",
+      "log": "logs/full_id28_drat_trim.log",
+      "not_verified_marker_count": 0,
+      "result": "PASS",
+      "returncode": 1,
+      "verified_marker_count": 1
+    }
+  ],
+  "result": "PASS"
+}

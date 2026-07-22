@@ -1,0 +1,903 @@
+{
+  "summary": {
+    "total_families": 30,
+    "killed_by_mod37_full_reduction": [
+      25,
+      26,
+      27,
+      29
+    ],
+    "impossible_ids": [
+      6,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "open_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      9,
+      10
+    ],
+    "found_ids": [],
+    "num_impossible": 21,
+    "num_open": 9,
+    "num_found": 0,
+    "all_order_ge_12_impossible": true,
+    "all_order_ge_9_impossible": true,
+    "impossible_orders_min": 4,
+    "open_orders_max": 6
+  },
+  "families": [
+    {
+      "id": 0,
+      "order": 1,
+      "r": 333,
+      "reduction_mod9_order": 1,
+      "reduction_mod37_order": 1,
+      "orbit_signature": [
+        [
+          1,
+          333
+        ]
+      ],
+      "generators": [],
+      "status": "OPEN",
+      "label": "not_exhausted",
+      "method": "search_incomplete_within_budget"
+    },
+    {
+      "id": 1,
+      "order": 2,
+      "r": 171,
+      "reduction_mod9_order": 1,
+      "reduction_mod37_order": 2,
+      "orbit_signature": [
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          162
+        ]
+      ],
+      "generators": [
+        73
+      ],
+      "status": "OPEN",
+      "label": "not_exhausted",
+      "method": "search_incomplete_within_budget"
+    },
+    {
+      "id": 2,
+      "order": 3,
+      "r": 185,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 1,
+      "orbit_signature": [
+        [
+          1,
+          111
+        ],
+        [
+          3,
+          74
+        ]
+      ],
+      "generators": [
+        112
+      ],
+      "status": "OPEN",
+      "label": "not_exhausted",
+      "method": "search_incomplete_within_budget"
+    },
+    {
+      "id": 3,
+      "order": 3,
+      "r": 117,
+      "reduction_mod9_order": 1,
+      "reduction_mod37_order": 3,
+      "orbit_signature": [
+        [
+          1,
+          9
+        ],
+        [
+          3,
+          108
+        ]
+      ],
+      "generators": [
+        10
+      ],
+      "status": "OPEN",
+      "label": "not_exhausted",
+      "method": "search_incomplete_within_budget"
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "r": 113,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 3,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          110
+        ]
+      ],
+      "generators": [
+        121
+      ],
+      "status": "OPEN",
+      "label": "not_exhausted",
+      "method": "search_incomplete_within_budget"
+    },
+    {
+      "id": 5,
+      "order": 3,
+      "r": 113,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 3,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          110
+        ]
+      ],
+      "generators": [
+        211
+      ],
+      "status": "OPEN",
+      "label": "not_exhausted",
+      "method": "search_incomplete_within_budget"
+    },
+    {
+      "id": 6,
+      "order": 4,
+      "r": 90,
+      "reduction_mod9_order": 1,
+      "reduction_mod37_order": 4,
+      "orbit_signature": [
+        [
+          1,
+          9
+        ],
+        [
+          4,
+          81
+        ]
+      ],
+      "generators": [
+        73,
+        154
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "phase2_value_set_9_compression_obstruction",
+      "certificate": "id12_phase2/results/general_compression_certificate.json",
+      "phase2": true
+    },
+    {
+      "id": 7,
+      "order": 6,
+      "r": 95,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 2,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          54
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          36
+        ]
+      ],
+      "generators": [
+        73,
+        112
+      ],
+      "status": "OPEN",
+      "label": "not_exhausted",
+      "method": "search_incomplete_within_budget"
+    },
+    {
+      "id": 8,
+      "order": 6,
+      "r": 63,
+      "reduction_mod9_order": 1,
+      "reduction_mod37_order": 6,
+      "orbit_signature": [
+        [
+          1,
+          9
+        ],
+        [
+          6,
+          54
+        ]
+      ],
+      "generators": [
+        10,
+        64
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "phase2_value_set_9_compression_obstruction",
+      "certificate": "id12_phase2/results/general_compression_certificate.json",
+      "phase2": true
+    },
+    {
+      "id": 9,
+      "order": 6,
+      "r": 59,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 6,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          54
+        ]
+      ],
+      "generators": [
+        73,
+        85
+      ],
+      "status": "OPEN",
+      "label": "not_exhausted",
+      "method": "search_incomplete_within_budget"
+    },
+    {
+      "id": 10,
+      "order": 6,
+      "r": 59,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 6,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          54
+        ]
+      ],
+      "generators": [
+        73,
+        121
+      ],
+      "status": "OPEN",
+      "label": "not_exhausted",
+      "method": "search_incomplete_within_budget"
+    },
+    {
+      "id": 11,
+      "order": 9,
+      "r": 65,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 3,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          38
+        ],
+        [
+          9,
+          24
+        ]
+      ],
+      "generators": [
+        10,
+        112
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "exact_CP_SAT_booleanized",
+      "certificate": "results/cpsat/id11_long.json"
+    },
+    {
+      "id": 12,
+      "order": 9,
+      "r": 45,
+      "reduction_mod9_order": 1,
+      "reduction_mod37_order": 9,
+      "orbit_signature": [
+        [
+          1,
+          9
+        ],
+        [
+          9,
+          36
+        ]
+      ],
+      "generators": [
+        10,
+        46
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "phase2_value_set_9_compression_obstruction",
+      "certificate": "id12_phase2/results/id12_impossible_certificate.json",
+      "phase2": true
+    },
+    {
+      "id": 13,
+      "order": 9,
+      "r": 41,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 9,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          9,
+          36
+        ]
+      ],
+      "generators": [
+        7
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "exact_CP_SAT_booleanized",
+      "certificate": "results/cpsat/id13_symbreak.json"
+    },
+    {
+      "id": 14,
+      "order": 9,
+      "r": 41,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 9,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          9,
+          36
+        ]
+      ],
+      "generators": [
+        10,
+        16
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "exact_CP_SAT_booleanized",
+      "certificate": "results/cpsat/id14_symbreak.json"
+    },
+    {
+      "id": 15,
+      "order": 12,
+      "r": 50,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 4,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          27
+        ],
+        [
+          12,
+          18
+        ]
+      ],
+      "generators": [
+        31
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "exact_CP_SAT_booleanized",
+      "certificate": "results/cpsat/id15_symbreak.json"
+    },
+    {
+      "id": 16,
+      "order": 12,
+      "r": 36,
+      "reduction_mod9_order": 1,
+      "reduction_mod37_order": 12,
+      "orbit_signature": [
+        [
+          1,
+          9
+        ],
+        [
+          12,
+          27
+        ]
+      ],
+      "generators": [
+        10,
+        64,
+        82
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "rowsum_modular_obstruction",
+      "rowsum_witness_modulus": 24,
+      "certificate": "results/necessary_conditions.json"
+    },
+    {
+      "id": 17,
+      "order": 12,
+      "r": 32,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 12,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          12,
+          27
+        ]
+      ],
+      "generators": [
+        73,
+        85,
+        88
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "rowsum_modular_obstruction",
+      "rowsum_witness_modulus": 24,
+      "certificate": "results/necessary_conditions.json"
+    },
+    {
+      "id": 18,
+      "order": 12,
+      "r": 32,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 12,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          12,
+          27
+        ]
+      ],
+      "generators": [
+        73,
+        121,
+        154
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "rowsum_modular_obstruction",
+      "rowsum_witness_modulus": 24,
+      "certificate": "results/necessary_conditions.json"
+    },
+    {
+      "id": 19,
+      "order": 18,
+      "r": 35,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 6,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          18
+        ],
+        [
+          18,
+          12
+        ]
+      ],
+      "generators": [
+        10,
+        64,
+        85
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "exact_CP_SAT_booleanized",
+      "certificate": "results/cpsat/id19_symbreak.json"
+    },
+    {
+      "id": 20,
+      "order": 18,
+      "r": 27,
+      "reduction_mod9_order": 1,
+      "reduction_mod37_order": 18,
+      "orbit_signature": [
+        [
+          1,
+          9
+        ],
+        [
+          18,
+          18
+        ]
+      ],
+      "generators": [
+        10,
+        28
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "exact_meet_in_the_middle",
+      "enumerated": 67108864,
+      "rowsum_valid": 6126120,
+      "certificate": "results/mitm/id20.json"
+    },
+    {
+      "id": 21,
+      "order": 18,
+      "r": 23,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 18,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          18,
+          18
+        ]
+      ],
+      "generators": [
+        7,
+        58
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "exact_meet_in_the_middle",
+      "enumerated": 4194304,
+      "rowsum_valid": 291720,
+      "certificate": "results/mitm/id21.json"
+    },
+    {
+      "id": 22,
+      "order": 18,
+      "r": 23,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 18,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          18,
+          18
+        ]
+      ],
+      "generators": [
+        4
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "exact_meet_in_the_middle",
+      "enumerated": 4194304,
+      "rowsum_valid": 291720,
+      "certificate": "results/mitm/id22.json"
+    },
+    {
+      "id": 23,
+      "order": 27,
+      "r": 25,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 9,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          27,
+          8
+        ]
+      ],
+      "generators": [
+        7,
+        16
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "exact_meet_in_the_middle",
+      "enumerated": 16777216,
+      "rowsum_valid": 536256,
+      "certificate": "results/mitm/id23.json"
+    },
+    {
+      "id": 24,
+      "order": 36,
+      "r": 20,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 12,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          36,
+          6
+        ]
+      ],
+      "generators": [
+        10,
+        31
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "rowsum_modular_obstruction",
+      "rowsum_witness_modulus": 24,
+      "certificate": "results/necessary_conditions.json"
+    },
+    {
+      "id": 25,
+      "order": 36,
+      "r": 18,
+      "reduction_mod9_order": 1,
+      "reduction_mod37_order": 36,
+      "orbit_signature": [
+        [
+          1,
+          9
+        ],
+        [
+          36,
+          9
+        ]
+      ],
+      "generators": [
+        10,
+        19
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "mod37_full_reduction_obstruction",
+      "certificate": "certificates/obstruction_certificates.json"
+    },
+    {
+      "id": 26,
+      "order": 36,
+      "r": 14,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 36,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          36,
+          9
+        ]
+      ],
+      "generators": [
+        4,
+        13
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "mod37_full_reduction_obstruction",
+      "certificate": "certificates/obstruction_certificates.json"
+    },
+    {
+      "id": 27,
+      "order": 36,
+      "r": 14,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 36,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          36,
+          9
+        ]
+      ],
+      "generators": [
+        7,
+        22
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "mod37_full_reduction_obstruction",
+      "certificate": "certificates/obstruction_certificates.json"
+    },
+    {
+      "id": 28,
+      "order": 54,
+      "r": 15,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 18,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          18,
+          6
+        ],
+        [
+          54,
+          4
+        ]
+      ],
+      "generators": [
+        4,
+        7
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "exact_meet_in_the_middle",
+      "enumerated": 16384,
+      "rowsum_valid": 768,
+      "certificate": "results/mitm/id28.json"
+    },
+    {
+      "id": 29,
+      "order": 108,
+      "r": 10,
+      "reduction_mod9_order": 3,
+      "reduction_mod37_order": 36,
+      "orbit_signature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          36,
+          3
+        ],
+        [
+          108,
+          2
+        ]
+      ],
+      "generators": [
+        4,
+        7,
+        13
+      ],
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "mod37_full_reduction_obstruction",
+      "certificate": "certificates/obstruction_certificates.json"
+    }
+  ]
+}

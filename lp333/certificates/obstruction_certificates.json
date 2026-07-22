@@ -1,0 +1,103 @@
+{
+  "length": 333,
+  "hadamard_order": 668,
+  "core_fact": {
+    "statement": "668 = 2^2 * 167 is NOT a sum of two integer squares",
+    "reason": "167 is prime and 167 = 3 (mod 4) occurs to an odd power",
+    "verified_no_two_square_representation": true
+  },
+  "mod3_obstruction": {
+    "example_unit_2_mod3": 2,
+    "action_on_Z3": {
+      "0": 0,
+      "1": 2,
+      "2": 1
+    },
+    "forces": "a~_1 = a~_2, b~_1 = b~_2, so A~(1),B~(1) are integers",
+    "resulting_equation": "A~(1)^2 + B~(1)^2 = 668",
+    "conclusion": "impossible; hence H <= ker(reduce mod 3), order 108",
+    "kernel_order": 108
+  },
+  "mod37_obstruction": {
+    "criterion": "H reduces ONTO (Z/37)^* (order 36)",
+    "num_families_killed": 4,
+    "families": [
+      {
+        "generators_min": [
+          1,
+          4,
+          10,
+          13,
+          16,
+          25
+        ],
+        "order": 36,
+        "reduction_mod37_order": 36,
+        "orbits_on_Z37_sizes": [
+          1,
+          36
+        ],
+        "compression_constant_on_nonzero_residues": true,
+        "resulting_equation": "(a~_0 - c)^2 + (b~_0 - d)^2 = 668",
+        "conclusion": "impossible"
+      },
+      {
+        "generators_min": [
+          1,
+          7,
+          10,
+          22,
+          34,
+          49
+        ],
+        "order": 36,
+        "reduction_mod37_order": 36,
+        "orbits_on_Z37_sizes": [
+          1,
+          36
+        ],
+        "compression_constant_on_nonzero_residues": true,
+        "resulting_equation": "(a~_0 - c)^2 + (b~_0 - d)^2 = 668",
+        "conclusion": "impossible"
+      },
+      {
+        "generators_min": [
+          1,
+          4,
+          7,
+          10,
+          13,
+          16
+        ],
+        "order": 108,
+        "reduction_mod37_order": 36,
+        "orbits_on_Z37_sizes": [
+          1,
+          36
+        ],
+        "compression_constant_on_nonzero_residues": true,
+        "resulting_equation": "(a~_0 - c)^2 + (b~_0 - d)^2 = 668",
+        "conclusion": "impossible"
+      },
+      {
+        "generators_min": [
+          1,
+          10,
+          19,
+          28,
+          46,
+          55
+        ],
+        "order": 36,
+        "reduction_mod37_order": 36,
+        "orbits_on_Z37_sizes": [
+          1,
+          36
+        ],
+        "compression_constant_on_nonzero_residues": true,
+        "resulting_equation": "(a~_0 - c)^2 + (b~_0 - d)^2 = 668",
+        "conclusion": "impossible"
+      }
+    ]
+  }
+}

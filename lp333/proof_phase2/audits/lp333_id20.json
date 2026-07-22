@@ -1,0 +1,69 @@
+{
+  "cnf_semantic_equivalence": {
+    "canonical_cnf_true_count": 0,
+    "kind": "random-orbit-model-equivalence",
+    "pb_sum_outputs_checked": 336,
+    "result": "PASS",
+    "samples": 12,
+    "seed": 333020,
+    "semantic_true_count": 0,
+    "xor_values_checked": 8424
+  },
+  "direct_orbit_paf_equivalence": {
+    "kind": "direct-full-length-orbit-PAF-audit",
+    "random_orbit_assignments": 24,
+    "representative_PAFs_checked": 624,
+    "result": "PASS",
+    "subgroup_id": 20,
+    "subgroup_order": 18
+  },
+  "model": {
+    "direct_pb_obstructions": [],
+    "length": 333,
+    "num_clauses": 50637,
+    "num_variables": 7565,
+    "orbit_count": 27,
+    "paf_encoding": "sum W_s(q,q')*(wa+wb) = const_s+sum(W_s)+1",
+    "paf_targets": [
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334,
+      334
+    ],
+    "pair_xor_count_per_sequence": 351,
+    "pb_encoding": "carry-save weighted-bit reduction followed by exact full-adder ripple sum; all output bits constrained",
+    "primary_orbit_variables": 54,
+    "row_sum_encoding": "weighted z sum in {(L-1)/2, (L+1)/2}",
+    "row_zero_normalization": "za[0] = zb[0] = 0",
+    "shift_representatives": 26,
+    "xor_encoding": "four-clause exact Tseitin XOR"
+  },
+  "subgroup_generators": [
+    10,
+    28
+  ],
+  "subgroup_id": 20,
+  "subgroup_order": 18
+}
