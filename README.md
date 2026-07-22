@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Documentation: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey.svg)](LICENSES/CC-BY-4.0.txt)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21498698.svg)](https://doi.org/10.5281/zenodo.21498698)
 
 This repository contains proof-carrying computations and analytic obstructions
 for multiplier-invariant Legendre pairs of length 333, a structured route to a
@@ -76,8 +77,9 @@ not global Legendre-pair or Hadamard nonexistence.
 
 ## Citation
 
-Citation metadata are provided in [`CITATION.cff`](CITATION.cff). A Zenodo DOI
-will be added after the immutable release is archived.
+Citation metadata are provided in [`CITATION.cff`](CITATION.cff). The archived
+software and proof artifact are available at
+[doi:10.5281/zenodo.21498698](https://doi.org/10.5281/zenodo.21498698).
 
 ## Licenses
 

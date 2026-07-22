@@ -11,6 +11,7 @@ url: "https://github.com/Arthur742Ramos/hadamard-668-multiplier-obstructions"
 version: 1.0.0
 date-released: 2026-07-22
 license: MIT
+doi: 10.5281/zenodo.21498698
 abstract: >-
   Proof-carrying exclusions for multiplier-invariant Legendre pairs of
   length 333, including an analytic exclusion of the final order-9
