@@ -150,6 +150,9 @@ not) and the 37-/9-compression relaxations (PAF-sum = −18 resp. −74).
   also row-sum). Enumeration counts recorded in `results/mitm/`.
 * **CP-SAT** proves impossible: ids 11, 13, 14 (order 9), id 15 (order 12),
   id 19 (order 18). id 11 (r=65) closes in 0.01 s with symmetry breaking.
+* **CRT mod-8 compression** proves impossible: ids 9 and 10 (order 6). Each
+  invariant sequence has compressed `PAF(1)=5 (mod 8)`, contradicting the pair
+  target `-74=6 (mod 8)`.
 
 ### Per-family verdict (all 30 families)
 
@@ -164,8 +167,8 @@ not) and the 37-/9-compression relaxations (PAF-sum = −18 resp. −74).
 | 6 | 4 | 90 | 1 | 4 | **IMPOSSIBLE** | 9-compression (K37 value-set), phase 2 |
 | 7 | 6 | 95 | 3 | 2 | OPEN | not exhausted |
 | 8 | 6 | 63 | 1 | 6 | **IMPOSSIBLE** | 9-compression (K37 value-set), phase 2 |
-| 9 | 6 | 59 | 3 | 6 | OPEN | not exhausted |
-| 10 | 6 | 59 | 3 | 6 | OPEN | not exhausted |
+| 9 | 6 | 59 | 3 | 6 | **IMPOSSIBLE** | CRT mod-8 compression |
+| 10 | 6 | 59 | 3 | 6 | **IMPOSSIBLE** | CRT mod-8 compression |
 | 11 | 9 | 65 | 3 | 3 | **IMPOSSIBLE** | exact CP-SAT |
 | 12 | 9 | 45 | 1 | 9 | **IMPOSSIBLE** | 9-compression (K37 value-set), phase 2 |
 | 13 | 9 | 41 | 3 | 9 | **IMPOSSIBLE** | exact CP-SAT |
@@ -200,8 +203,12 @@ label proved/heuristic, method, certificate pointer, and the exact counts).
   `id12_phase2/report.md`.)
 * **Phase 2's method (a value-set-restricted 9-compression) additionally closed
   two previously-open lower-order families: id 6 (order 4) and id 8 (order 6).**
-  In total **21 of the 30 families are now IMPOSSIBLE**; the 9 still OPEN are
-  ids 0,1,2,3,4,5,7,9,10 (orders 1,2,3,3,3,3,6,6,6).
+* **A CRT mod-8 compression obstruction closes ids 9 and 10 (order 6).**
+  Every invariant sequence has length-9 compressed `PAF(1) = 5 (mod 8)`, so a
+  pair gives 2 modulo 8, while the Legendre compression target is
+  `37*(-2)=-74=6 (mod 8)`.
+  In total **23 of the 30 families are now IMPOSSIBLE**; the 7 still OPEN are
+  ids 0,1,2,3,4,5,7 (orders 1,2,3,3,3,3,6).
 * No invariant Legendre pair was found in any exhausted family (all verdicts are
   IMPOSSIBLE, never FOUND). Had one been found, the two ±1 sequences and full
   PAF/PSD verification would be saved under `results/` — none were produced.
@@ -250,14 +257,24 @@ Full write-up, code and certificate: `id12_phase2/` (certificate
 
 ---
 
+### ids 9 and 10 — CRT mod-8 obstruction
+
+For either subgroup, CRT symmetry forces the length-9 compression of every
+normalized invariant sequence to have `PAF(1) = 5 (mod 8)`. The Legendre
+compression identity at that shift requires the two compressed PAFs to sum to
+`37*(-2)=-74=6 (mod 8)`, but two invariant sequences give `5+5=2 (mod 8)`.
+The full proof and dependency-free verifier are in `id9_id10_mod8/`.
+
+---
+
 ## 6. Remaining open cases (labeled OPEN, not exhausted)
 
-* **ids 0,1,2,3,4,5,7,9,10** (orders 1,2,3,3,3,3,6,6,6): the weakest-invariance
-  families, r = 59…333. These exceed exhaustive MITM and did not close under
+* **ids 0,1,2,3,4,5,7** (orders 1,2,3,3,3,3,6): the weakest-invariance
+  families, r = 95…333. These exceed exhaustive MITM and did not close under
   CP-SAT within budget. The value-set 9-compression of phase 2 does **not** close
   them: ids 0,1 have a free-odd column-sum value set; id3 is a trivial-mod-9
   candidate whose exhaustive enumeration exceeds budget (undecided); and ids
-  2,4,5,7,9,10 are not trivial mod 9, so that compression form does not apply.
+  2,4,5,7 are not trivial mod 9, so that compression form does not apply.
   A decision needs a larger SAT/CP effort or a further structural obstruction.
 
 > Phase 2 (value-set-restricted 9-compression) proved **id 6 (order 4), id 8
@@ -289,6 +306,7 @@ code/search_common.py        family PAF spec builder
 code/validate_and_refsearch.py  spec validation + Python reference MITM
 code/mitm.cpp / run_mitm.py  -> results/mitm/*.json  (exact MITM)
 code/cpsat_search.py, cpsat_search2.py, column_cpsat.py  exact CP-SAT engines
+id9_id10_mod8/code/standalone_verifier.py  CRT mod-8 proof checker
 code/consolidate.py          -> results/master_status.json
 code/run_all.sh              one-shot driver
 ```

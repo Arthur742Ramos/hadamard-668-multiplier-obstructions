@@ -210,9 +210,10 @@ cd id12_phase2
 
 All exact verdicts are re-derivable; the standalone/general verifiers need only
 Python 3 (no third-party packages, no randomness). A full top-level run
-(`../code/run_all.sh`) re-runs phase 1 + phase 2, **asserts `num_impossible=21`
-and `all_order_ge_9_impossible=true`** in `consolidate.py`, and regenerates the
-SHA-256 manifest so it always matches the produced files.
+(`../code/run_all.sh`) re-runs phase 1, phase 2, and the later ids 9/10 mod-8
+check, **asserts `num_impossible=23` and `all_order_ge_9_impossible=true`** in
+`consolidate.py`, and regenerates the SHA-256 manifest so it always matches the
+produced files.
 
 ---
 
@@ -256,7 +257,8 @@ Running the identical exact decision (`code/general_compression.py`,
   `general_verifier.py` tests it explicitly and reports **undecided** — its
   complete enumeration exceeds the node budget (honest, not a silent skip).
 * The families **not** trivial mod 9 (ids 2,4,5,7,9,10; r₉=3) are outside the
-  scope of this compression form.
+  scope of this compression form. IDs 9 and 10 are closed separately by the
+  CRT mod-8 obstruction in `../id9_id10_mod8/`.
 
 Pure-stdlib checker `code/general_verifier.py` certifies id6, id8, id12
 (IMPOSSIBLE) from first principles, verifies the stored free-odd witness (id0,

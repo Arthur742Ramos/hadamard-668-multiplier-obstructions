@@ -16,6 +16,8 @@
     "impossible_ids": [
       6,
       8,
+      9,
+      10,
       11,
       12,
       13,
@@ -43,13 +45,11 @@
       3,
       4,
       5,
-      7,
-      9,
-      10
+      7
     ],
     "found_ids": [],
-    "num_impossible": 21,
-    "num_open": 9,
+    "num_impossible": 23,
+    "num_open": 7,
     "num_found": 0,
     "all_order_ge_12_impossible": true,
     "all_order_ge_9_impossible": true,
@@ -200,10 +200,14 @@
         73,
         85
       ],
-      "status": "OPEN",
-      "label": "not_exhausted",
-      "method": "search_incomplete_within_budget",
-      "note": "not exhausted within budget; no impossibility claimed"
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "crt_mod8_compression_obstruction",
+      "certificate": {
+        "argument": "For either ID 9 or ID 10, CRT symmetry and row sum +-1 force the length-9 compressed PAF at shift 1 to be 5 modulo 8 for each sequence. A pair therefore gives 2 modulo 8, while the Legendre compression identity requires 37*(-2)=-74=6 modulo 8.",
+        "verification": "dependency-free exhaustive local residue audit, subgroup reconstruction, and deterministic full-orbit controls",
+        "source": "id9_id10_mod8/results/obstruction_certificate.json"
+      }
     },
     {
       "id": 10,
@@ -215,10 +219,14 @@
         73,
         121
       ],
-      "status": "OPEN",
-      "label": "not_exhausted",
-      "method": "search_incomplete_within_budget",
-      "note": "not exhausted within budget; no impossibility claimed"
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "crt_mod8_compression_obstruction",
+      "certificate": {
+        "argument": "For either ID 9 or ID 10, CRT symmetry and row sum +-1 force the length-9 compressed PAF at shift 1 to be 5 modulo 8 for each sequence. A pair therefore gives 2 modulo 8, while the Legendre compression identity requires 37*(-2)=-74=6 modulo 8.",
+        "verification": "dependency-free exhaustive local residue audit, subgroup reconstruction, and deterministic full-orbit controls",
+        "source": "id9_id10_mod8/results/obstruction_certificate.json"
+      }
     },
     {
       "id": 11,

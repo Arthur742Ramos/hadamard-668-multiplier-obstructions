@@ -7,11 +7,13 @@ These require only Python 3:
 ```bash
 python3 lp333/id12_phase2/code/standalone_verifier.py
 python3 lp333/id12_phase2/code/general_verifier.py
+python3 lp333/id9_id10_mod8/code/standalone_verifier.py
 python3 scripts/verify_hadamard_csv.py --order 4 artifacts/hadamard4.csv
 ```
 
 The first command must print `PROOF VERIFIED`. The second must report ids
-6, 8, and 12 impossible under the value-set-restricted 9-compression.
+6, 8, and 12 impossible under the value-set-restricted 9-compression. The
+third must verify the CRT mod-8 obstruction for ids 9 and 10.
 
 ## Environment
 
@@ -48,9 +50,9 @@ bash lp333/code/run_all.sh
 Expected final status:
 
 ```text
-21/30 families IMPOSSIBLE
+23/30 families IMPOSSIBLE
 all order >= 9 multiplier groups impossible
-OPEN: 0,1,2,3,4,5,7,9,10
+OPEN: 0,1,2,3,4,5,7
 ```
 
 ## Fixed-field note

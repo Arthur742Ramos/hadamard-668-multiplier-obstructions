@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Exclude common-multiplier subgroup ids 9 and 10 by a CRT mod-8
+  compressed-autocorrelation obstruction.
+- Update the exact classification to 23 impossible families and seven open
+  families; id7 is the only remaining order-six case.
+
 ## 1.0.0 — 2026-07-22
 
 - Prove analytically that the final order-9 multiplier family (`id12`) cannot
