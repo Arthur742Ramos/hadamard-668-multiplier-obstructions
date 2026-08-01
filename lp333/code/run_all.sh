@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# One-shot reproduction driver for the lp333 exact search (phase 1 + phase 2).
+# One-shot reproduction driver for the LP(333) exact proof pipeline.
 # Requires: python3 (stdlib only for the core proofs), a C++ compiler, and the
 # local venv at ../.venv with ortools installed.  z3 (../../solver-venv) is
 # optional and only adds a third corroborating engine for id12.

@@ -11,9 +11,14 @@ python3 lp333/id9_id10_mod8/code/standalone_verifier.py
 python3 scripts/verify_hadamard_csv.py --order 4 artifacts/hadamard4.csv
 ```
 
-The first command must print `PROOF VERIFIED`. The second must report ids
-6, 8, and 12 impossible under the value-set-restricted 9-compression. The
-third must verify the CRT mod-8 obstruction for ids 9 and 10.
+Each command checks a separate claim:
+
+| Command | Required result |
+|---|---|
+| `id12_phase2/code/standalone_verifier.py` | prints `PROOF VERIFIED` |
+| `id12_phase2/code/general_verifier.py` | reports ids 6, 8, and 12 impossible under the restricted 9-compression |
+| `id9_id10_mod8/code/standalone_verifier.py` | verifies the CRT mod-8 obstruction for ids 9 and 10 |
+| `scripts/verify_hadamard_csv.py` | accepts the order-4 positive control |
 
 ## Environment
 

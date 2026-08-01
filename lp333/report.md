@@ -150,9 +150,8 @@ not) and the 37-/9-compression relaxations (PAF-sum = −18 resp. −74).
   also row-sum). Enumeration counts recorded in `results/mitm/`.
 * **CP-SAT** proves impossible: ids 11, 13, 14 (order 9), id 15 (order 12),
   id 19 (order 18). id 11 (r=65) closes in 0.01 s with symmetry breaking.
-* **CRT mod-8 compression** proves impossible: ids 9 and 10 (order 6). Each
-  invariant sequence has compressed `PAF(1)=5 (mod 8)`, contradicting the pair
-  target `-74=6 (mod 8)`.
+* **CRT mod-8 compression** proves ids 9 and 10 (order 6) impossible by reducing
+  the pair condition to the false congruence `2 ≡ 6 (mod 8)`.
 
 ### Per-family verdict (all 30 families)
 
@@ -204,11 +203,9 @@ label proved/heuristic, method, certificate pointer, and the exact counts).
 * **Phase 2's method (a value-set-restricted 9-compression) additionally closed
   two previously-open lower-order families: id 6 (order 4) and id 8 (order 6).**
 * **A CRT mod-8 compression obstruction closes ids 9 and 10 (order 6).**
-  Every invariant sequence has length-9 compressed `PAF(1) = 5 (mod 8)`, so a
-  pair gives 2 modulo 8, while the Legendre compression target is
-  `37*(-2)=-74=6 (mod 8)`.
-  In total **23 of the 30 families are now IMPOSSIBLE**; the 7 still OPEN are
-  ids 0,1,2,3,4,5,7 (orders 1,2,3,3,3,3,6).
+  The proof reduces existence to `2 ≡ 6 (mod 8)`. The classification now has
+  **23 impossible families**, with ids 0,1,2,3,4,5,7 open
+  (orders 1,2,3,3,3,3,6).
 * No invariant Legendre pair was found in any exhausted family (all verdicts are
   IMPOSSIBLE, never FOUND). Had one been found, the two ±1 sequences and full
   PAF/PSD verification would be saved under `results/` — none were produced.
@@ -257,12 +254,15 @@ Full write-up, code and certificate: `id12_phase2/` (certificate
 
 ---
 
-### ids 9 and 10 — CRT mod-8 obstruction
+### ids 9 and 10: CRT mod-8 obstruction
 
-For either subgroup, CRT symmetry forces the length-9 compression of every
-normalized invariant sequence to have `PAF(1) = 5 (mod 8)`. The Legendre
-compression identity at that shift requires the two compressed PAFs to sum to
-`37*(-2)=-74=6 (mod 8)`, but two invariant sequences give `5+5=2 (mod 8)`.
+For either subgroup, CRT symmetry and the Legendre compression identity would
+give the false congruence
+
+```text
+2 ≡ 5+5 ≡ PAF_YA(1)+PAF_YB(1) = 37*(-2) = -74 ≡ 6 (mod 8).
+```
+
 The full proof and dependency-free verifier are in `id9_id10_mod8/`.
 
 ---
@@ -270,12 +270,11 @@ The full proof and dependency-free verifier are in `id9_id10_mod8/`.
 ## 6. Remaining open cases (labeled OPEN, not exhausted)
 
 * **ids 0,1,2,3,4,5,7** (orders 1,2,3,3,3,3,6): the weakest-invariance
-  families, r = 95…333. These exceed exhaustive MITM and did not close under
-  CP-SAT within budget. The value-set 9-compression of phase 2 does **not** close
-  them: ids 0,1 have a free-odd column-sum value set; id3 is a trivial-mod-9
-  candidate whose exhaustive enumeration exceeds budget (undecided); and ids
-  2,4,5,7 are not trivial mod 9, so that compression form does not apply.
-  A decision needs a larger SAT/CP effort or a further structural obstruction.
+  families, r = 95…333. These cases remain beyond current exact search budgets.
+  Within phase 2's value-set 9-compression, ids 0 and 1 have the free-odd value
+  set, and exhaustive enumeration for id3 exceeds its budget. The nontrivial
+  mod-9 images of ids 2,4,5,7 place them outside that compression form. A
+  decision needs a larger SAT/CP effort or a further structural obstruction.
 
 > Phase 2 (value-set-restricted 9-compression) proved **id 6 (order 4), id 8
 > (order 6), and id 12 (order 9)** IMPOSSIBLE; id 6 and id 8 had been OPEN. The

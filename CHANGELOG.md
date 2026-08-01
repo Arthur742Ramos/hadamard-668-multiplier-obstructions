@@ -2,10 +2,10 @@
 
 ## Unreleased
 
-- Exclude common-multiplier subgroup ids 9 and 10 by a CRT mod-8
-  compressed-autocorrelation obstruction.
-- Update the exact classification to 23 impossible families and seven open
-  families; id7 is the only remaining order-six case.
+- Exclude common-multiplier IDs 9 and 10 with a CRT mod-8 calculation on the
+  compressed autocorrelation.
+- Set the classification at 23 impossible families, with open IDs
+  0, 1, 2, 3, 4, 5, and 7.
 
 ## 1.0.0 — 2026-07-22
 

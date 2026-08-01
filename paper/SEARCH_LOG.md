@@ -330,8 +330,8 @@ both previously OPEN — IMPOSSIBLE:
 
 id0, id1 (K37 order ≤ 2) have V = all odd integers (the weak free-odd relaxation,
 842 square-multisets for 594) and are NOT closed; id3 (K37 order 3, |V|=26) is a
-candidate whose enumeration exceeds budget. At the end of this phase,
-**21 of the 30 multiplier families were IMPOSSIBLE**, with 9 open
+candidate whose enumeration exceeds budget. The recorded phase-2 classification
+was **21 impossible multiplier families**, with 9 open
 (ids 0,1,2,3,4,5,7,9,10). A dependency-free
 `general_verifier.py` certifies id6/id8/id12 from first principles with a
 positive control. Still concerns multiplier-invariant LPs only; H(668) unresolved.

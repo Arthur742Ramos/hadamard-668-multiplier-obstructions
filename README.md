@@ -11,11 +11,8 @@ real Hadamard matrix of order 668.
 ## Result
 
 Among the 30 common-multiplier subgroups compatible with the initial mod-3
-obstruction:
-
-- 23 are proved impossible;
-- all 19 subgroups of order at least 9 are impossible;
-- the seven unresolved subgroups have order at most 6.
+obstruction, exact proofs exclude 23, including every one of the 19 groups of
+order at least 9. The seven open groups have order at most 6.
 
 The last order-9 family (`id12`) is excluded by a short analytic
 9-compression argument. Its compressed values are forced into
@@ -23,10 +20,9 @@ The last order-9 family (`id12`) is excluded by a short analytic
 into one compressed sequence; at the shift joining them, the combined
 autocorrelation is at most `-240`, contradicting the required `-74`.
 
-The two image-6 order-six families (`id9` and `id10`) are excluded by a
-separate CRT mod-8 obstruction: each invariant sequence has compressed
-`PAF(1) = 5 (mod 8)`, whereas a Legendre pair would require the two residues
-to sum to `-74 = 6 (mod 8)`.
+For `id9` and `id10`, the CRT calculation forces the pair's compressed PAF
+residue to be `5+5=2 (mod 8)`, incompatible with the Legendre compression
+target `-74=6 (mod 8)`.
 
 This **does not construct or disprove** a Hadamard matrix of order 668. The
 unrestricted problem remains open.

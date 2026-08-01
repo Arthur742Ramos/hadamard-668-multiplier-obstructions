@@ -86,13 +86,12 @@ def main():
             }
         elif m == "crt_mod8_compression_obstruction":
             rec["certificate"] = {
-                "argument": "For either ID 9 or ID 10, CRT symmetry and row sum "
-                            "+-1 force the length-9 compressed PAF at shift 1 "
-                            "to be 5 modulo 8 for each sequence. A pair therefore "
-                            "gives 2 modulo 8, while the Legendre compression "
-                            "identity requires 37*(-2)=-74=6 modulo 8.",
-                "verification": "dependency-free exhaustive local residue audit, "
-                                "subgroup reconstruction, and deterministic full-orbit controls",
+                "argument": "For ID 9 or ID 10, CRT symmetry and row sum +-1 "
+                            "force each length-9 compressed PAF at shift 1 to "
+                            "equal 5 modulo 8. The pair condition becomes the "
+                            "false congruence between residues 2 and 6 modulo 8.",
+                "verification": "dependency-free verifier with exhaustive local "
+                                "enumeration and deterministic full-orbit controls",
                 "source": "id9_id10_mod8/results/obstruction_certificate.json",
             }
         families.append(rec)
@@ -104,9 +103,11 @@ def main():
         "summary": master["summary"],
         "families": families,
     }
-    with open(os.path.join(CERT, "impossible_certificates.json"), "w",
-              encoding="utf-8") as f:
-        json.dump(out, f, indent=2)
+    output_path = Path(CERT) / "impossible_certificates.json"
+    output_path.write_text(
+        json.dumps(out, indent=2) + "\n",
+        encoding="utf-8",
+    )
     imp = [r for r in families if r["status"] == "IMPOSSIBLE"]
     print("impossible families certified:", len(imp))
     print("open families:", [r["id"] for r in families if r["status"] == "OPEN"])

@@ -1,6 +1,10 @@
 {
-  "claimBoundary": "Exact for fixed common-multiplier IDs 9 and 10 only; not unrestricted LP(333) or Hadamard-668 nonexistence.",
+  "claimBoundary": "Applies exactly to pairs fixed by common-multiplier ID 9 or 10. Unrestricted LP(333) and Hadamard-668 remain open.",
   "exhaustiveLocalResidueAudit": {
+    "allowedRowSums": [
+      -1,
+      1
+    ],
     "compressedPaf1ResiduesMod8": [
       5
     ],
@@ -54,14 +58,10 @@
         "v": -1,
         "z0": 1
       }
-    ],
-    "rowSums": [
-      -1,
-      1
     ]
   },
   "mutationControl": {
-    "changedRowSums": [
+    "allowedRowSums": [
       -3,
       3
     ],
@@ -77,13 +77,13 @@
     "targetResidue6BecomesPossible": true
   },
   "proof": {
-    "compressionIdentityTarget": -74,
-    "contradiction": "2 != 6 (mod 8)",
-    "derivedPairResidueMod8": 2,
-    "normalizedRowSums": [
+    "allowedRowSums": [
       -1,
       1
     ],
+    "compressionIdentityTarget": -74,
+    "contradiction": "2 != 6 (mod 8)",
+    "derivedPairResidueMod8": 2,
     "singleSequenceCompressedPaf1ResiduesMod8": [
       5
     ],

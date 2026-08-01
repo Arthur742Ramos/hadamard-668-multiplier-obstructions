@@ -23,7 +23,11 @@ CASES = {
         "elements": (1, 73, 121, 175, 196, 322),
     },
 }
-DEFAULT_OUTPUT = Path(__file__).resolve().parent.parent / "results" / "obstruction_certificate.json"
+DEFAULT_OUTPUT = (
+    Path(__file__).resolve().parent.parent
+    / "results"
+    / "obstruction_certificate.json"
+)
 
 
 def require(condition: bool, message: str) -> None:
@@ -91,12 +95,26 @@ def local_residue_certificate(row_sums: tuple[int, ...]) -> dict:
                 if (mu - u) % 4 or (nu - v) % 4:
                     continue
                 total = (mu + nu) % 8
+                if row_sums == (-1, 1):
+                    require(total % 4 == 0, "mu+nu is not divisible by 4")
+                    require(
+                        (mu * nu - (total - 1)) % 8 == 0,
+                        "unified mu*nu congruence failed",
+                    )
+                    require(
+                        (rho * total - total) % 8 == 0,
+                        "row-sum term did not reduce to mu+nu",
+                    )
+                    require(
+                        total * total % 8 == 0,
+                        "squared total did not vanish",
+                    )
                 alpha_beta_gamma = (rho - 3 * total) % 8
                 paf1 = (alpha_beta_gamma * total + 3 * mu * nu) % 8
                 paf_residues.add(paf1)
 
     return {
-        "rowSums": list(row_sums),
+        "allowedRowSums": list(row_sums),
         "localPatternCount": len(local_patterns),
         "localPatterns": local_patterns,
         "compressedPaf1ResiduesMod8": sorted(paf_residues),
@@ -109,7 +127,7 @@ def direct_assignment_controls(
     seed: int,
     required: int = 48,
 ) -> dict:
-    """Check deterministic full invariant assignments as a non-proof control."""
+    """Check deterministic full invariant assignments as an implementation control."""
 
     state = seed & ((1 << 64) - 1)
 
@@ -208,7 +226,10 @@ def main() -> int:
         mutated["compressedPaf1ResiduesMod8"] == [1, 5],
         "row-sum mutation did not produce residues {1,5}",
     )
-    require(6 in mutated_pair_sums, "row-sum mutation did not disable obstruction")
+    require(
+        6 in mutated_pair_sums,
+        "row-sum mutation did not disable obstruction",
+    )
 
     records = []
     for subgroup_id, source in CASES.items():
@@ -264,7 +285,7 @@ def main() -> int:
         "status": "PASS",
         "verdict": "NO_ID9_OR_ID10_INVARIANT_LP333_EXISTS",
         "proof": {
-            "normalizedRowSums": [-1, 1],
+            "allowedRowSums": [-1, 1],
             "singleSequenceCompressedPaf1ResiduesMod8": [5],
             "derivedPairResidueMod8": derived_pair_residue,
             "compressionIdentityTarget": target,
@@ -273,7 +294,7 @@ def main() -> int:
         },
         "exhaustiveLocalResidueAudit": exact,
         "mutationControl": {
-            "changedRowSums": [-3, 3],
+            "allowedRowSums": [-3, 3],
             "singleSequenceResiduesMod8": mutated[
                 "compressedPaf1ResiduesMod8"
             ],
@@ -283,8 +304,8 @@ def main() -> int:
         },
         "subgroups": records,
         "claimBoundary": (
-            "Exact for fixed common-multiplier IDs 9 and 10 only; not "
-            "unrestricted LP(333) or Hadamard-668 nonexistence."
+            "Applies exactly to pairs fixed by common-multiplier ID 9 or 10. "
+            "Unrestricted LP(333) and Hadamard-668 remain open."
         ),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

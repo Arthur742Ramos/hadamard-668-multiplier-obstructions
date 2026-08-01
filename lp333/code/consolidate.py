@@ -32,6 +32,11 @@ def is_json_true(value):
     return isinstance(value, bool) and value
 
 
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
 def main():
     cls = load(os.path.join(RES, "subgroup_classification.json"))
     subs = {r["id"]: r for r in cls["subgroups"]}
@@ -107,7 +112,10 @@ def main():
                          "(id12_phase2/results/general_compression_certificate.json); "
                          "run id12_phase2/run_all.sh first.")
     phase2_closed = p2.get("closed_impossible", [])
-    assert sorted(phase2_closed) == [6, 8, 12], phase2_closed
+    require(
+        sorted(phase2_closed) == [6, 8, 12],
+        f"unexpected phase-2 closures: {phase2_closed}",
+    )
     for sid in phase2_closed:
         status[sid].update(
             status="IMPOSSIBLE", label="proved",
@@ -124,12 +132,34 @@ def main():
         raise SystemExit("ERROR: ID-9/ID-10 mod-8 certificate missing "
                          "(id9_id10_mod8/results/obstruction_certificate.json); "
                          "run id9_id10_mod8/code/standalone_verifier.py first.")
-    assert mod8.get("status") == "PASS", mod8.get("status")
-    assert mod8.get("verdict") == "NO_ID9_OR_ID10_INVARIANT_LP333_EXISTS"
-    assert mod8["proof"]["singleSequenceCompressedPaf1ResiduesMod8"] == [5]
-    assert mod8["proof"]["derivedPairResidueMod8"] == 2
-    assert mod8["proof"]["targetPairResidueMod8"] == 6
-    assert sorted(record["subgroupId"] for record in mod8["subgroups"]) == [9, 10]
+    require(
+        mod8.get("schema") == "lp333.id9-id10-crt-mod8-obstruction.v1",
+        "mod-8 certificate schema mismatch",
+    )
+    require(
+        mod8.get("status") == "PASS",
+        "mod-8 certificate status is not PASS",
+    )
+    require(
+        mod8.get("verdict") == "NO_ID9_OR_ID10_INVARIANT_LP333_EXISTS",
+        "mod-8 certificate verdict mismatch",
+    )
+    require(
+        mod8["proof"]["singleSequenceCompressedPaf1ResiduesMod8"] == [5],
+        "mod-8 certificate single-sequence residue mismatch",
+    )
+    require(
+        mod8["proof"]["derivedPairResidueMod8"] == 2,
+        "mod-8 certificate pair residue mismatch",
+    )
+    require(
+        mod8["proof"]["targetPairResidueMod8"] == 6,
+        "mod-8 certificate target residue mismatch",
+    )
+    require(
+        sorted(record["subgroupId"] for record in mod8["subgroups"]) == [9, 10],
+        "mod-8 certificate subgroup IDs mismatch",
+    )
     for sid in (9, 10):
         status[sid].update(
             status="IMPOSSIBLE", label="proved",
@@ -140,8 +170,6 @@ def main():
     by_status = {}
     for e in status.values():
         by_status.setdefault(e["status"], []).append(e["id"])
-    order_ge = lambda k: sorted(e["id"] for e in status.values()
-                                if e["order"] >= k and e["status"] == "IMPOSSIBLE")
     summary = {
         "total_families": len(status),
         "killed_by_mod37_full_reduction": sorted(
@@ -164,19 +192,32 @@ def main():
     out = {"summary": summary, "families": [status[i] for i in sorted(status)]}
 
     # ---- hard invariants: a full run must not regress proved closures ----
-    assert summary["num_impossible"] == 23, \
-        f"expected 23 IMPOSSIBLE, got {summary['num_impossible']}"
-    assert summary["all_order_ge_9_impossible"], \
-        "some order>=9 family is not IMPOSSIBLE"
-    assert summary["all_order_ge_12_impossible"]
-    assert set(summary["open_ids"]) == {0, 1, 2, 3, 4, 5, 7}, summary["open_ids"]
+    require(
+        summary["num_impossible"] == 23,
+        f"expected 23 IMPOSSIBLE, got {summary['num_impossible']}",
+    )
+    require(
+        summary["all_order_ge_9_impossible"],
+        "some order>=9 family is not IMPOSSIBLE",
+    )
+    require(
+        summary["all_order_ge_12_impossible"],
+        "some order>=12 family is not IMPOSSIBLE",
+    )
+    require(
+        set(summary["open_ids"]) == {0, 1, 2, 3, 4, 5, 7},
+        f"unexpected open IDs: {summary['open_ids']}",
+    )
     for sid in (6, 8, 12):
-        assert status[sid]["status"] == "IMPOSSIBLE", sid
+        require(status[sid]["status"] == "IMPOSSIBLE", f"ID {sid} regressed")
     for sid in (9, 10):
-        assert status[sid]["status"] == "IMPOSSIBLE", sid
+        require(status[sid]["status"] == "IMPOSSIBLE", f"ID {sid} regressed")
 
-    with open(os.path.join(RES, "master_status.json"), "w", encoding="utf-8") as f:
-        json.dump(out, f, indent=2)
+    output_path = Path(RES) / "master_status.json"
+    output_path.write_text(
+        json.dumps(out, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
     # console
     print(f"{'id':>3} {'|H|':>4} {'r':>4} {'r9':>3} {'r37':>4} {'status':>11} {'method'}")

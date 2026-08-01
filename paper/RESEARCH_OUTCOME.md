@@ -11,11 +11,9 @@ multiplier-symmetric Legendre-pair route.
 ## Main theorem-level result
 
 Let `H` be a common multiplier subgroup for a Legendre pair of length 333.
-Among the 30 subgroups compatible with the initial mod-3 obstruction:
-
-- 23 are proved impossible;
-- all 19 subgroups of order at least 9 are impossible;
-- the 7 remaining open subgroups have orders at most 6.
+Among the 30 subgroups compatible with the initial mod-3 obstruction, exact
+proofs exclude 23, including every one of the 19 groups of order at least 9.
+The seven open groups have order at most 6.
 
 The last order-9 case, id12, has a short analytic proof. Its 9-compression values
 must lie in
@@ -33,20 +31,18 @@ This closes id12 without relying on solver enumeration. Exhaustive enumeration,
 CP-SAT, and z3 independently confirm it. The same value-set compression also
 closes previously open subgroups id6 and id8.
 
-The remaining image-6 order-six subgroups, ids 9 and 10, are excluded by a
-short CRT mod-8 argument. For either symmetry, every normalized invariant
-sequence has length-9 compressed `PAF(1) = 5 (mod 8)`. Two such sequences give
-2 modulo 8, contradicting the Legendre compression target
-`37*(-2) = -74 = 6 (mod 8)`.
+A CRT mod-8 argument excludes order-six groups ids 9 and 10. Their symmetry
+fixes each compressed `PAF(1)` at 5 modulo 8, reducing the pair condition to
+the false congruence `2 ≡ 6 (mod 8)`.
 
 ## Proof package
 
 - `lp333/report.md` — full classification and scope.
 - `lp333/id12_phase2/report.md` — analytic id12 proof.
-- `lp333/id9_id10_mod8/report.md` — analytic ids 9/10 proof.
+- `lp333/id9_id10_mod8/report.md`: analytic ids 9/10 proof.
 - `lp333/proof_phase2/` — DIMACS, DRAT traces, direct PB certificates,
   independent audits, positive controls, and full verification.
-- `lp333/results/master_status.json` — machine-readable 23/30 status.
+- `lp333/results/master_status.json`: machine-readable 23/30 status.
 
 The top-level `lp333/code/run_all.sh` regenerates phase 1, phase 2, proof checks,
 consolidated status, certificates, and the final manifest.
