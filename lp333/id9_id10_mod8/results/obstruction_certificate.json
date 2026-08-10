@@ -1,0 +1,213 @@
+{
+  "claimBoundary": "Applies exactly to pairs fixed by common-multiplier ID 9 or 10. Unrestricted LP(333) and Hadamard-668 remain open.",
+  "exhaustiveLocalResidueAudit": {
+    "allowedRowSums": [
+      -1,
+      1
+    ],
+    "compressedPaf1ResiduesMod8": [
+      5
+    ],
+    "localPatternCount": 6,
+    "localPatterns": [
+      {
+        "d3": -1,
+        "d6": -1,
+        "rho": -1,
+        "u": -1,
+        "v": 1,
+        "z0": -1
+      },
+      {
+        "d3": -1,
+        "d6": -1,
+        "rho": -1,
+        "u": 1,
+        "v": -1,
+        "z0": -1
+      },
+      {
+        "d3": -1,
+        "d6": 1,
+        "rho": 1,
+        "u": -1,
+        "v": 1,
+        "z0": 1
+      },
+      {
+        "d3": -1,
+        "d6": 1,
+        "rho": 1,
+        "u": 1,
+        "v": -1,
+        "z0": 1
+      },
+      {
+        "d3": 1,
+        "d6": -1,
+        "rho": 1,
+        "u": -1,
+        "v": 1,
+        "z0": 1
+      },
+      {
+        "d3": 1,
+        "d6": -1,
+        "rho": 1,
+        "u": 1,
+        "v": -1,
+        "z0": 1
+      }
+    ]
+  },
+  "mutationControl": {
+    "allowedRowSums": [
+      -3,
+      3
+    ],
+    "possiblePairSumsMod8": [
+      2,
+      6
+    ],
+    "result": "PASS",
+    "singleSequenceResiduesMod8": [
+      1,
+      5
+    ],
+    "targetResidue6BecomesPossible": true
+  },
+  "proof": {
+    "allowedRowSums": [
+      -1,
+      1
+    ],
+    "compressionIdentityTarget": -74,
+    "contradiction": "2 != 6 (mod 8)",
+    "derivedPairResidueMod8": 2,
+    "singleSequenceCompressedPaf1ResiduesMod8": [
+      5
+    ],
+    "targetPairResidueMod8": 6
+  },
+  "schema": "lp333.id9-id10-crt-mod8-obstruction.v1",
+  "status": "PASS",
+  "subgroups": [
+    {
+      "directAssignmentControls": {
+        "acceptedAssignments": 48,
+        "attempts": 779,
+        "kind": "deterministic-full-orbit-bug-control",
+        "result": "PASS",
+        "seed": 900009,
+        "transcriptSha256": "46e5b3178acc26cdc08bfcda743414e64f20412f3f87b3f314f36facc5372500"
+      },
+      "elements": [
+        1,
+        73,
+        85,
+        211,
+        232,
+        286
+      ],
+      "generators": [
+        73,
+        85
+      ],
+      "mod37Image": [
+        1,
+        10,
+        11,
+        26,
+        27,
+        36
+      ],
+      "mod9Image": [
+        1,
+        4,
+        7
+      ],
+      "orbitSignature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          54
+        ]
+      ],
+      "result": "PASS",
+      "subgroupId": 9,
+      "symbolicResidueAudit": {
+        "compressedPaf1ResiduesMod8": [
+          5
+        ],
+        "localPatternCount": 6,
+        "result": "PASS"
+      }
+    },
+    {
+      "directAssignmentControls": {
+        "acceptedAssignments": 48,
+        "attempts": 1311,
+        "kind": "deterministic-full-orbit-bug-control",
+        "result": "PASS",
+        "seed": 900010,
+        "transcriptSha256": "4f2aa4f23ddecfd17173945dbb52003223cb8fd95c500c77e7bf9ea5236f58dd"
+      },
+      "elements": [
+        1,
+        73,
+        121,
+        175,
+        196,
+        322
+      ],
+      "generators": [
+        73,
+        121
+      ],
+      "mod37Image": [
+        1,
+        10,
+        11,
+        26,
+        27,
+        36
+      ],
+      "mod9Image": [
+        1,
+        4,
+        7
+      ],
+      "orbitSignature": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          54
+        ]
+      ],
+      "result": "PASS",
+      "subgroupId": 10,
+      "symbolicResidueAudit": {
+        "compressedPaf1ResiduesMod8": [
+          5
+        ],
+        "localPatternCount": 6,
+        "result": "PASS"
+      }
+    }
+  ],
+  "verdict": "NO_ID9_OR_ID10_INVARIANT_LP333_EXISTS"
+}

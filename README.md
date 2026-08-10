@@ -11,17 +11,18 @@ real Hadamard matrix of order 668.
 ## Result
 
 Among the 30 common-multiplier subgroups compatible with the initial mod-3
-obstruction:
-
-- 21 are proved impossible;
-- all 19 subgroups of order at least 9 are impossible;
-- the nine unresolved subgroups have order at most 6.
+obstruction, exact proofs exclude 23, including every one of the 19 groups of
+order at least 9. The seven open groups have order at most 6.
 
 The last order-9 family (`id12`) is excluded by a short analytic
 9-compression argument. Its compressed values are forced into
 `{+/-1,+/-17,+/-19,+/-35,+/-37}`. The LP equations force `+17` and `-17`
 into one compressed sequence; at the shift joining them, the combined
 autocorrelation is at most `-240`, contradicting the required `-74`.
+
+For `id9` and `id10`, the CRT calculation forces the pair's compressed PAF
+residue to be `5+5=2 (mod 8)`, incompatible with the Legendre compression
+target `-74=6 (mod 8)`.
 
 This **does not construct or disprove** a Hadamard matrix of order 668. The
 unrestricted problem remains open.
@@ -45,6 +46,7 @@ The analytic id12 proof and generalized compression checks need only Python:
 ```bash
 python3 lp333/id12_phase2/code/standalone_verifier.py
 python3 lp333/id12_phase2/code/general_verifier.py
+python3 lp333/id9_id10_mod8/code/standalone_verifier.py
 ```
 
 For the complete proof-carrying pipeline, download the proof artifact attached

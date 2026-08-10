@@ -10,6 +10,7 @@ subgroup families exactly one status with a labeled method:
 import json
 import os
 import glob
+from pathlib import Path
 
 HERE = os.path.dirname(__file__)
 RES = os.path.join(HERE, "..", "results")
@@ -18,10 +19,22 @@ CERT = os.path.join(HERE, "..", "certificates")
 
 def load(p, default=None):
     try:
-        with open(p) as f:
-            return json.load(f)
+        return json.loads(Path(p).read_text(encoding="utf-8"))
     except FileNotFoundError:
         return default
+
+
+def is_json_false(value):
+    return isinstance(value, bool) and not value
+
+
+def is_json_true(value):
+    return isinstance(value, bool) and value
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
 
 
 def main():
@@ -66,20 +79,21 @@ def main():
                          method="rowsum_modular_obstruction",
                          rowsum_witness_modulus=nc[sid]["rowsum_witness_modulus"],
                          certificate="results/necessary_conditions.json")
-        elif sid in mitm and mitm[sid]["sat"] is False:
+        elif sid in mitm and is_json_false(mitm[sid]["sat"]):
             entry.update(status="IMPOSSIBLE", label="proved",
                          method="exact_meet_in_the_middle",
                          enumerated=mitm[sid]["enumerated"],
                          rowsum_valid=mitm[sid]["rowsum_ok"],
                          certificate=f"results/mitm/id{sid}.json")
-        elif sid in cpsat and cpsat[sid].get("sat") is False:
+        elif sid in cpsat and is_json_false(cpsat[sid].get("sat")):
             entry.update(status="IMPOSSIBLE", label="proved",
                          method="exact_CP_SAT_" + (
                              "column_model" if cpsat[sid].get("model", "").startswith("column")
                              else "booleanized"),
                          certificate=f"results/cpsat/{os.path.basename(_find(sid))}"
                          if _find(sid) else None)
-        elif sid in cpsat and cpsat[sid].get("sat") is True and cpsat[sid].get("verified_legendre_pair"):
+        elif (sid in cpsat and is_json_true(cpsat[sid].get("sat"))
+              and cpsat[sid].get("verified_legendre_pair")):
             entry.update(status="FOUND", label="verified_LP",
                          method="exact_CP_SAT",
                          certificate=f"results/cpsat/id{sid}.json")
@@ -98,7 +112,10 @@ def main():
                          "(id12_phase2/results/general_compression_certificate.json); "
                          "run id12_phase2/run_all.sh first.")
     phase2_closed = p2.get("closed_impossible", [])
-    assert sorted(phase2_closed) == [6, 8, 12], phase2_closed
+    require(
+        sorted(phase2_closed) == [6, 8, 12],
+        f"unexpected phase-2 closures: {phase2_closed}",
+    )
     for sid in phase2_closed:
         status[sid].update(
             status="IMPOSSIBLE", label="proved",
@@ -108,12 +125,51 @@ def main():
             "id12_phase2/results/id12_impossible_certificate.json",
             phase2=True)
 
+    # ---- CRT mod-8 override for the two remaining order-six image-6 cases ----
+    mod8 = load(os.path.join(HERE, "..", "id9_id10_mod8", "results",
+                             "obstruction_certificate.json"))
+    if mod8 is None:
+        raise SystemExit("ERROR: ID-9/ID-10 mod-8 certificate missing "
+                         "(id9_id10_mod8/results/obstruction_certificate.json); "
+                         "run id9_id10_mod8/code/standalone_verifier.py first.")
+    require(
+        mod8.get("schema") == "lp333.id9-id10-crt-mod8-obstruction.v1",
+        "mod-8 certificate schema mismatch",
+    )
+    require(
+        mod8.get("status") == "PASS",
+        "mod-8 certificate status is not PASS",
+    )
+    require(
+        mod8.get("verdict") == "NO_ID9_OR_ID10_INVARIANT_LP333_EXISTS",
+        "mod-8 certificate verdict mismatch",
+    )
+    require(
+        mod8["proof"]["singleSequenceCompressedPaf1ResiduesMod8"] == [5],
+        "mod-8 certificate single-sequence residue mismatch",
+    )
+    require(
+        mod8["proof"]["derivedPairResidueMod8"] == 2,
+        "mod-8 certificate pair residue mismatch",
+    )
+    require(
+        mod8["proof"]["targetPairResidueMod8"] == 6,
+        "mod-8 certificate target residue mismatch",
+    )
+    require(
+        sorted(record["subgroupId"] for record in mod8["subgroups"]) == [9, 10],
+        "mod-8 certificate subgroup IDs mismatch",
+    )
+    for sid in (9, 10):
+        status[sid].update(
+            status="IMPOSSIBLE", label="proved",
+            method="crt_mod8_compression_obstruction",
+            certificate="id9_id10_mod8/results/obstruction_certificate.json")
+
     # summary
     by_status = {}
     for e in status.values():
         by_status.setdefault(e["status"], []).append(e["id"])
-    order_ge = lambda k: sorted(e["id"] for e in status.values()
-                                if e["order"] >= k and e["status"] == "IMPOSSIBLE")
     summary = {
         "total_families": len(status),
         "killed_by_mod37_full_reduction": sorted(
@@ -135,18 +191,33 @@ def main():
     }
     out = {"summary": summary, "families": [status[i] for i in sorted(status)]}
 
-    # ---- hard invariants: a full run must not regress the phase-2 closures ----
-    assert summary["num_impossible"] == 21, \
-        f"expected 21 IMPOSSIBLE, got {summary['num_impossible']}"
-    assert summary["all_order_ge_9_impossible"] is True, \
-        "some order>=9 family is not IMPOSSIBLE"
-    assert summary["all_order_ge_12_impossible"] is True
-    assert set(summary["open_ids"]) == {0, 1, 2, 3, 4, 5, 7, 9, 10}, summary["open_ids"]
+    # ---- hard invariants: a full run must not regress proved closures ----
+    require(
+        summary["num_impossible"] == 23,
+        f"expected 23 IMPOSSIBLE, got {summary['num_impossible']}",
+    )
+    require(
+        summary["all_order_ge_9_impossible"],
+        "some order>=9 family is not IMPOSSIBLE",
+    )
+    require(
+        summary["all_order_ge_12_impossible"],
+        "some order>=12 family is not IMPOSSIBLE",
+    )
+    require(
+        set(summary["open_ids"]) == {0, 1, 2, 3, 4, 5, 7},
+        f"unexpected open IDs: {summary['open_ids']}",
+    )
     for sid in (6, 8, 12):
-        assert status[sid]["status"] == "IMPOSSIBLE", sid
+        require(status[sid]["status"] == "IMPOSSIBLE", f"ID {sid} regressed")
+    for sid in (9, 10):
+        require(status[sid]["status"] == "IMPOSSIBLE", f"ID {sid} regressed")
 
-    with open(os.path.join(RES, "master_status.json"), "w") as f:
-        json.dump(out, f, indent=2)
+    output_path = Path(RES) / "master_status.json"
+    output_path.write_text(
+        json.dumps(out, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
     # console
     print(f"{'id':>3} {'|H|':>4} {'r':>4} {'r9':>3} {'r37':>4} {'status':>11} {'method'}")
@@ -155,7 +226,7 @@ def main():
         print(f"{i:>3} {e['order']:>4} {e['r']:>4} {e['reduction_mod9_order']:>3} "
               f"{e['reduction_mod37_order']:>4} {e['status']:>11} {e['method']}")
     print("\nSUMMARY:", json.dumps(summary, indent=2))
-    print("\nASSERTIONS PASSED: num_impossible=21, all_order_ge_9_impossible=true")
+    print("\nASSERTIONS PASSED: num_impossible=23, all_order_ge_9_impossible=true")
 
 
 def _find(sid):

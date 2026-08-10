@@ -5,6 +5,7 @@ machine-readable 'certificate for every family declared impossible' deliverable.
 """
 import json
 import os
+from pathlib import Path
 
 HERE = os.path.dirname(__file__)
 RES = os.path.join(HERE, "..", "results")
@@ -13,7 +14,7 @@ CERT = os.path.join(HERE, "..", "certificates")
 
 def load(p, d=None):
     try:
-        return json.load(open(p))
+        return json.loads(Path(p).read_text(encoding="utf-8"))
     except FileNotFoundError:
         return d
 
@@ -83,6 +84,16 @@ def main():
                 "source": e.get("certificate")
                           or "id12_phase2/results/general_compression_certificate.json",
             }
+        elif m == "crt_mod8_compression_obstruction":
+            rec["certificate"] = {
+                "argument": "For ID 9 or ID 10, CRT symmetry and row sum +-1 "
+                            "force each length-9 compressed PAF at shift 1 to "
+                            "equal 5 modulo 8. The pair condition becomes the "
+                            "false congruence between residues 2 and 6 modulo 8.",
+                "verification": "dependency-free verifier with exhaustive local "
+                                "enumeration and deterministic full-orbit controls",
+                "source": "id9_id10_mod8/results/obstruction_certificate.json",
+            }
         families.append(rec)
 
     out = {
@@ -92,8 +103,11 @@ def main():
         "summary": master["summary"],
         "families": families,
     }
-    with open(os.path.join(CERT, "impossible_certificates.json"), "w") as f:
-        json.dump(out, f, indent=2)
+    output_path = Path(CERT) / "impossible_certificates.json"
+    output_path.write_text(
+        json.dumps(out, indent=2) + "\n",
+        encoding="utf-8",
+    )
     imp = [r for r in families if r["status"] == "IMPOSSIBLE"]
     print("impossible families certified:", len(imp))
     print("open families:", [r["id"] for r in families if r["status"] == "OPEN"])

@@ -10,6 +10,8 @@
     "impossible_ids": [
       6,
       8,
+      9,
+      10,
       11,
       12,
       13,
@@ -37,13 +39,11 @@
       3,
       4,
       5,
-      7,
-      9,
-      10
+      7
     ],
     "found_ids": [],
-    "num_impossible": 21,
-    "num_open": 9,
+    "num_impossible": 23,
+    "num_open": 7,
     "num_found": 0,
     "all_order_ge_12_impossible": true,
     "all_order_ge_9_impossible": true,
@@ -291,9 +291,10 @@
         73,
         85
       ],
-      "status": "OPEN",
-      "label": "not_exhausted",
-      "method": "search_incomplete_within_budget"
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "crt_mod8_compression_obstruction",
+      "certificate": "id9_id10_mod8/results/obstruction_certificate.json"
     },
     {
       "id": 10,
@@ -319,9 +320,10 @@
         73,
         121
       ],
-      "status": "OPEN",
-      "label": "not_exhausted",
-      "method": "search_incomplete_within_budget"
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "crt_mod8_compression_obstruction",
+      "certificate": "id9_id10_mod8/results/obstruction_certificate.json"
     },
     {
       "id": 11,
