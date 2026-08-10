@@ -11,8 +11,8 @@ real Hadamard matrix of order 668.
 ## Result
 
 Among the 30 common-multiplier subgroups compatible with the initial mod-3
-obstruction, exact proofs exclude 23, including every one of the 19 groups of
-order at least 9. The seven open groups have order at most 6.
+obstruction, exact proofs exclude 24, including every one of the 19 groups of
+order at least 9. The six open groups have order at most 6.
 
 The last order-9 family (`id12`) is excluded by a short analytic
 9-compression argument. Its compressed values are forced into
@@ -23,6 +23,11 @@ autocorrelation is at most `-240`, contradicting the required `-74`.
 For `id9` and `id10`, the CRT calculation forces the pair's compressed PAF
 residue to be `5+5=2 (mod 8)`, incompatible with the Legendre compression
 target `-74=6 (mod 8)`.
+
+For `id2`, the congruence-kernel action forces at least 74 monochromatic
+three-point fibres in either invariant row, while the Legendre equation at
+shift 111 requires only 55 across both rows. Thus even one ID-2-invariant row
+is impossible.
 
 This **does not construct or disprove** a Hadamard matrix of order 668. The
 unrestricted problem remains open.
@@ -38,14 +43,17 @@ unrestricted problem remains open.
 - [`mod64/`](mod64/) — exact reconstruction and lifting analysis of the known
   64-modular order-668 construction.
 - [`scripts/`](scripts/) — independent Hadamard/Goethals-Seidel verifiers.
+- [`ACKNOWLEDGMENTS.md`](ACKNOWLEDGMENTS.md) — incorporated community
+  contributions and independent corroboration.
 
 ## Quick verification
 
-The analytic id12 proof and generalized compression checks need only Python:
+The lightweight analytic proofs and compression checks need only Python:
 
 ```bash
 python3 lp333/id12_phase2/code/standalone_verifier.py
 python3 lp333/id12_phase2/code/general_verifier.py
+python3 lp333/id2_congruence_kernel/code/standalone_verifier.py
 python3 lp333/id9_id10_mod8/code/standalone_verifier.py
 ```
 
@@ -73,6 +81,10 @@ results.
 The basic compression/sum-of-two-squares mechanism is established prior art.
 The fixed-field formulation and real-quadratic index-2 refinement in the
 supporting note are labeled potentially new pending specialist review.
+
+Community contributions incorporated after v1.0.0 are credited in
+[`ACKNOWLEDGMENTS.md`](ACKNOWLEDGMENTS.md) and in the corresponding proof
+reports.
 
 All nonexistence statements concern specified **fixed multiplier symmetries**,
 not global Legendre-pair or Hadamard nonexistence.

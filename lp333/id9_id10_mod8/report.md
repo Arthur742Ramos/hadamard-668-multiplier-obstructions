@@ -136,8 +136,9 @@ sums `+3` and `-3`, obtaining the set `{1,5}` and an available pair residue 6.
 
 ## Classification consequence
 
-The classification now contains 23 impossible groups, with open IDs
-`0,1,2,3,4,5,7`. Within order six, the open case is ID 7.
+Together with the subsequently integrated ID-2 congruence-kernel obstruction,
+the classification now contains 24 impossible groups, with open IDs
+`0,1,3,4,5,7`. Within order six, the open case is ID 7.
 
 ## Scope
 

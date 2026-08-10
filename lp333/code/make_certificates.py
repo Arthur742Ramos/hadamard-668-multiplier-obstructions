@@ -84,6 +84,16 @@ def main():
                 "source": e.get("certificate")
                           or "id12_phase2/results/general_compression_certificate.json",
             }
+        elif m == "congruence_kernel_fibre_obstruction":
+            rec["certificate"] = {
+                "argument": "At shift 111, a row with mu monochromatic "
+                            "three-point fibres has PAF=4*mu-111, so a Legendre "
+                            "pair requires mu(A)+mu(B)=55. ID-2 invariance makes "
+                            "74 fibres monochromatic in either invariant row.",
+                "verification": "dependency-free exhaustive local-pattern and "
+                                "multiplier-action verifier",
+                "source": "id2_congruence_kernel/results/obstruction_certificate.json",
+            }
         elif m == "crt_mod8_compression_obstruction":
             rec["certificate"] = {
                 "argument": "For ID 9 or ID 10, CRT symmetry and row sum +-1 "
