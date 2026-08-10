@@ -16,4 +16,7 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python3 lp333/id12_phase2/code/standalone_verifier.py
       - run: python3 lp333/id12_phase2/code/general_verifier.py
+      - run: python3 lp333/id2_congruence_kernel/code/standalone_verifier.py
+      - run: python3 lp333/id7_single_shift/code/standalone_verifier.py
+      - run: python3 lp333/id9_id10_mod8/code/standalone_verifier.py
       - run: bash compression_theorem/scripts/run_all.sh

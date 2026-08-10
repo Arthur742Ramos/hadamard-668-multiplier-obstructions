@@ -94,6 +94,16 @@ def main():
                                 "multiplier-action verifier",
                 "source": "id2_congruence_kernel/results/obstruction_certificate.json",
             }
+        elif m == "single_shift_orbit_obstruction":
+            rec["certificate"] = {
+                "argument": "At shift 111, ID-7 symmetry forces 222 of 333 "
+                            "autocorrelation terms to +1, so each invariant row "
+                            "has PAF at least 111 and the pair has PAF at least "
+                            "222, contradicting the Legendre target -2.",
+                "verification": "dependency-free subgroup, CRT, orbit-map, and "
+                                "exact quotient-component verifier",
+                "source": "id7_single_shift/results/obstruction_certificate.json",
+            }
         elif m == "crt_mod8_compression_obstruction":
             rec["certificate"] = {
                 "argument": "For ID 9 or ID 10, CRT symmetry and row sum +-1 "

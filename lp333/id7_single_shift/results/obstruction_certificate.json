@@ -1,0 +1,111 @@
+{
+  "claimBoundary": "Applies exactly to pairs with both rows fixed by common-multiplier ID 7. Unrestricted LP(333) and Hadamard-668 remain open.",
+  "elementaryProof": {
+    "contradiction": "222 > -2",
+    "legendrePairTarget": -2,
+    "pairPafLowerBound": 222,
+    "singleRowPafLowerBound": 111
+  },
+  "independentExactStrengthening": {
+    "componentSummary": [
+      {
+        "componentSize": 3,
+        "count": 18,
+        "minimumContribution": -2
+      },
+      {
+        "componentSize": 3,
+        "count": 1,
+        "minimumContribution": -1
+      }
+    ],
+    "pairPafLowerBound": 370,
+    "singleRowPafMinimum": 185
+  },
+  "mutationControl": {
+    "forcedEqualTermCount": 0,
+    "result": "PASS",
+    "subgroupGenerators": [
+      73
+    ]
+  },
+  "schema": "lp333.id7-single-shift-obstruction.v1",
+  "shift": {
+    "crtImageMod9Mod37": [
+      3,
+      0
+    ],
+    "forcedEqualTermCount": 222,
+    "forcedResiduesMod9": {
+      "1": 37,
+      "2": 37,
+      "4": 37,
+      "5": 37,
+      "7": 37,
+      "8": 37
+    },
+    "unforcedTermCount": 111,
+    "value": 111
+  },
+  "status": "PASS",
+  "subgroup": {
+    "classificationId": 7,
+    "crtImageMod9Mod37": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        36
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        36
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        7,
+        36
+      ]
+    ],
+    "elements": [
+      1,
+      73,
+      112,
+      184,
+      223,
+      295
+    ],
+    "generators": [
+      73,
+      112
+    ],
+    "orbitSignature": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        54
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        6,
+        36
+      ]
+    ]
+  },
+  "verdict": "NO_ID7_INVARIANT_LP333_EXISTS"
+}

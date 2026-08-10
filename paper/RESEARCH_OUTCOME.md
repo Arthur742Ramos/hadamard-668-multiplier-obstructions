@@ -12,8 +12,8 @@ multiplier-symmetric Legendre-pair route.
 
 Let `H` be a common multiplier subgroup for a Legendre pair of length 333.
 Among the 30 subgroups compatible with the initial mod-3 obstruction, exact
-proofs exclude 24, including every one of the 19 groups of order at least 9.
-The six open groups have order at most 6.
+proofs exclude 25, including every one of the 19 groups of order at least 9.
+The five open groups have order at most 3.
 
 The last order-9 case, id12, has a short analytic proof. Its 9-compression values
 must lie in
@@ -39,15 +39,21 @@ A shift-111 fibre count excludes id2. Its congruence-kernel symmetry forces at
 least 74 monochromatic fibres in either invariant row, but the Legendre
 equation permits only 55 across both rows.
 
+A separate shift-111 orbit count excludes id7. Its multiplier symmetry forces
+222 autocorrelation terms to `+1`, giving a one-row lower bound of 111 against
+the pair target `-2`. An exact quotient calculation sharpens the minimum to
+185 and closes the final order-six family.
+
 ## Proof package
 
 - `lp333/report.md` — full classification and scope.
 - `lp333/id12_phase2/report.md` — analytic id12 proof.
 - `lp333/id2_congruence_kernel/report.md`: analytic id2 proof.
+- `lp333/id7_single_shift/report.md`: analytic id7 proof.
 - `lp333/id9_id10_mod8/report.md`: analytic ids 9/10 proof.
 - `lp333/proof_phase2/` — DIMACS, DRAT traces, direct PB certificates,
   independent audits, positive controls, and full verification.
-- `lp333/results/master_status.json`: machine-readable 24/30 status.
+- `lp333/results/master_status.json`: machine-readable 25/30 status.
 
 The top-level `lp333/code/run_all.sh` regenerates phase 1, phase 2, proof checks,
 consolidated status, certificates, and the final manifest.

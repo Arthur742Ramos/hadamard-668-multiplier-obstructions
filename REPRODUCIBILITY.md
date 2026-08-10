@@ -8,6 +8,7 @@ These require only Python 3:
 python3 lp333/id12_phase2/code/standalone_verifier.py
 python3 lp333/id12_phase2/code/general_verifier.py
 python3 lp333/id2_congruence_kernel/code/standalone_verifier.py
+python3 lp333/id7_single_shift/code/standalone_verifier.py
 python3 lp333/id9_id10_mod8/code/standalone_verifier.py
 python3 scripts/verify_hadamard_csv.py --order 4 artifacts/hadamard4.csv
 ```
@@ -19,6 +20,7 @@ Each command checks a separate claim:
 | `id12_phase2/code/standalone_verifier.py` | prints `PROOF VERIFIED` |
 | `id12_phase2/code/general_verifier.py` | reports ids 6, 8, and 12 impossible under the restricted 9-compression |
 | `id2_congruence_kernel/code/standalone_verifier.py` | verifies the shift-111 fibre obstruction for id 2 |
+| `id7_single_shift/code/standalone_verifier.py` | verifies the shift-111 orbit obstruction for id 7 |
 | `id9_id10_mod8/code/standalone_verifier.py` | verifies the CRT mod-8 obstruction for ids 9 and 10 |
 | `scripts/verify_hadamard_csv.py` | accepts the order-4 positive control |
 
@@ -57,9 +59,9 @@ bash lp333/code/run_all.sh
 Expected final status:
 
 ```text
-24/30 families IMPOSSIBLE
+25/30 families IMPOSSIBLE
 all order >= 9 multiplier groups impossible
-OPEN: 0,1,3,4,5,7
+OPEN: 0,1,3,4,5
 ```
 
 ## Fixed-field note
