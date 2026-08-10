@@ -74,8 +74,9 @@ formalization. That work is archived as
 
 ## Classification consequence
 
-The common-multiplier classification now contains 24 impossible groups. The
-open IDs are `0,1,3,4,5,7`.
+Together with the subsequently integrated ID-7 single-shift obstruction, the
+common-multiplier classification now contains 25 impossible groups. The open
+IDs are `0,1,3,4,5`.
 
 ## Scope
 

@@ -159,6 +159,43 @@ def main():
         method="congruence_kernel_fibre_obstruction",
         certificate="id2_congruence_kernel/results/obstruction_certificate.json")
 
+    # ---- Single-shift orbit obstruction for ID 7 ----
+    id7 = load(os.path.join(HERE, "..", "id7_single_shift", "results",
+                            "obstruction_certificate.json"))
+    if id7 is None:
+        raise SystemExit("ERROR: ID-7 single-shift certificate missing "
+                         "(id7_single_shift/results/obstruction_certificate.json); "
+                         "run id7_single_shift/code/standalone_verifier.py first.")
+    require(
+        id7.get("schema") == "lp333.id7-single-shift-obstruction.v1",
+        "ID-7 certificate schema mismatch",
+    )
+    require(id7.get("status") == "PASS", "ID-7 certificate status is not PASS")
+    require(
+        id7.get("verdict") == "NO_ID7_INVARIANT_LP333_EXISTS",
+        "ID-7 certificate verdict mismatch",
+    )
+    require(
+        id7["subgroup"]["classificationId"] == 7,
+        "ID-7 certificate classification ID mismatch",
+    )
+    require(
+        id7["shift"]["forcedEqualTermCount"] == 222,
+        "ID-7 forced-equality count mismatch",
+    )
+    require(
+        id7["elementaryProof"]["singleRowPafLowerBound"] == 111,
+        "ID-7 elementary PAF lower bound mismatch",
+    )
+    require(
+        id7["independentExactStrengthening"]["singleRowPafMinimum"] == 185,
+        "ID-7 exact PAF minimum mismatch",
+    )
+    status[7].update(
+        status="IMPOSSIBLE", label="proved",
+        method="single_shift_orbit_obstruction",
+        certificate="id7_single_shift/results/obstruction_certificate.json")
+
     # ---- CRT mod-8 override for the two remaining order-six image-6 cases ----
     mod8 = load(os.path.join(HERE, "..", "id9_id10_mod8", "results",
                              "obstruction_certificate.json"))
@@ -227,8 +264,8 @@ def main():
 
     # ---- hard invariants: a full run must not regress proved closures ----
     require(
-        summary["num_impossible"] == 24,
-        f"expected 24 IMPOSSIBLE, got {summary['num_impossible']}",
+        summary["num_impossible"] == 25,
+        f"expected 25 IMPOSSIBLE, got {summary['num_impossible']}",
     )
     require(
         summary["all_order_ge_9_impossible"],
@@ -239,7 +276,7 @@ def main():
         "some order>=12 family is not IMPOSSIBLE",
     )
     require(
-        set(summary["open_ids"]) == {0, 1, 3, 4, 5, 7},
+        set(summary["open_ids"]) == {0, 1, 3, 4, 5},
         f"unexpected open IDs: {summary['open_ids']}",
     )
     for sid in (6, 8, 12):
@@ -247,6 +284,7 @@ def main():
     for sid in (9, 10):
         require(status[sid]["status"] == "IMPOSSIBLE", f"ID {sid} regressed")
     require(status[2]["status"] == "IMPOSSIBLE", "ID 2 regressed")
+    require(status[7]["status"] == "IMPOSSIBLE", "ID 7 regressed")
 
     output_path = Path(RES) / "master_status.json"
     output_path.write_text(
@@ -261,7 +299,7 @@ def main():
         print(f"{i:>3} {e['order']:>4} {e['r']:>4} {e['reduction_mod9_order']:>3} "
               f"{e['reduction_mod37_order']:>4} {e['status']:>11} {e['method']}")
     print("\nSUMMARY:", json.dumps(summary, indent=2))
-    print("\nASSERTIONS PASSED: num_impossible=24, all_order_ge_9_impossible=true")
+    print("\nASSERTIONS PASSED: num_impossible=25, all_order_ge_9_impossible=true")
 
 
 def _find(sid):

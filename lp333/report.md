@@ -153,6 +153,9 @@ not) and the 37-/9-compression relaxations (PAF-sum = −18 resp. −74).
 * **Congruence-kernel fibre count** proves id 2 (order 3) impossible. Invariance
   forces at least 74 monochromatic three-point fibres in either row, while the
   shift-111 Legendre equation requires 55 across both rows.
+* **Single-shift orbit count** proves id 7 (order 6) impossible. At shift 111,
+  symmetry forces 222 terms to `+1`, so each invariant row has PAF at least 111
+  (exact minimum 185), contradicting the pair target `-2`.
 * **CRT mod-8 compression** proves ids 9 and 10 (order 6) impossible by reducing
   the pair condition to the false congruence `2 ≡ 6 (mod 8)`.
 
@@ -167,7 +170,7 @@ not) and the 37-/9-compression relaxations (PAF-sum = −18 resp. −74).
 | 4 | 3 | 113 | 3 | 3 | OPEN | not exhausted |
 | 5 | 3 | 113 | 3 | 3 | OPEN | not exhausted |
 | 6 | 4 | 90 | 1 | 4 | **IMPOSSIBLE** | 9-compression (K37 value-set), phase 2 |
-| 7 | 6 | 95 | 3 | 2 | OPEN | not exhausted |
+| 7 | 6 | 95 | 3 | 2 | **IMPOSSIBLE** | single-shift orbit obstruction |
 | 8 | 6 | 63 | 1 | 6 | **IMPOSSIBLE** | 9-compression (K37 value-set), phase 2 |
 | 9 | 6 | 59 | 3 | 6 | **IMPOSSIBLE** | CRT mod-8 compression |
 | 10 | 6 | 59 | 3 | 6 | **IMPOSSIBLE** | CRT mod-8 compression |
@@ -208,8 +211,10 @@ label proved/heuristic, method, certificate pointer, and the exact counts).
 * **A CRT mod-8 compression obstruction closes ids 9 and 10 (order 6).**
   The proof reduces existence to `2 ≡ 6 (mod 8)`.
 * **A congruence-kernel fibre obstruction closes id 2 (order 3), even when only
-  one row is invariant.** The classification now has **24 impossible
-  families**, with ids 0,1,3,4,5,7 open (orders 1,2,3,3,3,6).
+  one row is invariant.**
+* **A single-shift orbit obstruction closes id 7 (order 6).** The classification
+  now has **25 impossible families**, with ids 0,1,3,4,5 open
+  (orders 1,2,3,3,3). No order-six family remains open.
 * No invariant Legendre pair was found in any exhausted family (all verdicts are
   IMPOSSIBLE, never FOUND). Had one been found, the two ±1 sequences and full
   PAF/PSD verification would be saved under `results/` — none were produced.
@@ -274,6 +279,23 @@ The full proof and dependency-free verifier are in `id2_congruence_kernel/`.
 
 ---
 
+### id 7: single-shift orbit obstruction
+
+At shift 111, exactly 222 of the 333 ordered terms have `x` and `x+111` in the
+same ID-7 multiplier orbit. They contribute `+1` to the PAF of every invariant
+row; bounding each remaining term by `-1` gives
+
+```text
+PAF_X(111) >= 222-111 = 111.
+```
+
+Two invariant rows therefore have combined PAF at least 222, contradicting the
+Legendre target `-2`. An independent quotient-component minimization sharpens
+the exact one-row minimum to 185. The full proof, provenance, and verifier are
+in `id7_single_shift/`.
+
+---
+
 ### ids 9 and 10: CRT mod-8 obstruction
 
 For either subgroup, CRT symmetry and the Legendre compression identity would
@@ -289,11 +311,11 @@ The full proof and dependency-free verifier are in `id9_id10_mod8/`.
 
 ## 6. Remaining open cases (labeled OPEN, not exhausted)
 
-* **ids 0,1,3,4,5,7** (orders 1,2,3,3,3,6): the weakest-invariance
-  families, r = 95…333. These cases remain beyond current exact search budgets.
+* **ids 0,1,3,4,5** (orders 1,2,3,3,3): the weakest-invariance
+  families, r = 113…333. These cases remain beyond current exact search budgets.
   Within phase 2's value-set 9-compression, ids 0 and 1 have the free-odd value
   set, and exhaustive enumeration for id3 exceeds its budget. The nontrivial
-  mod-9 images of ids 4,5,7 place them outside that compression form. A
+  mod-9 images of ids 4 and 5 place them outside that compression form. A
   decision needs a larger SAT/CP effort or a further structural obstruction.
 
 > Phase 2 (value-set-restricted 9-compression) proved **id 6 (order 4), id 8
@@ -326,6 +348,7 @@ code/validate_and_refsearch.py  spec validation + Python reference MITM
 code/mitm.cpp / run_mitm.py  -> results/mitm/*.json  (exact MITM)
 code/cpsat_search.py, cpsat_search2.py, column_cpsat.py  exact CP-SAT engines
 id2_congruence_kernel/code/standalone_verifier.py  ID-2 fibre proof checker
+id7_single_shift/code/standalone_verifier.py  ID-7 orbit proof checker
 id9_id10_mod8/code/standalone_verifier.py  CRT mod-8 proof checker
 code/consolidate.py          -> results/master_status.json
 code/run_all.sh              one-shot driver

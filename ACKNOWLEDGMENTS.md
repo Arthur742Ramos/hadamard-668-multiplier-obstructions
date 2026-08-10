@@ -2,7 +2,7 @@
 
 This project benefits from independent mathematical checks and community
 extensions. The following contributions are incorporated in the repository's
-current 24/30 fixed-multiplier classification.
+current 25/30 fixed-multiplier classification.
 
 - **Josh Arnold** ([@josh-sophon](https://github.com/josh-sophon)) contributed
   the CRT mod-8 proof, verifier, certificate, and repository integration that
@@ -23,6 +23,12 @@ current 24/30 fixed-multiplier classification.
   the ID-2 obstruction and developed a broader prime-square and affine-symmetry
   theorem with Lean 4 verification, archived at
   [doi:10.5281/zenodo.21779001](https://doi.org/10.5281/zenodo.21779001).
+- **Dennison Bertram** coordinated the AI-assisted research process that
+  produced and shared the elementary 222-term single-shift observation closing
+  ID 7. In accordance with the submitted note, this credit records his
+  coordination and communication of the result, not a claim of personal
+  derivation, priority, or novelty. The repository independently rederived the
+  argument and added an exact `PAF(111)` minimum and deterministic certificate.
 
 Credit here records the provenance of these specific contributions; it does
 not imply authorship of unrelated repository results.

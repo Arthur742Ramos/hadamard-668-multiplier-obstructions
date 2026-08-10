@@ -350,9 +350,9 @@ of `PAF_ã(q−p)` is `−251`). The exhaustive enumeration, CP-SAT and z3 are k
 independent confirmations. The dependency-free `standalone_verifier.py` checks the
 analytic bound directly.
 
-### Community extensions: ids 2, 9, and 10
+### Community extensions: ids 2, 7, 9, and 10
 
-Subsequent external contributions close three more fixed-multiplier families:
+Subsequent external contributions close four more fixed-multiplier families:
 
 - Josh Arnold's PR #4 integrates an independently derived CRT mod-8 proof for
   ids 9 and 10. Eric Alcaide had independently reported the same exclusions in
@@ -363,11 +363,16 @@ Subsequent external contributions close three more fixed-multiplier families:
   monochromatic in either invariant row. Benedek Blackthorn independently
   obtained and generalized this obstruction, including affine symmetries, with
   a Lean 4 verification package archived as doi:10.5281/zenodo.21779001.
+- Dennison Bertram coordinated and shared an AI-assisted note observing that
+  ID-7 invariance forces 222 shift-111 terms to `+1`, so each row has PAF at
+  least 111 against the pair target `-2`. He explicitly disclaimed personal
+  derivation, priority, and novelty. The repository independently reproduced
+  the count and sharpened the exact one-row minimum to 185.
 
-The repository independently rechecks both mechanisms with dependency-free
+The repository independently rechecks these mechanisms with dependency-free
 verifiers and deterministic certificates. The current classification is
-**24 impossible families**, with ids 0,1,3,4,5,7 open. Contribution provenance
-is recorded in `ACKNOWLEDGMENTS.md`.
+**25 impossible families**, with ids 0,1,3,4,5 open. Contribution provenance is
+recorded in `ACKNOWLEDGMENTS.md`.
 
 ### Proof-carrying and theorem packaging
 

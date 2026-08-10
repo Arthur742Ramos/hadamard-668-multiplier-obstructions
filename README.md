@@ -11,8 +11,8 @@ real Hadamard matrix of order 668.
 ## Result
 
 Among the 30 common-multiplier subgroups compatible with the initial mod-3
-obstruction, exact proofs exclude 24, including every one of the 19 groups of
-order at least 9. The six open groups have order at most 6.
+obstruction, exact proofs exclude 25, including every one of the 19 groups of
+order at least 9. The five open groups have order at most 3.
 
 The last order-9 family (`id12`) is excluded by a short analytic
 9-compression argument. Its compressed values are forced into
@@ -28,6 +28,11 @@ For `id2`, the congruence-kernel action forces at least 74 monochromatic
 three-point fibres in either invariant row, while the Legendre equation at
 shift 111 requires only 55 across both rows. Thus even one ID-2-invariant row
 is impossible.
+
+For `id7`, exactly 222 shift-111 terms are forced to `+1` by its multiplier
+orbits. Each invariant row therefore has `PAF(111) >= 111`, contradicting the
+pair target `-2`; an independent quotient calculation sharpens the one-row
+minimum to 185.
 
 This **does not construct or disprove** a Hadamard matrix of order 668. The
 unrestricted problem remains open.
@@ -54,6 +59,7 @@ The lightweight analytic proofs and compression checks need only Python:
 python3 lp333/id12_phase2/code/standalone_verifier.py
 python3 lp333/id12_phase2/code/general_verifier.py
 python3 lp333/id2_congruence_kernel/code/standalone_verifier.py
+python3 lp333/id7_single_shift/code/standalone_verifier.py
 python3 lp333/id9_id10_mod8/code/standalone_verifier.py
 ```
 

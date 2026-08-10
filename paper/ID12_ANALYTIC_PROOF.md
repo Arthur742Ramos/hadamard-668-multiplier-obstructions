@@ -210,8 +210,8 @@ cd id12_phase2
 
 All exact verdicts are re-derivable; the standalone/general verifiers need only
 Python 3 (no third-party packages, no randomness). The top-level driver
-(`../lp333/code/run_all.sh`) now includes the id2 congruence-kernel and ids 9/10
-mod-8 checks. Its consolidation requires `num_impossible=24` and
+(`../lp333/code/run_all.sh`) now includes the id2 and id7 single-shift checks
+and the ids 9/10 mod-8 check. Its consolidation requires `num_impossible=25` and
 `all_order_ge_9_impossible=true` before the driver regenerates the SHA-256
 manifest.
 
