@@ -14,6 +14,7 @@
       29
     ],
     "impossible_ids": [
+      2,
       6,
       8,
       9,
@@ -41,19 +42,18 @@
     "open_ids": [
       0,
       1,
-      2,
       3,
       4,
       5,
       7
     ],
     "found_ids": [],
-    "num_impossible": 23,
-    "num_open": 7,
+    "num_impossible": 24,
+    "num_open": 6,
     "num_found": 0,
     "all_order_ge_12_impossible": true,
     "all_order_ge_9_impossible": true,
-    "impossible_orders_min": 4,
+    "impossible_orders_min": 3,
     "open_orders_max": 6
   },
   "families": [
@@ -92,10 +92,14 @@
       "generators": [
         112
       ],
-      "status": "OPEN",
-      "label": "not_exhausted",
-      "method": "search_incomplete_within_budget",
-      "note": "not exhausted within budget; no impossibility claimed"
+      "status": "IMPOSSIBLE",
+      "label": "proved",
+      "method": "congruence_kernel_fibre_obstruction",
+      "certificate": {
+        "argument": "At shift 111, a row with mu monochromatic three-point fibres has PAF=4*mu-111, so a Legendre pair requires mu(A)+mu(B)=55. ID-2 invariance makes 74 fibres monochromatic in either invariant row.",
+        "verification": "dependency-free exhaustive local-pattern and multiplier-action verifier",
+        "source": "id2_congruence_kernel/results/obstruction_certificate.json"
+      }
     },
     {
       "id": 3,

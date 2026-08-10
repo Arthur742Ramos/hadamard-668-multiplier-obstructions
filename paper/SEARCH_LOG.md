@@ -350,6 +350,25 @@ of `PAF_ã(q−p)` is `−251`). The exhaustive enumeration, CP-SAT and z3 are k
 independent confirmations. The dependency-free `standalone_verifier.py` checks the
 analytic bound directly.
 
+### Community extensions: ids 2, 9, and 10
+
+Subsequent external contributions close three more fixed-multiplier families:
+
+- Josh Arnold's PR #4 integrates an independently derived CRT mod-8 proof for
+  ids 9 and 10. Eric Alcaide had independently reported the same exclusions in
+  issue #3 using a mod-24 argument, with verification scripts and Lean 4.
+- Claude, working with Patrick White, contributed the id2 congruence-kernel
+  fibre obstruction in issue #2. At shift 111, `PAF_X=4*mu(X)-111`, so a
+  Legendre pair needs `mu(A)+mu(B)=55`; invariance under `<112>` makes 74 fibres
+  monochromatic in either invariant row. Benedek Blackthorn independently
+  obtained and generalized this obstruction, including affine symmetries, with
+  a Lean 4 verification package archived as doi:10.5281/zenodo.21779001.
+
+The repository independently rechecks both mechanisms with dependency-free
+verifiers and deterministic certificates. The current classification is
+**24 impossible families**, with ids 0,1,3,4,5,7 open. Contribution provenance
+is recorded in `ACKNOWLEDGMENTS.md`.
+
 ### Proof-carrying and theorem packaging
 
 The computational phase-1 exclusions now have externally checkable evidence:

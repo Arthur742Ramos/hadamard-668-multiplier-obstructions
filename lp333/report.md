@@ -150,6 +150,9 @@ not) and the 37-/9-compression relaxations (PAF-sum = −18 resp. −74).
   also row-sum). Enumeration counts recorded in `results/mitm/`.
 * **CP-SAT** proves impossible: ids 11, 13, 14 (order 9), id 15 (order 12),
   id 19 (order 18). id 11 (r=65) closes in 0.01 s with symmetry breaking.
+* **Congruence-kernel fibre count** proves id 2 (order 3) impossible. Invariance
+  forces at least 74 monochromatic three-point fibres in either row, while the
+  shift-111 Legendre equation requires 55 across both rows.
 * **CRT mod-8 compression** proves ids 9 and 10 (order 6) impossible by reducing
   the pair condition to the false congruence `2 ≡ 6 (mod 8)`.
 
@@ -159,7 +162,7 @@ not) and the 37-/9-compression relaxations (PAF-sum = −18 resp. −74).
 |---|---|---|---|---|---|---|
 | 0 | 1 | 333 | 1 | 1 | OPEN | not exhausted |
 | 1 | 2 | 171 | 1 | 2 | OPEN | not exhausted |
-| 2 | 3 | 185 | 3 | 1 | OPEN | not exhausted |
+| 2 | 3 | 185 | 3 | 1 | **IMPOSSIBLE** | congruence-kernel fibre obstruction |
 | 3 | 3 | 117 | 1 | 3 | OPEN | not exhausted |
 | 4 | 3 | 113 | 3 | 3 | OPEN | not exhausted |
 | 5 | 3 | 113 | 3 | 3 | OPEN | not exhausted |
@@ -203,9 +206,10 @@ label proved/heuristic, method, certificate pointer, and the exact counts).
 * **Phase 2's method (a value-set-restricted 9-compression) additionally closed
   two previously-open lower-order families: id 6 (order 4) and id 8 (order 6).**
 * **A CRT mod-8 compression obstruction closes ids 9 and 10 (order 6).**
-  The proof reduces existence to `2 ≡ 6 (mod 8)`. The classification now has
-  **23 impossible families**, with ids 0,1,2,3,4,5,7 open
-  (orders 1,2,3,3,3,3,6).
+  The proof reduces existence to `2 ≡ 6 (mod 8)`.
+* **A congruence-kernel fibre obstruction closes id 2 (order 3), even when only
+  one row is invariant.** The classification now has **24 impossible
+  families**, with ids 0,1,3,4,5,7 open (orders 1,2,3,3,3,6).
 * No invariant Legendre pair was found in any exhausted family (all verdicts are
   IMPOSSIBLE, never FOUND). Had one been found, the two ±1 sequences and full
   PAF/PSD verification would be saved under `results/` — none were produced.
@@ -254,6 +258,22 @@ Full write-up, code and certificate: `id12_phase2/` (certificate
 
 ---
 
+### id 2: congruence-kernel fibre obstruction
+
+Write each index as `r+111t`, with `0 <= r < 111` and `t in Z/3Z`. If
+`mu(X)` counts monochromatic three-point fibres, then
+
+```text
+PAF_X(111) = 4*mu(X)-111.
+```
+
+The Legendre equation forces `mu(A)+mu(B)=55`. Multiplication by
+`112=1+111` sends `t` to `t+r`; for the 74 residues not divisible by 3 this
+is a 3-cycle. Thus an invariant row alone has `mu >= 74`, a contradiction.
+The full proof and dependency-free verifier are in `id2_congruence_kernel/`.
+
+---
+
 ### ids 9 and 10: CRT mod-8 obstruction
 
 For either subgroup, CRT symmetry and the Legendre compression identity would
@@ -269,11 +289,11 @@ The full proof and dependency-free verifier are in `id9_id10_mod8/`.
 
 ## 6. Remaining open cases (labeled OPEN, not exhausted)
 
-* **ids 0,1,2,3,4,5,7** (orders 1,2,3,3,3,3,6): the weakest-invariance
+* **ids 0,1,3,4,5,7** (orders 1,2,3,3,3,6): the weakest-invariance
   families, r = 95…333. These cases remain beyond current exact search budgets.
   Within phase 2's value-set 9-compression, ids 0 and 1 have the free-odd value
   set, and exhaustive enumeration for id3 exceeds its budget. The nontrivial
-  mod-9 images of ids 2,4,5,7 place them outside that compression form. A
+  mod-9 images of ids 4,5,7 place them outside that compression form. A
   decision needs a larger SAT/CP effort or a further structural obstruction.
 
 > Phase 2 (value-set-restricted 9-compression) proved **id 6 (order 4), id 8
@@ -305,6 +325,7 @@ code/search_common.py        family PAF spec builder
 code/validate_and_refsearch.py  spec validation + Python reference MITM
 code/mitm.cpp / run_mitm.py  -> results/mitm/*.json  (exact MITM)
 code/cpsat_search.py, cpsat_search2.py, column_cpsat.py  exact CP-SAT engines
+id2_congruence_kernel/code/standalone_verifier.py  ID-2 fibre proof checker
 id9_id10_mod8/code/standalone_verifier.py  CRT mod-8 proof checker
 code/consolidate.py          -> results/master_status.json
 code/run_all.sh              one-shot driver

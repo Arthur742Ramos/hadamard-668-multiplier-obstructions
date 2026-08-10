@@ -125,6 +125,40 @@ def main():
             "id12_phase2/results/id12_impossible_certificate.json",
             phase2=True)
 
+    # ---- Congruence-kernel fibre obstruction for ID 2 ----
+    id2 = load(os.path.join(HERE, "..", "id2_congruence_kernel", "results",
+                            "obstruction_certificate.json"))
+    if id2 is None:
+        raise SystemExit("ERROR: ID-2 congruence-kernel certificate missing "
+                         "(id2_congruence_kernel/results/"
+                         "obstruction_certificate.json); "
+                         "run id2_congruence_kernel/code/standalone_verifier.py first.")
+    require(
+        id2.get("schema") == "lp333.id2-congruence-kernel-obstruction.v1",
+        "ID-2 certificate schema mismatch",
+    )
+    require(id2.get("status") == "PASS", "ID-2 certificate status is not PASS")
+    require(
+        id2.get("verdict") == "NO_LP333_HAS_EITHER_ROW_INVARIANT_UNDER_ID2",
+        "ID-2 certificate verdict mismatch",
+    )
+    require(
+        id2["subgroup"]["classificationId"] == 2,
+        "ID-2 certificate classification ID mismatch",
+    )
+    require(
+        id2["fibreAction"]["forcedMonochromaticCount"] == 74,
+        "ID-2 invariant-row lower bound mismatch",
+    )
+    require(
+        id2["legendreShift111"]["requiredMonochromaticTotal"] == 55,
+        "ID-2 pair fibre total mismatch",
+    )
+    status[2].update(
+        status="IMPOSSIBLE", label="proved",
+        method="congruence_kernel_fibre_obstruction",
+        certificate="id2_congruence_kernel/results/obstruction_certificate.json")
+
     # ---- CRT mod-8 override for the two remaining order-six image-6 cases ----
     mod8 = load(os.path.join(HERE, "..", "id9_id10_mod8", "results",
                              "obstruction_certificate.json"))
@@ -193,8 +227,8 @@ def main():
 
     # ---- hard invariants: a full run must not regress proved closures ----
     require(
-        summary["num_impossible"] == 23,
-        f"expected 23 IMPOSSIBLE, got {summary['num_impossible']}",
+        summary["num_impossible"] == 24,
+        f"expected 24 IMPOSSIBLE, got {summary['num_impossible']}",
     )
     require(
         summary["all_order_ge_9_impossible"],
@@ -205,13 +239,14 @@ def main():
         "some order>=12 family is not IMPOSSIBLE",
     )
     require(
-        set(summary["open_ids"]) == {0, 1, 2, 3, 4, 5, 7},
+        set(summary["open_ids"]) == {0, 1, 3, 4, 5, 7},
         f"unexpected open IDs: {summary['open_ids']}",
     )
     for sid in (6, 8, 12):
         require(status[sid]["status"] == "IMPOSSIBLE", f"ID {sid} regressed")
     for sid in (9, 10):
         require(status[sid]["status"] == "IMPOSSIBLE", f"ID {sid} regressed")
+    require(status[2]["status"] == "IMPOSSIBLE", "ID 2 regressed")
 
     output_path = Path(RES) / "master_status.json"
     output_path.write_text(
@@ -226,7 +261,7 @@ def main():
         print(f"{i:>3} {e['order']:>4} {e['r']:>4} {e['reduction_mod9_order']:>3} "
               f"{e['reduction_mod37_order']:>4} {e['status']:>11} {e['method']}")
     print("\nSUMMARY:", json.dumps(summary, indent=2))
-    print("\nASSERTIONS PASSED: num_impossible=23, all_order_ge_9_impossible=true")
+    print("\nASSERTIONS PASSED: num_impossible=24, all_order_ge_9_impossible=true")
 
 
 def _find(sid):
